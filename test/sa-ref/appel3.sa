@@ -1,0 +1,38 @@
+<programme type="SaProg">
+ <fonctions type="SaLDecFonc">
+  <tete type="SaDecFonc" nom="g" typeRetour="nul">
+   <corps type="SaInstBloc">
+    <val type="SaLInst">
+     <tete type="SaInstEcriture">
+      <arg type="SaExpInt" val="2"/>
+     </tete>
+    </val>
+   </corps>
+  </tete>
+  <queue type="SaLDecFonc">
+   <tete type="SaDecFonc" nom="f" typeRetour="nul">
+    <corps type="SaInstBloc">
+     <val type="SaLInst">
+      <tete type="SaInstEcriture">
+       <arg type="SaExpInt" val="1"/>
+      </tete>
+     </val>
+    </corps>
+   </tete>
+   <queue type="SaLDecFonc">
+    <tete type="SaDecFonc" nom="main" typeRetour="nul">
+     <corps type="SaInstBloc">
+      <val type="SaLInst">
+       <tete type="SaAppel" nom="f">
+       </tete>
+       <queue type="SaLInst">
+        <tete type="SaAppel" nom="g">
+        </tete>
+       </queue>
+      </val>
+     </corps>
+    </tete>
+   </queue>
+  </queue>
+ </fonctions>
+</programme>

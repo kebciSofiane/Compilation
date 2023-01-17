@@ -1,0 +1,83 @@
+<programme type="SaProg">
+ <fonctions type="SaLDecFonc">
+  <tete type="SaDecFonc" nom="f" typeRetour="nul">
+   <parametres type="SaLDecVar">
+    <tete type="SaDecVarSimple" nom="a" typeVariable="entier"/>
+    <queue type="SaLDecVar">
+     <tete type="SaDecVarSimple" nom="b" typeVariable="entier"/>
+     <queue type="SaLDecVar">
+      <tete type="SaDecVarSimple" nom="c" typeVariable="entier"/>
+      <queue type="SaLDecVar">
+       <tete type="SaDecVarSimple" nom="d" typeVariable="entier"/>
+       <queue type="SaLDecVar">
+        <tete type="SaDecVarSimple" nom="e" typeVariable="entier"/>
+       </queue>
+      </queue>
+     </queue>
+    </queue>
+   </parametres>
+   <corps type="SaInstBloc">
+    <val type="SaLInst">
+     <tete type="SaInstEcriture">
+      <arg type="SaExpVar">
+       <var type="SaVarSimple" nom="a"/>
+      </arg>
+     </tete>
+     <queue type="SaLInst">
+      <tete type="SaInstEcriture">
+       <arg type="SaExpVar">
+        <var type="SaVarSimple" nom="b"/>
+       </arg>
+      </tete>
+      <queue type="SaLInst">
+       <tete type="SaInstEcriture">
+        <arg type="SaExpVar">
+         <var type="SaVarSimple" nom="c"/>
+        </arg>
+       </tete>
+       <queue type="SaLInst">
+        <tete type="SaInstEcriture">
+         <arg type="SaExpVar">
+          <var type="SaVarSimple" nom="d"/>
+         </arg>
+        </tete>
+        <queue type="SaLInst">
+         <tete type="SaInstEcriture">
+          <arg type="SaExpVar">
+           <var type="SaVarSimple" nom="e"/>
+          </arg>
+         </tete>
+        </queue>
+       </queue>
+      </queue>
+     </queue>
+    </val>
+   </corps>
+  </tete>
+  <queue type="SaLDecFonc">
+   <tete type="SaDecFonc" nom="main" typeRetour="nul">
+    <corps type="SaInstBloc">
+     <val type="SaLInst">
+      <tete type="SaAppel" nom="f">
+       <arguments type="SaLExp">
+        <tete type="SaExpInt" val="1"/>
+        <queue type="SaLExp">
+         <tete type="SaExpInt" val="2"/>
+         <queue type="SaLExp">
+          <tete type="SaExpInt" val="3"/>
+          <queue type="SaLExp">
+           <tete type="SaExpInt" val="4"/>
+           <queue type="SaLExp">
+            <tete type="SaExpInt" val="5"/>
+           </queue>
+          </queue>
+         </queue>
+        </queue>
+       </arguments>
+      </tete>
+     </val>
+    </corps>
+   </tete>
+  </queue>
+ </fonctions>
+</programme>
