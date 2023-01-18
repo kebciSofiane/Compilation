@@ -1,0 +1,28 @@
+Package sc;
+
+Helpers
+
+lettre = [['a' .. 'z'] + ['A' .. 'Z']];
+chiffre = ['0' .. '9'];
+alpha = [lettre + ['_' + '$']];
+alphanum = [lettre + chiffre];
+
+Tokens
+
+espaces = (' ' | 13 | 10)+;
+commentaire= '#' [[0 .. 0xffff] - [10 + 13]]* (10 | 13 | 10 13);
+virgule = ',';
+nombre = chiffre+;
+identif = alpha alphanum*;
+
+Ignored Tokens
+
+espaces, commentaire;
+
+Productions
+
+// l'axiome
+
+programme = listedecvar listedecfonc ;
+
+
