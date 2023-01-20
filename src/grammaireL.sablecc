@@ -14,6 +14,37 @@ commentaire= '#' [[0 .. 0xffff] - [10 + 13]]* (10 | 13 | 10 13);
 virgule = ',';
 nombre = chiffre+;
 identif = alpha alphanum*;
+co = '[';
+cf = ']';
+po = '(';
+pf = ')';
+aco = '{';
+acf = '}';
+pvirgule =';';
+tantque = 'tantque';
+faire = 'faire';
+si ='si';
+alors = 'alors';
+sinon = 'sinon';
+retourne = 'retourne';
+ecrire = 'ecrire';
+ou = 'ou';
+et = 'et';
+lire = 'lire';
+vrai = 'vrai';
+faux = 'faux';
+
+egale = '=';
+inf = '<';
+plus ='+';
+moins ='-';
+div = '/';
+mult = '*';
+non = '!';
+
+
+
+
 
 Ignored Tokens
 
@@ -24,5 +55,63 @@ Productions
 // l'axiome
 
 programme = listedecvar listedecfonc ;
+
+listedecvar = decvar listedecvarbis
+    | ;
+listedecvarbis = virgule decvar listedecvarbis
+    | ;
+decvar = typevar id
+    | typevar id co nombre cf;
+typevar = entier
+    | boolean;
+
+
+listedecfonc = decfonc listedecfonc
+    | ;
+decfonc = typeop id po listedecvar pf listedecvar blocinst;
+typeop = typevar
+    | ;
+blocinst = aco listeinst acf ;
+listeinst = inst listeinst
+    | ;
+inst = var exp pvirgule
+    | tantque exp faire blocinst
+    | si exp alors blocinst
+    | si exp alors blocinst sinon blocinst
+    | retourne exp pvirgule
+    | id po listeexp pf pvirgule
+    | ecrire po exp pf pvirgule ;
+
+
+listeexp = exp listeexpbis
+    | ;
+listeexpbis = virgule exp listeexpbis
+    | ;
+
+exp = exp ou exp2
+    | exp2 ;
+exp2 = exp2 et exp3
+    | exp3 ;
+exp3 = exp3 egale exp4
+    | exp3 inf exp4
+    |exp4;
+exp4 = exp4 plus exp5
+    |exp4 moins exp5
+    |exp5;
+exp5 = exp5 div exp6
+    | exp5 mult exp6
+    | exp6;
+exp6 = non exp6
+    |exp7;
+exp7= po exp pf
+    | var
+    | nombre
+    | id po listeexp pf
+    | lire po pf
+    | vrai
+    | faux;
+var = id
+    |id aco exp acf;
+
 
 
