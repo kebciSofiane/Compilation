@@ -13,7 +13,6 @@ espaces = (' ' | 13 | 10)+;
 commentaire= '#' [[0 .. 0xffff] - [10 + 13]]* (10 | 13 | 10 13);
 virgule = ',';
 nombre = chiffre+;
-identif = alpha alphanum*;
 co = '[';
 cf = ']';
 po = '(';
@@ -26,7 +25,7 @@ faire = 'faire';
 si ='si';
 alors = 'alors';
 sinon = 'sinon';
-retourne = 'retourne';
+retourne = 'retour';
 ecrire = 'ecrire';
 ou = 'ou';
 et = 'et';
@@ -41,9 +40,11 @@ moins ='-';
 div = '/';
 mult = '*';
 non = '!';
+entier = 'entier';
+boolean = 'boolean';
 
 
-
+id = alpha alphanum*;
 
 
 Ignored Tokens
@@ -56,62 +57,63 @@ Productions
 
 programme = listedecvar listedecfonc ;
 
-listedecvar = decvar listedecvarbis
-    | ;
-listedecvarbis = virgule decvar listedecvarbis
-    | ;
-decvar = typevar id
-    | typevar id co nombre cf;
-typevar = entier
-    | boolean;
+listedecvar = {cas1} decvar listedecvarbis
+    | {vide} ;
+listedecvarbis = {cas2} virgule decvar listedecvarbis
+    | {cas3} ;
+decvar = {cas4} typevar id
+    | {cas5} typevar id co nombre cf;
+typevar = {cas6} entier
+    | {cas7} boolean;
 
 
-listedecfonc = decfonc listedecfonc
-    | ;
-decfonc = typeop id po listedecvar pf listedecvar blocinst;
-typeop = typevar
-    | ;
+listedecfonc = {cas8} decfonc listedecfonc
+    | {cas9};
+
+decfonc = typeop id po [premier]:listedecvar pf [second]:listedecvar blocinst ;
+typeop = {cas10} typevar
+    | {cas11} ;
 blocinst = aco listeinst acf ;
-listeinst = inst listeinst
-    | ;
-inst = var exp pvirgule
-    | tantque exp faire blocinst
-    | si exp alors blocinst
-    | si exp alors blocinst sinon blocinst
-    | retourne exp pvirgule
-    | id po listeexp pf pvirgule
-    | ecrire po exp pf pvirgule ;
+listeinst = {cas12} inst listeinst
+    |{cas13} ;
+inst = {cas14} var exp pvirgule
+    | {cas15} tantque exp faire blocinst
+    | {cas16} si exp alors blocinst
+    | {cas17} si exp alors [premier]:blocinst sinon [second]:blocinst
+    | {cas18} retourne exp pvirgule
+    | {cas19} id po listeexp pf pvirgule
+    | {cas20} ecrire po exp pf pvirgule;
 
 
-listeexp = exp listeexpbis
-    | ;
-listeexpbis = virgule exp listeexpbis
-    | ;
+listeexp = {cas21} exp listeexpbis
+    | {cas22};
+listeexpbis = {cas23} virgule exp listeexpbis
+    |{cas24} ;
 
-exp = exp ou exp2
-    | exp2 ;
-exp2 = exp2 et exp3
-    | exp3 ;
-exp3 = exp3 egale exp4
-    | exp3 inf exp4
-    |exp4;
-exp4 = exp4 plus exp5
-    |exp4 moins exp5
-    |exp5;
-exp5 = exp5 div exp6
-    | exp5 mult exp6
-    | exp6;
-exp6 = non exp6
-    |exp7;
-exp7= po exp pf
-    | var
-    | nombre
-    | id po listeexp pf
-    | lire po pf
-    | vrai
-    | faux;
-var = id
-    |id aco exp acf;
+exp = {cas25} exp ou exp2
+    | {cas26} exp2 ;
+exp2 = {cas27} exp2 et exp3
+    | {cas28} exp3 ;
+exp3 = {cas29} exp3 egale exp4
+    | {cas30} exp3 inf exp4
+    |{cas31} exp4;
+exp4 = {cas32} exp4 plus exp5
+    |{cas33} exp4 moins exp5
+    |{cas34} exp5;
+exp5 = {cas35} exp5 div exp6
+    | {cas36} exp5 mult exp6
+    | {cas37} exp6;
+exp6 = {cas38} non exp6
+    |{cas39} exp7;
+exp7= {cas40} po exp pf
+    | {cas41} var
+    | {cas42} nombre
+    | {cas43} id po listeexp pf
+    | {cas44} lire po pf
+    | {cas45} vrai
+    | {cas46} faux;
+var = {cas47} id
+    | {cas48} id aco exp acf;
 
 
 
