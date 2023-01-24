@@ -211,46 +211,67 @@ public class ReversedDepthFirstAdapter extends AnalysisAdapter
         outAFoncDecvar(node);
     }
 
-    public void inAEntierTypevar(AEntierTypevar node)
+    public void inAVraiTypevar(AVraiTypevar node)
     {
         defaultIn(node);
     }
 
-    public void outAEntierTypevar(AEntierTypevar node)
+    public void outAVraiTypevar(AVraiTypevar node)
     {
         defaultOut(node);
     }
 
     @Override
-    public void caseAEntierTypevar(AEntierTypevar node)
+    public void caseAVraiTypevar(AVraiTypevar node)
     {
-        inAEntierTypevar(node);
-        if(node.getEntier() != null)
+        inAVraiTypevar(node);
+        if(node.getVrai() != null)
         {
-            node.getEntier().apply(this);
+            node.getVrai().apply(this);
         }
-        outAEntierTypevar(node);
+        outAVraiTypevar(node);
     }
 
-    public void inABooleanTypevar(ABooleanTypevar node)
+    public void inAFauxTypevar(AFauxTypevar node)
     {
         defaultIn(node);
     }
 
-    public void outABooleanTypevar(ABooleanTypevar node)
+    public void outAFauxTypevar(AFauxTypevar node)
     {
         defaultOut(node);
     }
 
     @Override
-    public void caseABooleanTypevar(ABooleanTypevar node)
+    public void caseAFauxTypevar(AFauxTypevar node)
     {
-        inABooleanTypevar(node);
-        if(node.getBoolean() != null)
+        inAFauxTypevar(node);
+        if(node.getFaux() != null)
         {
-            node.getBoolean().apply(this);
+            node.getFaux().apply(this);
         }
-        outABooleanTypevar(node);
+        outAFauxTypevar(node);
+    }
+
+    public void inANombreTypevar(ANombreTypevar node)
+    {
+        defaultIn(node);
+    }
+
+    public void outANombreTypevar(ANombreTypevar node)
+    {
+        defaultOut(node);
+    }
+
+    @Override
+    public void caseANombreTypevar(ANombreTypevar node)
+    {
+        inANombreTypevar(node);
+        if(node.getNombre() != null)
+        {
+            node.getNombre().apply(this);
+        }
+        outANombreTypevar(node);
     }
 
     public void inADecfoncListedecfonc(ADecfoncListedecfonc node)
@@ -470,6 +491,10 @@ public class ReversedDepthFirstAdapter extends AnalysisAdapter
         if(node.getExp() != null)
         {
             node.getExp().apply(this);
+        }
+        if(node.getEgale() != null)
+        {
+            node.getEgale().apply(this);
         }
         if(node.getVar() != null)
         {

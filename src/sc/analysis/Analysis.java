@@ -19,8 +19,9 @@ public interface Analysis extends Switch
     void caseAVideListedecvarbis(AVideListedecvarbis node);
     void caseAVarDecvar(AVarDecvar node);
     void caseAFoncDecvar(AFoncDecvar node);
-    void caseAEntierTypevar(AEntierTypevar node);
-    void caseABooleanTypevar(ABooleanTypevar node);
+    void caseAVraiTypevar(AVraiTypevar node);
+    void caseAFauxTypevar(AFauxTypevar node);
+    void caseANombreTypevar(ANombreTypevar node);
     void caseADecfoncListedecfonc(ADecfoncListedecfonc node);
     void caseAVideListedecfonc(AVideListedecfonc node);
     void caseADecfonc(ADecfonc node);

@@ -66,8 +66,7 @@ listedecvarbis = {listdecvar} virgule decvar listedecvarbis
 decvar = {var} typevar id
     | {fonc} typevar id co nombre cf;
 
-typevar = {entier} entier
-    | {boolean} boolean;
+typevar = {vrai} vrai | {faux} faux| {nombre} nombre;
 
 
 listedecfonc = {decfonc} decfonc listedecfonc
@@ -83,7 +82,7 @@ blocinst = aco listeinst acf ;
 listeinst = {listinst} inst listeinst
     |{vide} ;
 
-inst = {inst} var exp pvirgule
+inst = {inst} var egale exp pvirgule
     | {tanque} tantque exp faire blocinst
     | {si} si exp alors blocinst
     | {sisinon} si exp alors [premier]:blocinst sinon [second]:blocinst
@@ -94,6 +93,7 @@ inst = {inst} var exp pvirgule
 
 listeexp = {listexp} exp listeexpbis
     | {vide};
+
 listeexpbis = {listexpbis} virgule exp listeexpbis
     |{vide} ;
 
