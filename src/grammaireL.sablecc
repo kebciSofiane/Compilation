@@ -57,63 +57,77 @@ Productions
 
 programme = listedecvar listedecfonc ;
 
-listedecvar = {cas1} decvar listedecvarbis
+listedecvar = {decvar} decvar listedecvarbis
     | {vide} ;
-listedecvarbis = {cas2} virgule decvar listedecvarbis
-    | {cas3} ;
-decvar = {cas4} typevar id
-    | {cas5} typevar id co nombre cf;
-typevar = {cas6} entier
-    | {cas7} boolean;
+
+listedecvarbis = {listdecvar} virgule decvar listedecvarbis
+    | {vide} ;
+
+decvar = {var} typevar id
+    | {fonc} typevar id co nombre cf;
+
+typevar = {entier} entier
+    | {boolean} boolean;
 
 
-listedecfonc = {cas8} decfonc listedecfonc
-    | {cas9};
+listedecfonc = {decfonc} decfonc listedecfonc
+    | {vide};
 
 decfonc = typeop id po [premier]:listedecvar pf [second]:listedecvar blocinst ;
-typeop = {cas10} typevar
-    | {cas11} ;
+
+typeop = {typeop} typevar
+    | {vide} ;
+
 blocinst = aco listeinst acf ;
-listeinst = {cas12} inst listeinst
-    |{cas13} ;
-inst = {cas14} var exp pvirgule
-    | {cas15} tantque exp faire blocinst
-    | {cas16} si exp alors blocinst
-    | {cas17} si exp alors [premier]:blocinst sinon [second]:blocinst
-    | {cas18} retourne exp pvirgule
-    | {cas19} id po listeexp pf pvirgule
-    | {cas20} ecrire po exp pf pvirgule;
+
+listeinst = {listinst} inst listeinst
+    |{vide} ;
+
+inst = {inst} var exp pvirgule
+    | {tanque} tantque exp faire blocinst
+    | {si} si exp alors blocinst
+    | {sisinon} si exp alors [premier]:blocinst sinon [second]:blocinst
+    | {retourn} retourne exp pvirgule
+    | {appfonc} id po listeexp pf pvirgule
+    | {ecrire} ecrire po exp pf pvirgule;
 
 
-listeexp = {cas21} exp listeexpbis
-    | {cas22};
-listeexpbis = {cas23} virgule exp listeexpbis
-    |{cas24} ;
+listeexp = {listexp} exp listeexpbis
+    | {vide};
+listeexpbis = {listexpbis} virgule exp listeexpbis
+    |{vide} ;
 
-exp = {cas25} exp ou exp2
-    | {cas26} exp2 ;
-exp2 = {cas27} exp2 et exp3
-    | {cas28} exp3 ;
-exp3 = {cas29} exp3 egale exp4
-    | {cas30} exp3 inf exp4
-    |{cas31} exp4;
-exp4 = {cas32} exp4 plus exp5
-    |{cas33} exp4 moins exp5
-    |{cas34} exp5;
-exp5 = {cas35} exp5 div exp6
-    | {cas36} exp5 mult exp6
-    | {cas37} exp6;
-exp6 = {cas38} non exp6
-    |{cas39} exp7;
-exp7= {cas40} po exp pf
-    | {cas41} var
-    | {cas42} nombre
-    | {cas43} id po listeexp pf
-    | {cas44} lire po pf
-    | {cas45} vrai
-    | {cas46} faux;
-var = {cas47} id
-    | {cas48} id aco exp acf;
+exp = {ou} exp ou exp2
+    | {exp2} exp2 ;
+
+exp2 = {et} exp2 et exp3
+    | {exp3} exp3 ;
+
+exp3 = {egale} exp3 egale exp4
+    | {inf} exp3 inf exp4
+    |{exp4} exp4;
+
+exp4 = {plus} exp4 plus exp5
+    |{moins} exp4 moins exp5
+    |{exp5} exp5;
+
+exp5 = {div} exp5 div exp6
+    | {mult} exp5 mult exp6
+    | {exp6} exp6;
+
+exp6 = {non} non exp6
+    |{exp7} exp7;
+
+exp7= {expb} po exp pf
+    | {var} var
+    | {nombre} nombre
+    | {appelfonc} id po listeexp pf
+    | {lire} lire po pf
+    | {vrai} vrai
+    | {faux} faux;
+
+var = {id} id
+    | {idb} id aco exp acf;
 
 
 
