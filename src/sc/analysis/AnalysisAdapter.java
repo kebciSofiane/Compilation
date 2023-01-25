@@ -117,19 +117,13 @@ public class AnalysisAdapter implements Analysis
     }
 
     @Override
-    public void caseAVraiTypevar(AVraiTypevar node)
+    public void caseABooleanTypevar(ABooleanTypevar node)
     {
         defaultCase(node);
     }
 
     @Override
-    public void caseAFauxTypevar(AFauxTypevar node)
-    {
-        defaultCase(node);
-    }
-
-    @Override
-    public void caseANombreTypevar(ANombreTypevar node)
+    public void caseAEntierTypevar(AEntierTypevar node)
     {
         defaultCase(node);
     }

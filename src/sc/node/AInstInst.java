@@ -8,6 +8,7 @@ import sc.analysis.*;
 public final class AInstInst extends PInst
 {
     private PVar _var_;
+    private TEgale _egale_;
     private PExp _exp_;
     private TPvirgule _pvirgule_;
 
@@ -18,11 +19,14 @@ public final class AInstInst extends PInst
 
     public AInstInst(
         @SuppressWarnings("hiding") PVar _var_,
+        @SuppressWarnings("hiding") TEgale _egale_,
         @SuppressWarnings("hiding") PExp _exp_,
         @SuppressWarnings("hiding") TPvirgule _pvirgule_)
     {
         // Constructor
         setVar(_var_);
+
+        setEgale(_egale_);
 
         setExp(_exp_);
 
@@ -35,6 +39,7 @@ public final class AInstInst extends PInst
     {
         return new AInstInst(
             cloneNode(this._var_),
+            cloneNode(this._egale_),
             cloneNode(this._exp_),
             cloneNode(this._pvirgule_));
     }
@@ -68,6 +73,31 @@ public final class AInstInst extends PInst
         }
 
         this._var_ = node;
+    }
+
+    public TEgale getEgale()
+    {
+        return this._egale_;
+    }
+
+    public void setEgale(TEgale node)
+    {
+        if(this._egale_ != null)
+        {
+            this._egale_.parent(null);
+        }
+
+        if(node != null)
+        {
+            if(node.parent() != null)
+            {
+                node.parent().removeChild(node);
+            }
+
+            node.parent(this);
+        }
+
+        this._egale_ = node;
     }
 
     public PExp getExp()
@@ -125,6 +155,7 @@ public final class AInstInst extends PInst
     {
         return ""
             + toString(this._var_)
+            + toString(this._egale_)
             + toString(this._exp_)
             + toString(this._pvirgule_);
     }
@@ -136,6 +167,12 @@ public final class AInstInst extends PInst
         if(this._var_ == child)
         {
             this._var_ = null;
+            return;
+        }
+
+        if(this._egale_ == child)
+        {
+            this._egale_ = null;
             return;
         }
 
@@ -161,6 +198,12 @@ public final class AInstInst extends PInst
         if(this._var_ == oldChild)
         {
             setVar((PVar) newChild);
+            return;
+        }
+
+        if(this._egale_ == oldChild)
+        {
+            setEgale((TEgale) newChild);
             return;
         }
 

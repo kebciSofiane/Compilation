@@ -1,0 +1,78 @@
+Évaluation de Diff de sa :
+0/80 correct (  0.00%)
+Évaluation de Diff de ts :
+0/80 correct (  0.00%)
+Évaluation de Execution de sa :
+0/80 correct (  0.00%)
+Évaluation de Diff de c3a :
+0/80 correct (  0.00%)
+Évaluation de Execution du c3a :
+0/80 correct (  0.00%)
+Évaluation de Diff de pre-nasm :
+0/80 correct (  0.00%)
+Évaluation de Execution du pre-nasm :
+0/80 correct (  0.00%)
+Évaluation de Diff de nasm :
+0/80 correct (  0.00%)
+Évaluation de Execution du nasm :
+0/80 correct (  0.00%)
+Évaluation de Execution du binaire :
+0/80 correct (  0.00%)
+Évaluation de ERR_TS :
+0/7 correct (  0.00%)
+	double_dec1.l       INCORRECT
+	double_dec2.l       INCORRECT
+	double_dec3.l       INCORRECT
+	double_dec4.l       INCORRECT
+	fct_inconnue1.l     INCORRECT
+	mauvais_nb_arg1.l   INCORRECT
+	var_inconnue1.l     INCORRECT
+Évaluation de ERR_TYPE :
+0/46 correct (  0.00%)
+	add1.l       INCORRECT
+	add2.l       INCORRECT
+	add3.l       INCORRECT
+	add4.l       INCORRECT
+	affect1.l    INCORRECT
+	affect2.l    INCORRECT
+	affect3.l    INCORRECT
+	affect4.l    INCORRECT
+	and1.l       INCORRECT
+	and2.l       INCORRECT
+	and3.l       INCORRECT
+	and4.l       INCORRECT
+	appel1.l     INCORRECT
+	appel2.l     INCORRECT
+	appel3.l     INCORRECT
+	appel4.l     INCORRECT
+	div1.l       INCORRECT
+	div2.l       INCORRECT
+	div3.l       INCORRECT
+	div4.l       INCORRECT
+	egal1.l      INCORRECT
+	egal2.l      INCORRECT
+	egal3.l      INCORRECT
+	egal4.l      INCORRECT
+	inf1.l       INCORRECT
+	inf2.l       INCORRECT
+	inf3.l       INCORRECT
+	inf4.l       INCORRECT
+	mult1.l      INCORRECT
+	mult2.l      INCORRECT
+	mult3.l      INCORRECT
+	mult4.l      INCORRECT
+	not1.l       INCORRECT
+	or1.l        INCORRECT
+	or2.l        INCORRECT
+	or3.l        INCORRECT
+	or4.l        INCORRECT
+	retour1.l    INCORRECT
+	retour2.l    INCORRECT
+	retour3.l    INCORRECT
+	si1.l        INCORRECT
+	sub1.l       INCORRECT
+	sub2.l       INCORRECT
+	sub3.l       INCORRECT
+	sub4.l       INCORRECT
+	tantque1.l   INCORRECT
+

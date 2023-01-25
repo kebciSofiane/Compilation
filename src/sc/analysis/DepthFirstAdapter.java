@@ -211,67 +211,46 @@ public class DepthFirstAdapter extends AnalysisAdapter
         outAFoncDecvar(node);
     }
 
-    public void inAVraiTypevar(AVraiTypevar node)
+    public void inABooleanTypevar(ABooleanTypevar node)
     {
         defaultIn(node);
     }
 
-    public void outAVraiTypevar(AVraiTypevar node)
+    public void outABooleanTypevar(ABooleanTypevar node)
     {
         defaultOut(node);
     }
 
     @Override
-    public void caseAVraiTypevar(AVraiTypevar node)
+    public void caseABooleanTypevar(ABooleanTypevar node)
     {
-        inAVraiTypevar(node);
-        if(node.getVrai() != null)
+        inABooleanTypevar(node);
+        if(node.getBoolean() != null)
         {
-            node.getVrai().apply(this);
+            node.getBoolean().apply(this);
         }
-        outAVraiTypevar(node);
+        outABooleanTypevar(node);
     }
 
-    public void inAFauxTypevar(AFauxTypevar node)
+    public void inAEntierTypevar(AEntierTypevar node)
     {
         defaultIn(node);
     }
 
-    public void outAFauxTypevar(AFauxTypevar node)
+    public void outAEntierTypevar(AEntierTypevar node)
     {
         defaultOut(node);
     }
 
     @Override
-    public void caseAFauxTypevar(AFauxTypevar node)
+    public void caseAEntierTypevar(AEntierTypevar node)
     {
-        inAFauxTypevar(node);
-        if(node.getFaux() != null)
+        inAEntierTypevar(node);
+        if(node.getEntier() != null)
         {
-            node.getFaux().apply(this);
+            node.getEntier().apply(this);
         }
-        outAFauxTypevar(node);
-    }
-
-    public void inANombreTypevar(ANombreTypevar node)
-    {
-        defaultIn(node);
-    }
-
-    public void outANombreTypevar(ANombreTypevar node)
-    {
-        defaultOut(node);
-    }
-
-    @Override
-    public void caseANombreTypevar(ANombreTypevar node)
-    {
-        inANombreTypevar(node);
-        if(node.getNombre() != null)
-        {
-            node.getNombre().apply(this);
-        }
-        outANombreTypevar(node);
+        outAEntierTypevar(node);
     }
 
     public void inADecfoncListedecfonc(ADecfoncListedecfonc node)
@@ -1398,17 +1377,17 @@ public class DepthFirstAdapter extends AnalysisAdapter
         {
             node.getId().apply(this);
         }
-        if(node.getAco() != null)
+        if(node.getCo() != null)
         {
-            node.getAco().apply(this);
+            node.getCo().apply(this);
         }
         if(node.getExp() != null)
         {
             node.getExp().apply(this);
         }
-        if(node.getAcf() != null)
+        if(node.getCf() != null)
         {
-            node.getAcf().apply(this);
+            node.getCf().apply(this);
         }
         outAIdbVar(node);
     }

@@ -9,12 +9,12 @@ public final class TOu extends Token
 {
     public TOu()
     {
-        super.setText("ou");
+        super.setText("|");
     }
 
     public TOu(int line, int pos)
     {
-        super.setText("ou");
+        super.setText("|");
         setLine(line);
         setPos(pos);
     }

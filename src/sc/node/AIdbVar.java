@@ -8,9 +8,9 @@ import sc.analysis.*;
 public final class AIdbVar extends PVar
 {
     private TId _id_;
-    private TAco _aco_;
+    private TCo _co_;
     private PExp _exp_;
-    private TAcf _acf_;
+    private TCf _cf_;
 
     public AIdbVar()
     {
@@ -19,18 +19,18 @@ public final class AIdbVar extends PVar
 
     public AIdbVar(
         @SuppressWarnings("hiding") TId _id_,
-        @SuppressWarnings("hiding") TAco _aco_,
+        @SuppressWarnings("hiding") TCo _co_,
         @SuppressWarnings("hiding") PExp _exp_,
-        @SuppressWarnings("hiding") TAcf _acf_)
+        @SuppressWarnings("hiding") TCf _cf_)
     {
         // Constructor
         setId(_id_);
 
-        setAco(_aco_);
+        setCo(_co_);
 
         setExp(_exp_);
 
-        setAcf(_acf_);
+        setCf(_cf_);
 
     }
 
@@ -39,9 +39,9 @@ public final class AIdbVar extends PVar
     {
         return new AIdbVar(
             cloneNode(this._id_),
-            cloneNode(this._aco_),
+            cloneNode(this._co_),
             cloneNode(this._exp_),
-            cloneNode(this._acf_));
+            cloneNode(this._cf_));
     }
 
     @Override
@@ -75,16 +75,16 @@ public final class AIdbVar extends PVar
         this._id_ = node;
     }
 
-    public TAco getAco()
+    public TCo getCo()
     {
-        return this._aco_;
+        return this._co_;
     }
 
-    public void setAco(TAco node)
+    public void setCo(TCo node)
     {
-        if(this._aco_ != null)
+        if(this._co_ != null)
         {
-            this._aco_.parent(null);
+            this._co_.parent(null);
         }
 
         if(node != null)
@@ -97,7 +97,7 @@ public final class AIdbVar extends PVar
             node.parent(this);
         }
 
-        this._aco_ = node;
+        this._co_ = node;
     }
 
     public PExp getExp()
@@ -125,16 +125,16 @@ public final class AIdbVar extends PVar
         this._exp_ = node;
     }
 
-    public TAcf getAcf()
+    public TCf getCf()
     {
-        return this._acf_;
+        return this._cf_;
     }
 
-    public void setAcf(TAcf node)
+    public void setCf(TCf node)
     {
-        if(this._acf_ != null)
+        if(this._cf_ != null)
         {
-            this._acf_.parent(null);
+            this._cf_.parent(null);
         }
 
         if(node != null)
@@ -147,7 +147,7 @@ public final class AIdbVar extends PVar
             node.parent(this);
         }
 
-        this._acf_ = node;
+        this._cf_ = node;
     }
 
     @Override
@@ -155,9 +155,9 @@ public final class AIdbVar extends PVar
     {
         return ""
             + toString(this._id_)
-            + toString(this._aco_)
+            + toString(this._co_)
             + toString(this._exp_)
-            + toString(this._acf_);
+            + toString(this._cf_);
     }
 
     @Override
@@ -170,9 +170,9 @@ public final class AIdbVar extends PVar
             return;
         }
 
-        if(this._aco_ == child)
+        if(this._co_ == child)
         {
-            this._aco_ = null;
+            this._co_ = null;
             return;
         }
 
@@ -182,9 +182,9 @@ public final class AIdbVar extends PVar
             return;
         }
 
-        if(this._acf_ == child)
+        if(this._cf_ == child)
         {
-            this._acf_ = null;
+            this._cf_ = null;
             return;
         }
 
@@ -201,9 +201,9 @@ public final class AIdbVar extends PVar
             return;
         }
 
-        if(this._aco_ == oldChild)
+        if(this._co_ == oldChild)
         {
-            setAco((TAco) newChild);
+            setCo((TCo) newChild);
             return;
         }
 
@@ -213,9 +213,9 @@ public final class AIdbVar extends PVar
             return;
         }
 
-        if(this._acf_ == oldChild)
+        if(this._cf_ == oldChild)
         {
-            setAcf((TAcf) newChild);
+            setCf((TCf) newChild);
             return;
         }
 
