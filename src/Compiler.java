@@ -2,7 +2,7 @@ import java.io.*;
 import sc.parser.*;
 import sc.lexer.*;
 import sc.node.*;
-//import sa.*;
+import sa.*;
 //import ts.*;
 //import c3a.*;
 //import nasm.*;
@@ -51,7 +51,7 @@ public class Compiler
 		tree.apply(new Sc2Xml(baseName));
 	    }
 	    
-	    /*	    System.out.println("[BUILD SA] ");
+	    System.out.println("[BUILD SA] ");
 	    Sc2sa sc2sa = new Sc2sa();
 	    tree.apply(sc2sa);
 	    SaNode saRoot = sc2sa.getRoot();
@@ -59,7 +59,7 @@ public class Compiler
 	    if(verboseLevel > 1){
 		System.out.println("[PRINT SA]");
 		new Sa2Xml(saRoot, baseName);
-		}*/
+		}
 	    
 	    /* System.out.println("[BUILD TS] ");
 	    Ts tableGlobale = new Sa2ts(saRoot).getTableGlobale();
