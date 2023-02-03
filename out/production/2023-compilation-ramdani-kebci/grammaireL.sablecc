@@ -1,0 +1,133 @@
+Package sc;
+
+Helpers
+
+lettre = [['a' .. 'z'] + ['A' .. 'Z']];
+chiffre = ['0' .. '9'];
+alpha = [lettre + ['_' + '$']];
+alphanum = [lettre + chiffre];
+
+Tokens
+
+espaces = (' ' | 13 | 10)+;
+commentaire= '#' [[0 .. 0xffff] - [10 + 13]]* (10 | 13 | 10 13);
+virgule = ',';
+nombre = chiffre+;
+co = '[';
+cf = ']';
+po = '(';
+pf = ')';
+aco = '{';
+acf = '}';
+pvirgule =';';
+tantque = 'tantque';
+faire = 'faire';
+si ='si';
+alors = 'alors';
+sinon = 'sinon';
+retourne = 'retour';
+ecrire = 'ecrire';
+ou = 'ou';
+et = 'et';
+lire = 'lire';
+vrai = 'vrai';
+faux = 'faux';
+
+egale = '=';
+inf = '<';
+plus ='+';
+moins ='-';
+div = '/';
+mult = '*';
+non = '!';
+entier = 'entier';
+boolean = 'boolean';
+
+
+id = alpha alphanum*;
+
+
+Ignored Tokens
+
+espaces, commentaire;
+
+Productions
+
+// l'axiome
+
+programme = listedecvar listedecfonc ;
+
+listedecvar = {decvar} decvar listedecvarbis
+    | {vide} ;
+
+listedecvarbis = {listdecvar} virgule decvar listedecvarbis
+    | {vide} ;
+
+decvar = {var} typevar id
+    | {fonc} typevar id co nombre cf;
+
+typevar = {vrai} vrai | {faux} faux| {nombre} nombre;
+
+
+listedecfonc = {decfonc} decfonc listedecfonc
+    | {vide};
+
+decfonc = typeop id po [premier]:listedecvar pf [second]:listedecvar blocinst ;
+
+typeop = {typeop} typevar
+    | {vide} ;
+
+blocinst = aco listeinst acf ;
+
+listeinst = {listinst} inst listeinst
+    |{vide} ;
+
+inst = {inst} var egale exp pvirgule
+    | {tanque} tantque exp faire blocinst
+    | {si} si exp alors blocinst
+    | {sisinon} si exp alors [premier]:blocinst sinon [second]:blocinst
+    | {retourn} retourne exp pvirgule
+    | {appfonc} id po listeexp pf pvirgule
+    | {ecrire} ecrire po exp pf pvirgule;
+
+
+listeexp = {listexp} exp listeexpbis
+    | {vide};
+
+listeexpbis = {listexpbis} virgule exp listeexpbis
+    |{vide} ;
+
+exp = {ou} exp ou exp2
+    | {exp2} exp2 ;
+
+exp2 = {et} exp2 et exp3
+    | {exp3} exp3 ;
+
+exp3 = {egale} exp3 egale exp4
+    | {inf} exp3 inf exp4
+    |{exp4} exp4;
+
+exp4 = {plus} exp4 plus exp5
+    |{moins} exp4 moins exp5
+    |{exp5} exp5;
+
+exp5 = {div} exp5 div exp6
+    | {mult} exp5 mult exp6
+    | {exp6} exp6;
+
+exp6 = {non} non exp6
+    |{exp7} exp7;
+
+exp7= {expb} po exp pf
+    | {var} var
+    | {nombre} nombre
+    | {appelfonc} id po listeexp pf
+    | {lire} lire po pf
+    | {vrai} vrai
+    | {faux} faux;
+
+var = {id} id
+    | {idb} id aco exp acf;
+
+
+
