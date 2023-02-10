@@ -27,13 +27,6 @@ public class Sc2sa extends DepthFirstAdapter {
         defaultOut(node);
     }
 
-    public void inAProgramme(AProgramme node) {
-        defaultIn(node);
-    }
-
-    public void outAProgramme(AProgramme node) {
-        defaultOut(node);
-    }
 
 
 
@@ -75,26 +68,17 @@ public class Sc2sa extends DepthFirstAdapter {
         SaLDecFonc  LdecFonc = null;
         if (node.getListedecvar() != null) {
             node.getListedecvar().apply(this);
-            LdecFonc = (SaLDecFonc) this.returnValue;
+            LdecVar = (SaLDecVar) this.returnValue;
         }
         if (node.getListedecfonc() != null) {
             node.getListedecfonc().apply(this);
-            LdecVar = (SaLDecVar) this.returnValue;
+            LdecFonc = (SaLDecFonc) this.returnValue;
 
         }
         this.returnValue = new SaProg(LdecVar,LdecFonc);
 
         outAProgramme(node);
     }
-
-    public void inADecvarListedecvar(ADecvarListedecvar node) {
-        defaultIn(node);
-    }
-
-    public void outADecvarListedecvar(ADecvarListedecvar node) {
-        defaultOut(node);
-    }
-
 
 
     //listedecvar = {decvar} decvar listedecvarbis
@@ -116,17 +100,11 @@ public class Sc2sa extends DepthFirstAdapter {
     }
 
 
-    public void inAVideListedecvar(AVideListedecvar node) {
-        defaultIn(node);
-    }
-
-    public void outAVideListedecvar(AVideListedecvar node) {
-        defaultOut(node);
-    }
 
     @Override
     public void caseAVideListedecvar(AVideListedecvar node) {
         inAVideListedecvar(node);
+        this.returnValue=null;
         outAVideListedecvar(node);
     }
 
@@ -150,46 +128,12 @@ public class Sc2sa extends DepthFirstAdapter {
         outAListdecvarListedecvarbis(node);
     }
 
-    public void inAListdecvarListedecvarbis(AListdecvarListedecvarbis node) {
-        defaultIn(node);
-    }
-
-    public void outAListdecvarListedecvarbis(AListdecvarListedecvarbis node) {
-        defaultOut(node);
-    }
-
-
-
-
-
-
-
-
-
-
-    public void inAVideListedecvarbis(AVideListedecvarbis node) {
-        defaultIn(node);
-    }
-
-    public void outAVideListedecvarbis(AVideListedecvarbis node) {
-        defaultOut(node);
-    }
-
     @Override
     public void caseAVideListedecvarbis(AVideListedecvarbis node) {
         inAVideListedecvarbis(node);
+        this.returnValue =null;
         outAVideListedecvarbis(node);
     }
-
-
-    public void inAVarDecvar(AVarDecvar node) {
-        defaultIn(node);
-    }
-
-    public void outAVarDecvar(AVarDecvar node) {
-        defaultOut(node);
-    }
-
 
 
    // decvar = {var} typevar id
@@ -211,13 +155,6 @@ public class Sc2sa extends DepthFirstAdapter {
     }
 
 
-    public void inAFoncDecvar(AFoncDecvar node) {
-        defaultIn(node);
-    }
-
-    public void outAFoncDecvar(AFoncDecvar node) {
-        defaultOut(node);
-    }
 
 
     //decvar = {fonc} typevar id co nombre cf;
@@ -244,13 +181,6 @@ public class Sc2sa extends DepthFirstAdapter {
         outAFoncDecvar(node);
     }
 
-    public void inABooleanTypevar(ABooleanTypevar node) {
-        defaultIn(node);
-    }
-
-    public void outABooleanTypevar(ABooleanTypevar node) {
-        defaultOut(node);
-    }
 
 
     //typevar = {boolean} boolean
@@ -262,14 +192,6 @@ public class Sc2sa extends DepthFirstAdapter {
         }
         this.returnType = Type.BOOL;
         outABooleanTypevar(node);
-    }
-
-    public void inAEntierTypevar(AEntierTypevar node) {
-        defaultIn(node);
-    }
-
-    public void outAEntierTypevar(AEntierTypevar node) {
-        defaultOut(node);
     }
 
 
@@ -285,13 +207,6 @@ public class Sc2sa extends DepthFirstAdapter {
         outAEntierTypevar(node);
     }
 
-    public void inADecfoncListedecfonc(ADecfoncListedecfonc node) {
-        defaultIn(node);
-    }
-
-    public void outADecfoncListedecfonc(ADecfoncListedecfonc node) {
-        defaultOut(node);
-    }
 
 
     //listedecfonc = {decfonc} decfonc listedecfonc
@@ -313,27 +228,15 @@ public class Sc2sa extends DepthFirstAdapter {
         outADecfoncListedecfonc(node);
     }
 
-    public void inAVideListedecfonc(AVideListedecfonc node) {
-        defaultIn(node);
-    }
 
-    public void outAVideListedecfonc(AVideListedecfonc node) {
-        defaultOut(node);
-    }
 
     @Override
     public void caseAVideListedecfonc(AVideListedecfonc node) {
         inAVideListedecfonc(node);
+        this.returnValue =null;
         outAVideListedecfonc(node);
     }
 
-    public void inADecfonc(ADecfonc node) {
-        defaultIn(node);
-    }
-
-    public void outADecfonc(ADecfonc node) {
-        defaultOut(node);
-    }
 
     //decfonc = typeop id po [premier]:listedecvar pf [second]:listedecvar blocinst ;
     @Override
@@ -371,13 +274,6 @@ public class Sc2sa extends DepthFirstAdapter {
         outADecfonc(node);
     }
 
-    public void inATypeopTypeop(ATypeopTypeop node) {
-        defaultIn(node);
-    }
-
-    public void outATypeopTypeop(ATypeopTypeop node) {
-        defaultOut(node);
-    }
 
    // typeop = {typeop} typevar
     @Override
@@ -389,29 +285,15 @@ public class Sc2sa extends DepthFirstAdapter {
         outATypeopTypeop(node);
     }
 
-    public void inAVideTypeop(AVideTypeop node) {
-        defaultIn(node);
-    }
-
-    public void outAVideTypeop(AVideTypeop node) {
-        defaultOut(node);
-    }
-
 
     @Override
     public void caseAVideTypeop(AVideTypeop node) {
         inAVideTypeop(node);
+        this.returnType = Type.NUL;
         outAVideTypeop(node);
-        returnType = Type.NUL;
     }
 
-    public void inABlocinst(ABlocinst node) {
-        defaultIn(node);
-    }
 
-    public void outABlocinst(ABlocinst node) {
-        defaultOut(node);
-    }
 
     //blocinst = aco listeinst acf ;
     @Override
@@ -426,13 +308,6 @@ public class Sc2sa extends DepthFirstAdapter {
         outABlocinst(node);
     }
 
-    public void inAListinstListeinst(AListinstListeinst node) {
-        defaultIn(node);
-    }
-
-    public void outAListinstListeinst(AListinstListeinst node) {
-        defaultOut(node);
-    }
 
     //listeinst = {listinst} inst listeinst
 
@@ -453,27 +328,14 @@ public class Sc2sa extends DepthFirstAdapter {
         outAListinstListeinst(node);
     }
 
-    public void inAVideListeinst(AVideListeinst node) {
-        defaultIn(node);
-    }
-
-    public void outAVideListeinst(AVideListeinst node) {
-        defaultOut(node);
-    }
 
     @Override
     public void caseAVideListeinst(AVideListeinst node) {
         inAVideListeinst(node);
+        this.returnValue = null;
         outAVideListeinst(node);
     }
 
-    public void inAInstInst(AInstInst node) {
-        defaultIn(node);
-    }
-
-    public void outAInstInst(AInstInst node) {
-        defaultOut(node);
-    }
 
     //inst = {inst} var egale exp pvirgule
     @Override
@@ -494,13 +356,6 @@ public class Sc2sa extends DepthFirstAdapter {
         outAInstInst(node);
     }
 
-    public void inATanqueInst(ATanqueInst node) {
-        defaultIn(node);
-    }
-
-    public void outATanqueInst(ATanqueInst node) {
-        defaultOut(node);
-    }
 
     //inst ={tanque} tantque exp faire blocinst
 
@@ -523,13 +378,6 @@ public class Sc2sa extends DepthFirstAdapter {
         this.returnValue= new SaInstTantQue(saExp,saInstBloc);
     }
 
-    public void inASiInst(ASiInst node) {
-        defaultIn(node);
-    }
-
-    public void outASiInst(ASiInst node) {
-        defaultOut(node);
-    }
 
    // inst ={si} si exp alors blocinst
     @Override
@@ -550,13 +398,6 @@ public class Sc2sa extends DepthFirstAdapter {
         outASiInst(node);
     }
 
-    public void inASisinonInst(ASisinonInst node) {
-        defaultIn(node);
-    }
-
-    public void outASisinonInst(ASisinonInst node) {
-        defaultOut(node);
-    }
 
     //inst ={sisinon} si exp alors [premier]:blocinst sinon [second]:blocinst
     @Override
@@ -584,13 +425,7 @@ public class Sc2sa extends DepthFirstAdapter {
         outASisinonInst(node);
     }
 
-    public void inARetournInst(ARetournInst node) {
-        defaultIn(node);
-    }
 
-    public void outARetournInst(ARetournInst node) {
-        defaultOut(node);
-    }
 
     //  inst= {retourn} retourne exp pvirgule
     @Override
@@ -605,19 +440,14 @@ public class Sc2sa extends DepthFirstAdapter {
         outARetournInst(node);
     }
 
-    public void inAAppfoncInst(AAppfoncInst node) {
-        defaultIn(node);
-    }
 
-    public void outAAppfoncInst(AAppfoncInst node) {
-        defaultOut(node);
-    }
 
     //inst ={appfonc} id po listeexp pf pvirgule
     @Override
     public void caseAAppfoncInst(AAppfoncInst node) {
         inAAppfoncInst(node);
         String id = null;
+
         SaLExp saLExp = null;
 
         if (node.getId() != null) {
@@ -633,13 +463,7 @@ public class Sc2sa extends DepthFirstAdapter {
         outAAppfoncInst(node);
     }
 
-    public void inAEcrireInst(AEcrireInst node) {
-        defaultIn(node);
-    }
 
-    public void outAEcrireInst(AEcrireInst node) {
-        defaultOut(node);
-    }
 
    // inst =     | {ecrire} ecrire po exp pf pvirgule;
     @Override
@@ -655,13 +479,6 @@ public class Sc2sa extends DepthFirstAdapter {
         this.returnValue = new SaInstEcriture(saExp);
     }
 
-    public void inAListexpListeexp(AListexpListeexp node) {
-        defaultIn(node);
-    }
-
-    public void outAListexpListeexp(AListexpListeexp node) {
-        defaultOut(node);
-    }
 
     //listeexp = {listexp} exp listeexpbis
     @Override
@@ -681,28 +498,14 @@ public class Sc2sa extends DepthFirstAdapter {
         outAListexpListeexp(node);
     }
 
-    public void inAVideListeexp(AVideListeexp node) {
-        defaultIn(node);
-    }
-
-    public void outAVideListeexp(AVideListeexp node) {
-        defaultOut(node);
-    }
-
 
     @Override
     public void caseAVideListeexp(AVideListeexp node) {
         inAVideListeexp(node);
+        this.returnValue=null;
         outAVideListeexp(node);
     }
 
-    public void inAListexpbisListeexpbis(AListexpbisListeexpbis node) {
-        defaultIn(node);
-    }
-
-    public void outAListexpbisListeexpbis(AListexpbisListeexpbis node) {
-        defaultOut(node);
-    }
     //listeexpbis = {listexpbis} virgule exp listeexpbis
     @Override
     public void caseAListexpbisListeexpbis(AListexpbisListeexpbis node) {
@@ -721,27 +524,15 @@ public class Sc2sa extends DepthFirstAdapter {
         outAListexpbisListeexpbis(node);
     }
 
-    public void inAVideListeexpbis(AVideListeexpbis node) {
-        defaultIn(node);
-    }
-
-    public void outAVideListeexpbis(AVideListeexpbis node) {
-        defaultOut(node);
-    }
 
     @Override
     public void caseAVideListeexpbis(AVideListeexpbis node) {
         inAVideListeexpbis(node);
+        this.returnValue=null;
         outAVideListeexpbis(node);
     }
 
-    public void inAOuExp(AOuExp node) {
-        defaultIn(node);
-    }
 
-    public void outAOuExp(AOuExp node) {
-        defaultOut(node);
-    }
 
 
     //exp = {ou} exp ou exp2
@@ -763,13 +554,6 @@ public class Sc2sa extends DepthFirstAdapter {
         outAOuExp(node);
     }
 
-    public void inAExp2Exp(AExp2Exp node) {
-        defaultIn(node);
-    }
-
-    public void outAExp2Exp(AExp2Exp node) {
-        defaultOut(node);
-    }
 
     //   exp = | {exp2} exp2 ;
     @Override
@@ -781,13 +565,6 @@ public class Sc2sa extends DepthFirstAdapter {
         outAExp2Exp(node);
     }
 
-    public void inAEtExp2(AEtExp2 node) {
-        defaultIn(node);
-    }
-
-    public void outAEtExp2(AEtExp2 node) {
-        defaultOut(node);
-    }
 
     //exp2 = {et} exp2 et exp3
     @Override
@@ -806,13 +583,7 @@ public class Sc2sa extends DepthFirstAdapter {
         this.returnValue = new SaExpAnd(saExp1, saExp2);
         outAEtExp2(node);
     }
-    public void inAExp3Exp2(AExp3Exp2 node) {
-        defaultIn(node);
-    }
 
-    public void outAExp3Exp2(AExp3Exp2 node) {
-        defaultOut(node);
-    }
 
     //exp2=exp3
     @Override
@@ -824,13 +595,7 @@ public class Sc2sa extends DepthFirstAdapter {
         outAExp3Exp2(node);
     }
 
-    public void inAEgaleExp3(AEgaleExp3 node) {
-        defaultIn(node);
-    }
 
-    public void outAEgaleExp3(AEgaleExp3 node) {
-        defaultOut(node);
-    }
 
     //exp3 = {egale} exp3 egale exp4
     @Override
@@ -851,13 +616,7 @@ public class Sc2sa extends DepthFirstAdapter {
         outAEgaleExp3(node);
     }
 
-    public void inAInfExp3(AInfExp3 node) {
-        defaultIn(node);
-    }
 
-    public void outAInfExp3(AInfExp3 node) {
-        defaultOut(node);
-    }
 
 
     //    | {inf} exp3 inf exp4
@@ -878,13 +637,7 @@ public class Sc2sa extends DepthFirstAdapter {
         outAInfExp3(node);
     }
 
-    public void inAExp4Exp3(AExp4Exp3 node) {
-        defaultIn(node);
-    }
 
-    public void outAExp4Exp3(AExp4Exp3 node) {
-        defaultOut(node);
-    }
 
     @Override
     public void caseAExp4Exp3(AExp4Exp3 node) {
@@ -895,22 +648,6 @@ public class Sc2sa extends DepthFirstAdapter {
         outAExp4Exp3(node);
     }
 
-    public void inAPlusExp4(APlusExp4 node) {
-        defaultIn(node);
-    }
-
-    public void outAPlusExp4(APlusExp4 node) {
-        defaultOut(node);
-    }
-
-
-    public void inAMoinsExp4(AMoinsExp4 node) {
-        defaultIn(node);
-    }
-
-    public void outAMoinsExp4(AMoinsExp4 node) {
-        defaultOut(node);
-    }
 
     //    |{moins} exp4 moins exp5
     @Override
@@ -931,13 +668,7 @@ public class Sc2sa extends DepthFirstAdapter {
         outAMoinsExp4(node);
     }
 
-    public void inAExp5Exp4(AExp5Exp4 node) {
-        defaultIn(node);
-    }
 
-    public void outAExp5Exp4(AExp5Exp4 node) {
-        defaultOut(node);
-    }
 
     @Override
     public void caseAExp5Exp4(AExp5Exp4 node) {
@@ -948,13 +679,7 @@ public class Sc2sa extends DepthFirstAdapter {
         outAExp5Exp4(node);
     }
 
-    public void inADivExp5(ADivExp5 node) {
-        defaultIn(node);
-    }
 
-    public void outADivExp5(ADivExp5 node) {
-        defaultOut(node);
-    }
 
     //exp5 = {div} exp5 div exp6
     @Override
@@ -973,13 +698,7 @@ public class Sc2sa extends DepthFirstAdapter {
         outADivExp5(node);
     }
 
-    public void inAMultExp5(AMultExp5 node) {
-        defaultIn(node);
-    }
 
-    public void outAMultExp5(AMultExp5 node) {
-        defaultOut(node);
-    }
 
     //    | {mult} exp5 mult exp6
     @Override
@@ -1001,13 +720,6 @@ public class Sc2sa extends DepthFirstAdapter {
         outAMultExp5(node);
     }
 
-    public void inAExp6Exp5(AExp6Exp5 node) {
-        defaultIn(node);
-    }
-
-    public void outAExp6Exp5(AExp6Exp5 node) {
-        defaultOut(node);
-    }
 
     @Override
     public void caseAExp6Exp5(AExp6Exp5 node) {
@@ -1018,13 +730,6 @@ public class Sc2sa extends DepthFirstAdapter {
         outAExp6Exp5(node);
     }
 
-    public void inANonExp6(ANonExp6 node) {
-        defaultIn(node);
-    }
-
-    public void outANonExp6(ANonExp6 node) {
-        defaultOut(node);
-    }
 
 //exp6 = {non} non exp6
     @Override
@@ -1040,13 +745,6 @@ public class Sc2sa extends DepthFirstAdapter {
         outANonExp6(node);
     }
 
-    public void inAExp7Exp6(AExp7Exp6 node) {
-        defaultIn(node);
-    }
-
-    public void outAExp7Exp6(AExp7Exp6 node) {
-        defaultOut(node);
-    }
 
 
     @Override
@@ -1058,13 +756,6 @@ public class Sc2sa extends DepthFirstAdapter {
         outAExp7Exp6(node);
     }
 
-    public void inAExpbExp7(AExpbExp7 node) {
-        defaultIn(node);
-    }
-
-    public void outAExpbExp7(AExpbExp7 node) {
-        defaultOut(node);
-    }
 
 
 
@@ -1079,13 +770,7 @@ public class Sc2sa extends DepthFirstAdapter {
         outAExpbExp7(node);
     }
 
-    public void inAVarExp7(AVarExp7 node) {
-        defaultIn(node);
-    }
 
-    public void outAVarExp7(AVarExp7 node) {
-        defaultOut(node);
-    }
 
 
     //    | {var} var
@@ -1098,13 +783,7 @@ public class Sc2sa extends DepthFirstAdapter {
         outAVarExp7(node);
     }
 
-    public void inANombreExp7(ANombreExp7 node) {
-        defaultIn(node);
-    }
 
-    public void outANombreExp7(ANombreExp7 node) {
-        defaultOut(node);
-    }
 
        // {nombre} nombre
     @Override
@@ -1116,13 +795,6 @@ public class Sc2sa extends DepthFirstAdapter {
         outANombreExp7(node);
     }
 
-    public void inAAppelfoncExp7(AAppelfoncExp7 node) {
-        defaultIn(node);
-    }
-
-    public void outAAppelfoncExp7(AAppelfoncExp7 node) {
-        defaultOut(node);
-    }
 
     // {appelfonc} id po listeexp pf
     @Override
@@ -1142,13 +814,6 @@ public class Sc2sa extends DepthFirstAdapter {
         this.returnValue=new SaAppel(id,saLExp);
         outAAppelfoncExp7(node);
     }
-    public void inALireExp7(ALireExp7 node) {
-        defaultIn(node);
-    }
-
-    public void outALireExp7(ALireExp7 node) {
-        defaultOut(node);
-    }
 
     //TODO
     //    | {lire} lire po pf
@@ -1167,13 +832,7 @@ public class Sc2sa extends DepthFirstAdapter {
         outALireExp7(node);
     }
 
-    public void inAVraiExp7(AVraiExp7 node) {
-        defaultIn(node);
-    }
 
-    public void outAVraiExp7(AVraiExp7 node) {
-        defaultOut(node);
-    }
 
 
     //    | {vrai} vrai
@@ -1185,13 +844,7 @@ public class Sc2sa extends DepthFirstAdapter {
        outAVraiExp7(node);
     }
 
-    public void inAFauxExp7(AFauxExp7 node) {
-        defaultIn(node);
-    }
 
-    public void outAFauxExp7(AFauxExp7 node) {
-        defaultOut(node);
-    }
 
     @Override
     public void caseAFauxExp7(AFauxExp7 node) {
@@ -1200,13 +853,7 @@ public class Sc2sa extends DepthFirstAdapter {
         outAFauxExp7(node);
     }
 
-    public void inAIdVar(AIdVar node) {
-        defaultIn(node);
-    }
 
-    public void outAIdVar(AIdVar node) {
-        defaultOut(node);
-    }
 
     @Override
     public void caseAIdVar(AIdVar node) {
@@ -1217,13 +864,6 @@ public class Sc2sa extends DepthFirstAdapter {
         outAIdVar(node);
     }
 
-    public void inAIdbVar(AIdbVar node) {
-        defaultIn(node);
-    }
-
-    public void outAIdbVar(AIdbVar node) {
-        defaultOut(node);
-    }
 
         //| {idb} id co exp cf;
     @Override

@@ -27,8 +27,8 @@ alors = 'alors';
 sinon = 'sinon';
 retourne = 'retour';
 ecrire = 'ecrire';
-ou = 'ou';
-et = 'et';
+ou = '|';
+et = '&';
 lire = 'lire';
 vrai = 'vrai';
 faux = 'faux';
@@ -66,7 +66,7 @@ listedecvarbis = {listdecvar} virgule decvar listedecvarbis
 decvar = {var} typevar id
     | {fonc} typevar id co nombre cf;
 
-typevar = {vrai} vrai | {faux} faux| {nombre} nombre;
+typevar = {boolean} boolean | {entier} entier;
 
 
 listedecfonc = {decfonc} decfonc listedecfonc
@@ -127,7 +127,7 @@ exp7= {expb} po exp pf
     | {faux} faux;
 
 var = {id} id
-    | {idb} id aco exp acf;
+    | {idb} id co exp cf;
 
 
 
