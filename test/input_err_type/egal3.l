@@ -1,4 +1,4 @@
 main()
 {
-ecrire(vrai = faux);
+ecrire((1 = 1) + 1);
 }
