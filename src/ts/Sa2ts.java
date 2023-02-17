@@ -1,6 +1,9 @@
 package ts;
 import sa.*;
+import sc.node.Node;
 import util.Error;
+
+import java.util.Map;
 
 public class Sa2ts extends SaDepthFirstVisitor <Void> {
     enum Context {
@@ -33,4 +36,58 @@ public class Sa2ts extends SaDepthFirstVisitor <Void> {
 	catch(Exception e){}
     }
 
+	//todo  DEC -> var id
+	public Void visit(SaDecVar node) throws Exception
+	{
+		defaultIn(node);
+		defaultOut(node);
+		return null;
+	}
+
+
+
+	//todo DEC -> var id taille
+	public Void visit(SaDecTab node) throws Exception{
+		defaultIn(node);
+		defaultOut(node);
+		return null;
+	}
+
+	//todo DEC -> fct id LDEC LDEC LINST
+	public Void visit(SaDecFonc node) throws Exception
+	{
+		defaultIn(node);
+		if(node.getParametres() != null) node.getParametres().accept(this);
+		if(node.getVariable() != null) node.getVariable().accept(this);
+		if(node.getCorps() != null) node.getCorps().accept(this);
+		defaultOut(node);
+		return null;
+	}
+
+	//todo
+	public Void visit(SaVarSimple node) throws Exception
+	{
+		defaultIn(node);
+		defaultOut(node);
+		return null;
+	}
+
+	//todo
+	public Void visit(SaVarIndicee node) throws Exception
+	{
+		defaultIn(node);
+		node.getIndice().accept(this);
+		defaultOut(node);
+		return null;
+	}
+
+
+	//todo
+	public Void visit(SaAppel node) throws Exception
+	{
+		defaultIn(node);
+		if(node.getArguments() != null) node.getArguments().accept(this);
+		defaultOut(node);
+		return null;
+	}
 }

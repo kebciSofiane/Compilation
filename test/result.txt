@@ -179,14 +179,14 @@
 Évaluation de Execution du binaire :
 0/80 correct (  0.00%)
 Évaluation de ERR_TS :
-0/7 correct (  0.00%)
+2/7 correct ( 28.57%)
+	fct_inconnue1.l   CORRECT
+	var_inconnue1.l   CORRECT
 	double_dec1.l       INCORRECT
 	double_dec2.l       INCORRECT
 	double_dec3.l       INCORRECT
 	double_dec4.l       INCORRECT
-	fct_inconnue1.l     INCORRECT
 	mauvais_nb_arg1.l   INCORRECT
-	var_inconnue1.l     INCORRECT
 Évaluation de ERR_TYPE :
 0/45 correct (  0.00%)
 	add1.l       INCORRECT
