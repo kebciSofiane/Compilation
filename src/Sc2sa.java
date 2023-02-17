@@ -140,7 +140,7 @@ public class Sc2sa extends DepthFirstAdapter {
     @Override
     public void caseAVarDecvar(AVarDecvar node) {
         inAVarDecvar(node);
-        Type typeVar = null;
+        Type typeVar = Type.NUL;
         String id =null;
         if (node.getTypevar() != null) {
             node.getTypevar().apply(this);
@@ -186,11 +186,13 @@ public class Sc2sa extends DepthFirstAdapter {
     //typevar = {boolean} boolean
     @Override
     public void caseABooleanTypevar(ABooleanTypevar node) {
+        Type type = Type.NUL;
         inABooleanTypevar(node);
         if (node.getBoolean() != null) {
             node.getBoolean().apply(this);
+            type = this.returnType;
         }
-        this.returnType = Type.BOOL;
+        this.returnType = type;
         outABooleanTypevar(node);
     }
 
@@ -199,11 +201,13 @@ public class Sc2sa extends DepthFirstAdapter {
 
     @Override
     public void caseAEntierTypevar(AEntierTypevar node) {
+        Type type = Type.NUL ;                                                         ;
         inAEntierTypevar(node);
         if (node.getEntier() != null) {
             node.getEntier().apply(this);
+            type = this.returnType;
         }
-        this.returnType = Type.ENTIER;
+        this.returnType = type;
         outAEntierTypevar(node);
     }
 
@@ -242,11 +246,11 @@ public class Sc2sa extends DepthFirstAdapter {
     @Override
     public void caseADecfonc(ADecfonc node) {
         inADecfonc(node);
-        Type typeOp= null;
+        Type typeOp= Type.NUL;
         String id =null;
         SaLDecVar saLDecVarP = null;
         SaLDecVar saLDecVarS = null;
-        SaInstBloc saInstBloc = null;
+        SaInst saInstBloc = null;
 
         if (node.getTypeop() != null) {
             node.getTypeop().apply(this);
@@ -268,7 +272,7 @@ public class Sc2sa extends DepthFirstAdapter {
         }
         if (node.getBlocinst() != null) {
             node.getBlocinst().apply(this);
-            saInstBloc = (SaInstBloc) this.returnValue;
+            saInstBloc = (SaInst) this.returnValue;
         }
         this.returnValue=new SaDecFonc(id,typeOp,saLDecVarP,saLDecVarS,saInstBloc);
         outADecfonc(node);
@@ -278,10 +282,13 @@ public class Sc2sa extends DepthFirstAdapter {
    // typeop = {typeop} typevar
     @Override
     public void caseATypeopTypeop(ATypeopTypeop node) {
+        Type type = Type.NUL;
         inATypeopTypeop(node);
         if (node.getTypevar() != null) {
             node.getTypevar().apply(this);
+            type = this.returnType;
         }
+        this.returnType = type;
         outATypeopTypeop(node);
     }
 
