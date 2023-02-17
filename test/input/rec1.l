@@ -1,4 +1,4 @@
-f(entier a)
+entier f(entier a)
 {
 si (a = 1) alors {
 retour(1);

@@ -188,7 +188,7 @@
 	mauvais_nb_arg1.l   INCORRECT
 	var_inconnue1.l     INCORRECT
 Évaluation de ERR_TYPE :
-0/46 correct (  0.00%)
+0/45 correct (  0.00%)
 	add1.l       INCORRECT
 	add2.l       INCORRECT
 	add3.l       INCORRECT
@@ -212,7 +212,6 @@
 	egal1.l      INCORRECT
 	egal2.l      INCORRECT
 	egal3.l      INCORRECT
-	egal4.l      INCORRECT
 	inf1.l       INCORRECT
 	inf2.l       INCORRECT
 	inf3.l       INCORRECT

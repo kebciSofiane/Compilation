@@ -1,4 +1,4 @@
-fibo( entier n ) 
+entier fibo( entier n ) 
 {
   si n < 2 alors {
     retour 1;
