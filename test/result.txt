@@ -1,97 +1,102 @@
 Évaluation de Diff de sa :
-20/80 correct ( 25.00%)
-	and1.sa       CORRECT
-	and2.sa       CORRECT
-	and3.sa       CORRECT
-	and4.sa       CORRECT
-	and5.sa       CORRECT
-	not1.sa       CORRECT
-	not2.sa       CORRECT
-	not3.sa       CORRECT
-	or1.sa        CORRECT
-	or2.sa        CORRECT
-	or3.sa        CORRECT
-	or4.sa        CORRECT
-	or5.sa        CORRECT
-	prio56-2.sa   CORRECT
-	prio67-1.sa   CORRECT
-	prio67-2.sa   CORRECT
-	si1.sa        CORRECT
-	si3.sa        CORRECT
-	si4.sa        CORRECT
-	si5.sa        CORRECT
-	add1.sa            INCORRECT
-	add2.sa            INCORRECT
-	appel-param1.sa    INCORRECT
-	appel-retour1.sa   INCORRECT
-	appel1.sa          INCORRECT
-	appel2.sa          INCORRECT
-	appel3.sa          INCORRECT
-	div1.sa            INCORRECT
-	div2.sa            INCORRECT
-	div3.sa            INCORRECT
-	div4.sa            INCORRECT
-	ecrire1.sa         INCORRECT
-	ecrire2.sa         INCORRECT
-	egal1.sa           INCORRECT
-	egal2.sa           INCORRECT
-	egal3.sa           INCORRECT
-	inf1.sa            INCORRECT
-	inf2.sa            INCORRECT
-	inf3.sa            INCORRECT
-	mult1.sa           INCORRECT
-	mult2.sa           INCORRECT
-	mult3.sa           INCORRECT
-	parenth1.sa        INCORRECT
-	parenth2.sa        INCORRECT
-	prio34-1.sa        INCORRECT
-	prio34-2.sa        INCORRECT
-	prio34-3.sa        INCORRECT
-	prio34-4.sa        INCORRECT
-	prio45-1.sa        INCORRECT
-	prio45-2.sa        INCORRECT
-	prio45-3.sa        INCORRECT
-	prio45-4.sa        INCORRECT
-	prio56-1.sa        INCORRECT
-	sub1.sa            INCORRECT
-	sub2.sa            INCORRECT
-	sub3.sa            INCORRECT
-	affect1.sa        NON-EXISTANT
-	affect2.sa        NON-EXISTANT
-	affect3.sa        NON-EXISTANT
-	appel-param2.sa   NON-EXISTANT
-	appel-param3.sa   NON-EXISTANT
-	fibo.sa           NON-EXISTANT
-	rec1.sa           NON-EXISTANT
-	si2.sa            NON-EXISTANT
-	tab1.sa           NON-EXISTANT
-	tab2.sa           NON-EXISTANT
-	tab3.sa           NON-EXISTANT
-	tab4.sa           NON-EXISTANT
-	tantque1.sa       NON-EXISTANT
-	tantque2.sa       NON-EXISTANT
-	tri.sa            NON-EXISTANT
-	varglob1.sa       NON-EXISTANT
-	varglob2.sa       NON-EXISTANT
-	varglob3.sa       NON-EXISTANT
-	varglob4.sa       NON-EXISTANT
-	varloc1.sa        NON-EXISTANT
-	varloc2.sa        NON-EXISTANT
-	varloc3.sa        NON-EXISTANT
-	varloc4.sa        NON-EXISTANT
-	varloc5.sa        NON-EXISTANT
+80/80 correct (100.00%)
+	add1.sa            CORRECT
+	add2.sa            CORRECT
+	affect1.sa         CORRECT
+	affect2.sa         CORRECT
+	affect3.sa         CORRECT
+	and1.sa            CORRECT
+	and2.sa            CORRECT
+	and3.sa            CORRECT
+	and4.sa            CORRECT
+	and5.sa            CORRECT
+	appel-param1.sa    CORRECT
+	appel-param2.sa    CORRECT
+	appel-param3.sa    CORRECT
+	appel-retour1.sa   CORRECT
+	appel1.sa          CORRECT
+	appel2.sa          CORRECT
+	appel3.sa          CORRECT
+	div1.sa            CORRECT
+	div2.sa            CORRECT
+	div3.sa            CORRECT
+	div4.sa            CORRECT
+	ecrire1.sa         CORRECT
+	ecrire2.sa         CORRECT
+	egal1.sa           CORRECT
+	egal2.sa           CORRECT
+	egal3.sa           CORRECT
+	fibo.sa            CORRECT
+	inf1.sa            CORRECT
+	inf2.sa            CORRECT
+	inf3.sa            CORRECT
+	mult1.sa           CORRECT
+	mult2.sa           CORRECT
+	mult3.sa           CORRECT
+	not1.sa            CORRECT
+	not2.sa            CORRECT
+	not3.sa            CORRECT
+	or1.sa             CORRECT
+	or2.sa             CORRECT
+	or3.sa             CORRECT
+	or4.sa             CORRECT
+	or5.sa             CORRECT
+	parenth1.sa        CORRECT
+	parenth2.sa        CORRECT
+	prio34-1.sa        CORRECT
+	prio34-2.sa        CORRECT
+	prio34-3.sa        CORRECT
+	prio34-4.sa        CORRECT
+	prio45-1.sa        CORRECT
+	prio45-2.sa        CORRECT
+	prio45-3.sa        CORRECT
+	prio45-4.sa        CORRECT
+	prio56-1.sa        CORRECT
+	prio56-2.sa        CORRECT
+	prio67-1.sa        CORRECT
+	prio67-2.sa        CORRECT
+	rec1.sa            CORRECT
+	si1.sa             CORRECT
+	si2.sa             CORRECT
+	si3.sa             CORRECT
+	si4.sa             CORRECT
+	si5.sa             CORRECT
+	sub1.sa            CORRECT
+	sub2.sa            CORRECT
+	sub3.sa            CORRECT
+	tab1.sa            CORRECT
+	tab2.sa            CORRECT
+	tab3.sa            CORRECT
+	tab4.sa            CORRECT
+	tantque1.sa        CORRECT
+	tantque2.sa        CORRECT
+	tri.sa             CORRECT
+	varglob1.sa        CORRECT
+	varglob2.sa        CORRECT
+	varglob3.sa        CORRECT
+	varglob4.sa        CORRECT
+	varloc1.sa         CORRECT
+	varloc2.sa         CORRECT
+	varloc3.sa         CORRECT
+	varloc4.sa         CORRECT
+	varloc5.sa         CORRECT
 Évaluation de Diff de ts :
 0/80 correct (  0.00%)
 Évaluation de Execution de sa :
 0/80 correct (  0.00%)
 	add1.saout            INCORRECT
 	add2.saout            INCORRECT
+	affect1.saout         INCORRECT
+	affect2.saout         INCORRECT
+	affect3.saout         INCORRECT
 	and1.saout            INCORRECT
 	and2.saout            INCORRECT
 	and3.saout            INCORRECT
 	and4.saout            INCORRECT
 	and5.saout            INCORRECT
 	appel-param1.saout    INCORRECT
+	appel-param2.saout    INCORRECT
+	appel-param3.saout    INCORRECT
 	appel-retour1.saout   INCORRECT
 	appel1.saout          INCORRECT
 	appel2.saout          INCORRECT
@@ -105,6 +110,7 @@
 	egal1.saout           INCORRECT
 	egal2.saout           INCORRECT
 	egal3.saout           INCORRECT
+	fibo.saout            INCORRECT
 	inf1.saout            INCORRECT
 	inf2.saout            INCORRECT
 	inf3.saout            INCORRECT
@@ -133,37 +139,31 @@
 	prio56-2.saout        INCORRECT
 	prio67-1.saout        INCORRECT
 	prio67-2.saout        INCORRECT
+	rec1.saout            INCORRECT
 	si1.saout             INCORRECT
+	si2.saout             INCORRECT
 	si3.saout             INCORRECT
 	si4.saout             INCORRECT
 	si5.saout             INCORRECT
 	sub1.saout            INCORRECT
 	sub2.saout            INCORRECT
 	sub3.saout            INCORRECT
-	affect1.saout        NON-EXISTANT
-	affect2.saout        NON-EXISTANT
-	affect3.saout        NON-EXISTANT
-	appel-param2.saout   NON-EXISTANT
-	appel-param3.saout   NON-EXISTANT
-	fibo.saout           NON-EXISTANT
-	rec1.saout           NON-EXISTANT
-	si2.saout            NON-EXISTANT
-	tab1.saout           NON-EXISTANT
-	tab2.saout           NON-EXISTANT
-	tab3.saout           NON-EXISTANT
-	tab4.saout           NON-EXISTANT
-	tantque1.saout       NON-EXISTANT
-	tantque2.saout       NON-EXISTANT
-	tri.saout            NON-EXISTANT
-	varglob1.saout       NON-EXISTANT
-	varglob2.saout       NON-EXISTANT
-	varglob3.saout       NON-EXISTANT
-	varglob4.saout       NON-EXISTANT
-	varloc1.saout        NON-EXISTANT
-	varloc2.saout        NON-EXISTANT
-	varloc3.saout        NON-EXISTANT
-	varloc4.saout        NON-EXISTANT
-	varloc5.saout        NON-EXISTANT
+	tab1.saout            INCORRECT
+	tab2.saout            INCORRECT
+	tab3.saout            INCORRECT
+	tab4.saout            INCORRECT
+	tantque1.saout        INCORRECT
+	tantque2.saout        INCORRECT
+	tri.saout             INCORRECT
+	varglob1.saout        INCORRECT
+	varglob2.saout        INCORRECT
+	varglob3.saout        INCORRECT
+	varglob4.saout        INCORRECT
+	varloc1.saout         INCORRECT
+	varloc2.saout         INCORRECT
+	varloc3.saout         INCORRECT
+	varloc4.saout         INCORRECT
+	varloc5.saout         INCORRECT
 Évaluation de Diff de c3a :
 0/80 correct (  0.00%)
 Évaluation de Execution du c3a :
@@ -243,6 +243,18 @@ ERROR evaluateSa for input add2.l : 'Error: Could not find or load main class Sa
 Caused by: java.lang.ClassNotFoundException: SaVM
 '
 
+ERROR evaluateSa for input affect1.l : 'Error: Could not find or load main class SaVM
+Caused by: java.lang.ClassNotFoundException: SaVM
+'
+
+ERROR evaluateSa for input affect2.l : 'Error: Could not find or load main class SaVM
+Caused by: java.lang.ClassNotFoundException: SaVM
+'
+
+ERROR evaluateSa for input affect3.l : 'Error: Could not find or load main class SaVM
+Caused by: java.lang.ClassNotFoundException: SaVM
+'
+
 ERROR evaluateSa for input and1.l : 'Error: Could not find or load main class SaVM
 Caused by: java.lang.ClassNotFoundException: SaVM
 '
@@ -264,6 +276,14 @@ Caused by: java.lang.ClassNotFoundException: SaVM
 '
 
 ERROR evaluateSa for input appel-param1.l : 'Error: Could not find or load main class SaVM
+Caused by: java.lang.ClassNotFoundException: SaVM
+'
+
+ERROR evaluateSa for input appel-param2.l : 'Error: Could not find or load main class SaVM
+Caused by: java.lang.ClassNotFoundException: SaVM
+'
+
+ERROR evaluateSa for input appel-param3.l : 'Error: Could not find or load main class SaVM
 Caused by: java.lang.ClassNotFoundException: SaVM
 '
 
@@ -316,6 +336,10 @@ Caused by: java.lang.ClassNotFoundException: SaVM
 '
 
 ERROR evaluateSa for input egal3.l : 'Error: Could not find or load main class SaVM
+Caused by: java.lang.ClassNotFoundException: SaVM
+'
+
+ERROR evaluateSa for input fibo.l : 'Error: Could not find or load main class SaVM
 Caused by: java.lang.ClassNotFoundException: SaVM
 '
 
@@ -431,7 +455,15 @@ ERROR evaluateSa for input prio67-2.l : 'Error: Could not find or load main clas
 Caused by: java.lang.ClassNotFoundException: SaVM
 '
 
+ERROR evaluateSa for input rec1.l : 'Error: Could not find or load main class SaVM
+Caused by: java.lang.ClassNotFoundException: SaVM
+'
+
 ERROR evaluateSa for input si1.l : 'Error: Could not find or load main class SaVM
+Caused by: java.lang.ClassNotFoundException: SaVM
+'
+
+ERROR evaluateSa for input si2.l : 'Error: Could not find or load main class SaVM
 Caused by: java.lang.ClassNotFoundException: SaVM
 '
 
@@ -456,5 +488,69 @@ Caused by: java.lang.ClassNotFoundException: SaVM
 '
 
 ERROR evaluateSa for input sub3.l : 'Error: Could not find or load main class SaVM
+Caused by: java.lang.ClassNotFoundException: SaVM
+'
+
+ERROR evaluateSa for input tab1.l : 'Error: Could not find or load main class SaVM
+Caused by: java.lang.ClassNotFoundException: SaVM
+'
+
+ERROR evaluateSa for input tab2.l : 'Error: Could not find or load main class SaVM
+Caused by: java.lang.ClassNotFoundException: SaVM
+'
+
+ERROR evaluateSa for input tab3.l : 'Error: Could not find or load main class SaVM
+Caused by: java.lang.ClassNotFoundException: SaVM
+'
+
+ERROR evaluateSa for input tab4.l : 'Error: Could not find or load main class SaVM
+Caused by: java.lang.ClassNotFoundException: SaVM
+'
+
+ERROR evaluateSa for input tantque1.l : 'Error: Could not find or load main class SaVM
+Caused by: java.lang.ClassNotFoundException: SaVM
+'
+
+ERROR evaluateSa for input tantque2.l : 'Error: Could not find or load main class SaVM
+Caused by: java.lang.ClassNotFoundException: SaVM
+'
+
+ERROR evaluateSa for input tri.l : 'Error: Could not find or load main class SaVM
+Caused by: java.lang.ClassNotFoundException: SaVM
+'
+
+ERROR evaluateSa for input varglob1.l : 'Error: Could not find or load main class SaVM
+Caused by: java.lang.ClassNotFoundException: SaVM
+'
+
+ERROR evaluateSa for input varglob2.l : 'Error: Could not find or load main class SaVM
+Caused by: java.lang.ClassNotFoundException: SaVM
+'
+
+ERROR evaluateSa for input varglob3.l : 'Error: Could not find or load main class SaVM
+Caused by: java.lang.ClassNotFoundException: SaVM
+'
+
+ERROR evaluateSa for input varglob4.l : 'Error: Could not find or load main class SaVM
+Caused by: java.lang.ClassNotFoundException: SaVM
+'
+
+ERROR evaluateSa for input varloc1.l : 'Error: Could not find or load main class SaVM
+Caused by: java.lang.ClassNotFoundException: SaVM
+'
+
+ERROR evaluateSa for input varloc2.l : 'Error: Could not find or load main class SaVM
+Caused by: java.lang.ClassNotFoundException: SaVM
+'
+
+ERROR evaluateSa for input varloc3.l : 'Error: Could not find or load main class SaVM
+Caused by: java.lang.ClassNotFoundException: SaVM
+'
+
+ERROR evaluateSa for input varloc4.l : 'Error: Could not find or load main class SaVM
+Caused by: java.lang.ClassNotFoundException: SaVM
+'
+
+ERROR evaluateSa for input varloc5.l : 'Error: Could not find or load main class SaVM
 Caused by: java.lang.ClassNotFoundException: SaVM
 '

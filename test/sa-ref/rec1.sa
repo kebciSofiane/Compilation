@@ -1,6 +1,6 @@
 <programme type="SaProg">
  <fonctions type="SaLDecFonc">
-  <tete type="SaDecFonc" nom="f" typeRetour="nul">
+  <tete type="SaDecFonc" nom="f" typeRetour="entier">
    <parametres type="SaLDecVar">
     <tete type="SaDecVarSimple" nom="a" typeVariable="entier"/>
    </parametres>
