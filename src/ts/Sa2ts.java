@@ -37,11 +37,10 @@ public class Sa2ts extends SaDepthFirstVisitor <Void> {
 	catch(Exception e){}
     }
 
-	//todo  DEC -> var id fini?
+
 	public Void visit(SaDecVar node) throws Exception
 	{
 		defaultIn(node);
-		defaultOut(node);
 		String identif = node.getNom();
 		Type type = node.getType();
 		if(this.context == Context.GLOBAL){
@@ -62,19 +61,26 @@ public class Sa2ts extends SaDepthFirstVisitor <Void> {
 			}
 			tableLocaleCourante.addParam(identif, type);
 		}
-
+		defaultOut(node);
 		return null;
 	}
 
 
 
-	//todo DEC -> var id taille
+	//todo DEC -> var id taille fini
 	public Void visit(SaDecTab node) throws Exception{
+
 		defaultIn(node);
-		defaultOut(node);
 		String identif = node.getNom();
 		Type type = node.getType();
-
+		int taille = node.getTaille();
+		if(this.context == Context.GLOBAL){
+			if(this.tableGlobale.getVar(node.getNom()) != null){
+				throw new ErrorException(Error.TS, "La vairiable existe déja");
+			}
+			tableGlobale.addTab(identif, type, taille);
+		}
+		defaultOut(node);
 		return null;
 	}
 
@@ -82,6 +88,8 @@ public class Sa2ts extends SaDepthFirstVisitor <Void> {
 	public Void visit(SaDecFonc node) throws Exception
 	{
 		defaultIn(node);
+		String identif = node.getNom();
+
 		if(node.getParametres() != null) node.getParametres().accept(this);
 		if(node.getVariable() != null) node.getVariable().accept(this);
 		if(node.getCorps() != null) node.getCorps().accept(this);
