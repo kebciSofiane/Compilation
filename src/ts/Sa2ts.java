@@ -89,6 +89,16 @@ public class Sa2ts extends SaDepthFirstVisitor <Void> {
 	{
 		defaultIn(node);
 		String identif = node.getNom();
+		Type typeDeRetour = node.getTypeRetour();
+		int nbArgs = 0;
+		 Ts table = new Ts();
+		// this.context =
+		if(this.context == Context.GLOBAL){
+			if(this.tableGlobale.getFct(node.getNom()) != null){
+				throw new ErrorException(Error.TS, "La fonction existe déja");
+			}
+			tableGlobale.addFct(identif, typeDeRetour, nbArgs,table,node);
+		} // arrivé là
 
 		if(node.getParametres() != null) node.getParametres().accept(this);
 		if(node.getVariable() != null) node.getVariable().accept(this);
