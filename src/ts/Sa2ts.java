@@ -2,6 +2,7 @@ package ts;
 import sa.*;
 import sc.node.Node;
 import util.Error;
+import util.Type;
 
 import java.util.Map;
 
@@ -36,11 +37,32 @@ public class Sa2ts extends SaDepthFirstVisitor <Void> {
 	catch(Exception e){}
     }
 
-	//todo  DEC -> var id
+	//todo  DEC -> var id fini?
 	public Void visit(SaDecVar node) throws Exception
 	{
 		defaultIn(node);
 		defaultOut(node);
+		String identif = node.getNom();
+		Type type = node.getType();
+		if(this.context == Context.GLOBAL){
+			if(this.tableGlobale.getVar(node.getNom()) != null){
+				throw new ErrorException(Error.TS, "La vairiable existe déja");
+			}
+			tableGlobale.addVar(identif, type);
+		}
+		if(this.context == Context.LOCAL){
+			if(this.tableLocaleCourante.getVar(node.getNom())!= null){
+				throw new ErrorException(Error.TS, "La vairiable existe déja");
+			}
+			tableLocaleCourante.addVar(identif, type);
+		}
+		if(this.context == Context.PARAM){
+			if(this.tableLocaleCourante.getVar(node.getNom())!= null){
+				throw new ErrorException(Error.TS, "La vairiable existe déja");
+			}
+			tableLocaleCourante.addParam(identif, type);
+		}
+
 		return null;
 	}
 
@@ -50,6 +72,9 @@ public class Sa2ts extends SaDepthFirstVisitor <Void> {
 	public Void visit(SaDecTab node) throws Exception{
 		defaultIn(node);
 		defaultOut(node);
+		String identif = node.getNom();
+		Type type = node.getType();
+
 		return null;
 	}
 
