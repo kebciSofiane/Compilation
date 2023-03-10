@@ -9,12 +9,12 @@ public final class TBoolean extends Token
 {
     public TBoolean()
     {
-        super.setText("boolean");
+        super.setText("bool");
     }
 
     public TBoolean(int line, int pos)
     {
-        super.setText("boolean");
+        super.setText("bool");
         setLine(line);
         setPos(pos);
     }

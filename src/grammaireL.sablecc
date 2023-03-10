@@ -41,7 +41,7 @@ div = '/';
 mult = '*';
 non = '!';
 entier = 'entier';
-boolean = 'boolean';
+boolean = 'bool';
 
 
 id = alpha alphanum*;

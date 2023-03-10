@@ -1,5 +1,5 @@
 Évaluation de Diff de sa :
-80/80 correct (100.00%)
+78/80 correct ( 97.50%)
 	add1.sa            CORRECT
 	add2.sa            CORRECT
 	affect1.sa         CORRECT
@@ -26,7 +26,6 @@
 	egal1.sa           CORRECT
 	egal2.sa           CORRECT
 	egal3.sa           CORRECT
-	fibo.sa            CORRECT
 	inf1.sa            CORRECT
 	inf2.sa            CORRECT
 	inf3.sa            CORRECT
@@ -55,7 +54,6 @@
 	prio56-2.sa        CORRECT
 	prio67-1.sa        CORRECT
 	prio67-2.sa        CORRECT
-	rec1.sa            CORRECT
 	si1.sa             CORRECT
 	si2.sa             CORRECT
 	si3.sa             CORRECT
@@ -80,8 +78,90 @@
 	varloc3.sa         CORRECT
 	varloc4.sa         CORRECT
 	varloc5.sa         CORRECT
+	fibo.sa   INCORRECT
+	rec1.sa   INCORRECT
 Évaluation de Diff de ts :
-0/80 correct (  0.00%)
+79/80 correct ( 98.75%)
+	add1.ts            CORRECT
+	add2.ts            CORRECT
+	affect1.ts         CORRECT
+	affect2.ts         CORRECT
+	affect3.ts         CORRECT
+	and1.ts            CORRECT
+	and2.ts            CORRECT
+	and3.ts            CORRECT
+	and4.ts            CORRECT
+	and5.ts            CORRECT
+	appel-param1.ts    CORRECT
+	appel-param2.ts    CORRECT
+	appel-param3.ts    CORRECT
+	appel-retour1.ts   CORRECT
+	appel1.ts          CORRECT
+	appel3.ts          CORRECT
+	div1.ts            CORRECT
+	div2.ts            CORRECT
+	div3.ts            CORRECT
+	div4.ts            CORRECT
+	ecrire1.ts         CORRECT
+	ecrire2.ts         CORRECT
+	egal1.ts           CORRECT
+	egal2.ts           CORRECT
+	egal3.ts           CORRECT
+	fibo.ts            CORRECT
+	inf1.ts            CORRECT
+	inf2.ts            CORRECT
+	inf3.ts            CORRECT
+	mult1.ts           CORRECT
+	mult2.ts           CORRECT
+	mult3.ts           CORRECT
+	not1.ts            CORRECT
+	not2.ts            CORRECT
+	not3.ts            CORRECT
+	or1.ts             CORRECT
+	or2.ts             CORRECT
+	or3.ts             CORRECT
+	or4.ts             CORRECT
+	or5.ts             CORRECT
+	parenth1.ts        CORRECT
+	parenth2.ts        CORRECT
+	prio34-1.ts        CORRECT
+	prio34-2.ts        CORRECT
+	prio34-3.ts        CORRECT
+	prio34-4.ts        CORRECT
+	prio45-1.ts        CORRECT
+	prio45-2.ts        CORRECT
+	prio45-3.ts        CORRECT
+	prio45-4.ts        CORRECT
+	prio56-1.ts        CORRECT
+	prio56-2.ts        CORRECT
+	prio67-1.ts        CORRECT
+	prio67-2.ts        CORRECT
+	rec1.ts            CORRECT
+	si1.ts             CORRECT
+	si2.ts             CORRECT
+	si3.ts             CORRECT
+	si4.ts             CORRECT
+	si5.ts             CORRECT
+	sub1.ts            CORRECT
+	sub2.ts            CORRECT
+	sub3.ts            CORRECT
+	tab1.ts            CORRECT
+	tab2.ts            CORRECT
+	tab3.ts            CORRECT
+	tab4.ts            CORRECT
+	tantque1.ts        CORRECT
+	tantque2.ts        CORRECT
+	tri.ts             CORRECT
+	varglob1.ts        CORRECT
+	varglob2.ts        CORRECT
+	varglob3.ts        CORRECT
+	varglob4.ts        CORRECT
+	varloc1.ts         CORRECT
+	varloc2.ts         CORRECT
+	varloc3.ts         CORRECT
+	varloc4.ts         CORRECT
+	varloc5.ts         CORRECT
+	appel2.ts   INCORRECT
 Évaluation de Execution de sa :
 0/80 correct (  0.00%)
 	add1.saout            INCORRECT
@@ -179,12 +259,12 @@
 Évaluation de Execution du binaire :
 0/80 correct (  0.00%)
 Évaluation de ERR_TS :
-2/7 correct ( 28.57%)
+5/7 correct ( 71.43%)
+	double_dec1.l     CORRECT
+	double_dec2.l     CORRECT
+	double_dec3.l     CORRECT
 	fct_inconnue1.l   CORRECT
 	var_inconnue1.l   CORRECT
-	double_dec1.l       INCORRECT
-	double_dec2.l       INCORRECT
-	double_dec3.l       INCORRECT
 	double_dec4.l       INCORRECT
 	mauvais_nb_arg1.l   INCORRECT
 Évaluation de ERR_TYPE :

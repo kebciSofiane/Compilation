@@ -37,6 +37,7 @@ public class Sa2ts extends SaDepthFirstVisitor <Void> {
 	catch(Exception e){}
     }
 
+	//Done
 
 	public Void visit(SaDecVar node) throws Exception
 	{
@@ -67,7 +68,7 @@ public class Sa2ts extends SaDepthFirstVisitor <Void> {
 
 
 
-	//todo DEC -> var id taille fini
+	//Done
 	public Void visit(SaDecTab node) throws Exception{
 
 		defaultIn(node);
@@ -84,41 +85,79 @@ public class Sa2ts extends SaDepthFirstVisitor <Void> {
 		return null;
 	}
 
-	//todo DEC -> fct id LDEC LDEC LINST
+	//Done
 	public Void visit(SaDecFonc node) throws Exception
 	{
 		defaultIn(node);
+		this.tableLocaleCourante = new Ts();
 		String identif = node.getNom();
 		Type typeDeRetour = node.getTypeRetour();
-		int nbArgs = 0;
-		 Ts table = new Ts();
-		// this.context =
-		if(this.context == Context.GLOBAL){
-			if(this.tableGlobale.getFct(node.getNom()) != null){
-				throw new ErrorException(Error.TS, "La fonction existe déja");
-			}
-			tableGlobale.addFct(identif, typeDeRetour, nbArgs,table,node);
-		} // arrivé là
+
+
+		int nbArgs;
+
+		this.context = Context.PARAM;
+
+		if (node.getParametres() == null){ //pas sur
+			nbArgs = 0;
+		}
+		else {
+				nbArgs = node.getParametres().length();
+		}
 
 		if(node.getParametres() != null) node.getParametres().accept(this);
+
+		context = Context.LOCAL;
 		if(node.getVariable() != null) node.getVariable().accept(this);
+
+
+		if(this.tableGlobale.getFct(node.getNom()) != null){
+				throw new ErrorException(Error.TS, "La fonction existe déja");
+		}
+		tableGlobale.addFct(identif, typeDeRetour, nbArgs,this.tableLocaleCourante,node);
+
 		if(node.getCorps() != null) node.getCorps().accept(this);
 		defaultOut(node);
 		return null;
 	}
 
-	//todo
+	//Done
 	public Void visit(SaVarSimple node) throws Exception
 	{
 		defaultIn(node);
+		String identif = node.getNom();
+		if( tableLocaleCourante.getVar(identif ) != null){
+			if(tableLocaleCourante.getVar(identif) instanceof TsItemVarTab){
+				throw new ErrorException(Error.TS, "Ce n'est pas une variable simple");
+			}
+		}
+		else if( tableGlobale.getVar(identif ) != null){
+			if(tableGlobale.getVar(identif) instanceof TsItemVarTab){
+				throw new ErrorException(Error.TS, "Ce n'est pas une variable simple..");
+			}
+		}
+		else throw new ErrorException(Error.TS, "La variable n'existe pas");
+
 		defaultOut(node);
 		return null;
 	}
 
-	//todo
+	//Done
 	public Void visit(SaVarIndicee node) throws Exception
 	{
 		defaultIn(node);
+		String identif = node.getNom();
+
+		if( tableGlobale.getVar(identif ) != null){
+			if( ! (tableGlobale.getVar(identif) instanceof TsItemVarTab)){
+				throw new ErrorException(Error.TS, "Ce n'est pas une variable indicee");
+			}
+			if(node.getIndice() == null){
+				throw new ErrorException(Error.TS, "L'indice ne doit pas ete null");
+
+			}
+		}
+		else throw new ErrorException(Error.TS, "La variable n'existe pas");
 		node.getIndice().accept(this);
 		defaultOut(node);
 		return null;
@@ -129,7 +168,16 @@ public class Sa2ts extends SaDepthFirstVisitor <Void> {
 	public Void visit(SaAppel node) throws Exception
 	{
 		defaultIn(node);
-		if(node.getArguments() != null) node.getArguments().accept(this);
+		String identif = node.getNom();
+		int nbArg = node.getArguments().length();
+		if( tableGlobale.getFct(identif ) != null){
+			if(nbArg != tableGlobale.getFct(identif).getNbArgs()){
+				throw new ErrorException(Error.TS, "Mauvais nombre d'arguments");
+			}
+		}
+		else {
+			throw new ErrorException(Error.TS, "La fonction n'existe pas");
+		}
 		defaultOut(node);
 		return null;
 	}

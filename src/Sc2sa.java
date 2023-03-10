@@ -244,7 +244,7 @@ public class Sc2sa extends DepthFirstAdapter {
     @Override
     public void caseADecfonc(ADecfonc node) {
         inADecfonc(node);
-        Type typeOp= Type.NUL;
+        Type typeOp= null;
         String id =null;
         SaLDecVar saLDecVarP = null;
         SaLDecVar saLDecVarS = null;
