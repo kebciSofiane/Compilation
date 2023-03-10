@@ -164,7 +164,7 @@ public class Sa2ts extends SaDepthFirstVisitor <Void> {
 	}
 
 
-	//todo
+	//Done
 	public Void visit(SaAppel node) throws Exception
 	{
 		defaultIn(node);

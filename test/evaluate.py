@@ -23,7 +23,7 @@ outputFilename = "result.txt"
 ################################################################################
 def compileCompiler() :
   global classpath
-  for file in ["Compiler.java", "C3aVM.java", "NasmVM.java"] :
+  for file in ["Compiler.java", "SaVM.java", "C3aVM.java", "NasmVM.java"] :
     if not os.path.isfile(srcPath+file) :
       print("Skipping compilation of %s"%file, file=outVerbose)
       continue
