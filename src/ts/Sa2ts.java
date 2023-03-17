@@ -93,6 +93,10 @@ public class Sa2ts extends SaDepthFirstVisitor <Void> {
 	public Void visit(SaDecFonc node) throws Exception
 	{
 		defaultIn(node);
+
+		if(this.getTableGlobale().getFct(node.getNom()) != null){
+			throw new ErrorException(Error.TS, "La fonction existe déja");
+		}
 		this.tableLocaleCourante = new Ts();
 		this.context = Context.PARAM;
 		String identif = node.getNom();
@@ -100,7 +104,9 @@ public class Sa2ts extends SaDepthFirstVisitor <Void> {
 
 		int nbArgs;
 
-		if (node.getParametres() == null){ //pas sur
+
+
+		if (node.getParametres() == null){
 			nbArgs = 0;
 		}
 		else {
@@ -113,9 +119,7 @@ public class Sa2ts extends SaDepthFirstVisitor <Void> {
 		if(node.getVariable() != null) node.getVariable().accept(this);
 
 
-		if(this.tableGlobale.getFct(node.getNom()) != null){
-				throw new ErrorException(Error.TS, "La fonction existe déja");
-		}
+
 		tableGlobale.addFct(identif, typeDeRetour, nbArgs,this.tableLocaleCourante,node);
 
 		if(node.getCorps() != null) node.getCorps().accept(this);
@@ -173,30 +177,7 @@ public class Sa2ts extends SaDepthFirstVisitor <Void> {
 	//Done
 	@Override
 
-	/*
-	public Void visit(SaAppel node) throws Exception
-	{
-		defaultIn(node);
-		String identif = node.getNom();
-		int nbArgs;
-		if (node.getArguments() == null){ //pas sur
-			nbArgs = 0;
-		}
-		else {
-			nbArgs = node.getArguments().length();
-		}
 
-		if( tableGlobale.getFct(identif ) != null){
-			if(nbArgs != tableGlobale.getFct(identif).getNbArgs()){
-				throw new ErrorException(Error.TS, "Mauvais nombre d'arguments");
-			}
-		}
-		else {
-			throw new ErrorException(Error.TS, "La fonction n'existe pas");
-		}
-		defaultOut(node);
-		return null;
-	}*/
 	public Void visit(SaAppel node) throws Exception {
 		defaultIn(node);
 		String identif = node.getNom();
@@ -204,11 +185,9 @@ public class Sa2ts extends SaDepthFirstVisitor <Void> {
 		int nbArgs = 0;
 		if (tableGlobale.getFct(identif)!=null) {
 			if (node.getArguments() != null) {
-				node.getArguments().getTete().accept(this);
 				nbArgs++;
 				SaLExp next = node.getArguments().getQueue();
 				while (next != null) {
-					next.getTete().accept(this);
 					nbArgs++;
 					next = next.getQueue();
 				}

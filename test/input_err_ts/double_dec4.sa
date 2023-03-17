@@ -1,0 +1,7 @@
+<programme type="SaProg">
+ <fonctions type="SaLDecFonc">
+  <tete type="SaDecFonc" nom="f" typeRetour="nul">
+   <parametres type="SaLDecVar">
+    <tete type="SaDecVarSimple" nom="a" typeVariable="entier"/>
+   </parametres>
+   <corps type="SaInstBloc">

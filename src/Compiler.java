@@ -48,10 +48,10 @@ public class Compiler
 	    System.out.println("[BUILD SC] ");
 	    Start tree = p.parse();
 	    
-	    if(verboseLevel > 1){
+/*	    if(verboseLevel > 1){
 		System.out.println("[PRINT SC]");
 		tree.apply(new Sc2Xml(baseName));
-	    }
+	    }*/
 	    
 	    System.out.println("[BUILD SA] ");
 	    Sc2sa sc2sa = new Sc2sa();
