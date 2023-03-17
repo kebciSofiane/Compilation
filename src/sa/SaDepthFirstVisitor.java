@@ -67,10 +67,12 @@ public class SaDepthFirstVisitor <T> implements SaVisitor <T>{
     //   private NouvelleClasse x;
     public void defaultIn(SaNode node)
     {
+		System.out.println("<" + node.getClass().getSimpleName() + ">");
     }
 
     public void defaultOut(SaNode node)
     {
+		System.out.println("</" + node.getClass().getSimpleName() + ">");
     }
 
     // P -> LDEC LDEC 

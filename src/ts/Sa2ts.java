@@ -183,18 +183,19 @@ public class Sa2ts extends SaDepthFirstVisitor <Void> {
 		String identif = node.getNom();
 
 		int nbArgs = 0;
-		if (tableGlobale.getFct(identif)!=null) {
-			if (node.getArguments() != null) {
-				nbArgs++;
-				SaLExp next = node.getArguments().getQueue();
-				while (next != null) {
-					nbArgs++;
-					next = next.getQueue();
-				}
-				if(nbArgs != tableGlobale.getFct(identif).getNbArgs() )
+		if (node.getArguments() != null)
+			nbArgs = node.getArguments().length();
+
+		System.out.println("nombre de parametres = " + nbArgs);
+
+		TsItemFct entreeFct = tableGlobale.getFct(identif);
+		System.out.println("nombre de parametres dans la ts = " + entreeFct.getNbArgs());
+		if (entreeFct != null) {
+			node.tsItem = entreeFct;
+				if(nbArgs != entreeFct.getNbArgs())
 					throw new ErrorException(Error.TS, "Wrong nb of args. ");
 			}
-		}else throw new ErrorException(Error.TS,"Function not found");
+		else throw new ErrorException(Error.TS,"Function not found");
 
 		defaultOut(node);
 		return null;

@@ -163,62 +163,17 @@
 	varloc4.ts         CORRECT
 	varloc5.ts         CORRECT
 Évaluation de Execution de sa :
-52/80 correct ( 65.00%)
-	add1.saout       CORRECT
-	add2.saout       CORRECT
-	and1.saout       CORRECT
-	and2.saout       CORRECT
-	and3.saout       CORRECT
-	and4.saout       CORRECT
-	and5.saout       CORRECT
-	div1.saout       CORRECT
-	div2.saout       CORRECT
-	div3.saout       CORRECT
-	div4.saout       CORRECT
-	ecrire1.saout    CORRECT
-	ecrire2.saout    CORRECT
-	egal1.saout      CORRECT
-	egal2.saout      CORRECT
-	egal3.saout      CORRECT
-	inf1.saout       CORRECT
-	inf2.saout       CORRECT
-	inf3.saout       CORRECT
-	mult1.saout      CORRECT
-	mult2.saout      CORRECT
-	mult3.saout      CORRECT
-	not1.saout       CORRECT
-	not2.saout       CORRECT
-	not3.saout       CORRECT
-	or1.saout        CORRECT
-	or2.saout        CORRECT
-	or3.saout        CORRECT
-	or4.saout        CORRECT
-	or5.saout        CORRECT
-	parenth1.saout   CORRECT
-	parenth2.saout   CORRECT
-	prio34-1.saout   CORRECT
-	prio34-2.saout   CORRECT
-	prio34-3.saout   CORRECT
-	prio34-4.saout   CORRECT
-	prio45-1.saout   CORRECT
-	prio45-2.saout   CORRECT
-	prio45-3.saout   CORRECT
-	prio45-4.saout   CORRECT
-	prio56-1.saout   CORRECT
-	prio56-2.saout   CORRECT
-	prio67-1.saout   CORRECT
-	prio67-2.saout   CORRECT
-	si1.saout        CORRECT
-	si2.saout        CORRECT
-	si3.saout        CORRECT
-	si4.saout        CORRECT
-	si5.saout        CORRECT
-	sub1.saout       CORRECT
-	sub2.saout       CORRECT
-	sub3.saout       CORRECT
+0/80 correct (  0.00%)
+	add1.saout            INCORRECT
+	add2.saout            INCORRECT
 	affect1.saout         INCORRECT
 	affect2.saout         INCORRECT
 	affect3.saout         INCORRECT
+	and1.saout            INCORRECT
+	and2.saout            INCORRECT
+	and3.saout            INCORRECT
+	and4.saout            INCORRECT
+	and5.saout            INCORRECT
 	appel-param1.saout    INCORRECT
 	appel-param2.saout    INCORRECT
 	appel-param3.saout    INCORRECT
@@ -226,8 +181,53 @@
 	appel1.saout          INCORRECT
 	appel2.saout          INCORRECT
 	appel3.saout          INCORRECT
+	div1.saout            INCORRECT
+	div2.saout            INCORRECT
+	div3.saout            INCORRECT
+	div4.saout            INCORRECT
+	ecrire1.saout         INCORRECT
+	ecrire2.saout         INCORRECT
+	egal1.saout           INCORRECT
+	egal2.saout           INCORRECT
+	egal3.saout           INCORRECT
 	fibo.saout            INCORRECT
+	inf1.saout            INCORRECT
+	inf2.saout            INCORRECT
+	inf3.saout            INCORRECT
+	mult1.saout           INCORRECT
+	mult2.saout           INCORRECT
+	mult3.saout           INCORRECT
+	not1.saout            INCORRECT
+	not2.saout            INCORRECT
+	not3.saout            INCORRECT
+	or1.saout             INCORRECT
+	or2.saout             INCORRECT
+	or3.saout             INCORRECT
+	or4.saout             INCORRECT
+	or5.saout             INCORRECT
+	parenth1.saout        INCORRECT
+	parenth2.saout        INCORRECT
+	prio34-1.saout        INCORRECT
+	prio34-2.saout        INCORRECT
+	prio34-3.saout        INCORRECT
+	prio34-4.saout        INCORRECT
+	prio45-1.saout        INCORRECT
+	prio45-2.saout        INCORRECT
+	prio45-3.saout        INCORRECT
+	prio45-4.saout        INCORRECT
+	prio56-1.saout        INCORRECT
+	prio56-2.saout        INCORRECT
+	prio67-1.saout        INCORRECT
+	prio67-2.saout        INCORRECT
 	rec1.saout            INCORRECT
+	si1.saout             INCORRECT
+	si2.saout             INCORRECT
+	si3.saout             INCORRECT
+	si4.saout             INCORRECT
+	si5.saout             INCORRECT
+	sub1.saout            INCORRECT
+	sub2.saout            INCORRECT
+	sub3.saout            INCORRECT
 	tab1.saout            INCORRECT
 	tab2.saout            INCORRECT
 	tab3.saout            INCORRECT
@@ -263,9 +263,9 @@
 	double_dec1.l     CORRECT
 	double_dec2.l     CORRECT
 	double_dec3.l     CORRECT
-	fct_inconnue1.l   CORRECT
+	double_dec4.l     CORRECT
 	var_inconnue1.l   CORRECT
-	double_dec4.l       INCORRECT
+	fct_inconnue1.l     INCORRECT
 	mauvais_nb_arg1.l   INCORRECT
 Évaluation de ERR_TYPE :
 0/45 correct (  0.00%)
