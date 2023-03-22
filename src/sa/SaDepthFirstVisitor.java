@@ -23,7 +23,7 @@ package sa;
 // INST -> ret EXP 
 // INST -> ecr EXP 
 
-// APP -> id LEXP 
+// APP -> id LEXP node.getVal().accept(this);
 
 // LEXP -> EXP LEXP 
 // LEXP -> null 

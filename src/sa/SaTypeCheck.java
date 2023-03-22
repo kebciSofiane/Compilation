@@ -21,91 +21,76 @@ public class SaTypeCheck extends SaDepthFirstVisitor <Void>{
 
     public void defaultIn(SaNode node)
     {
-	//			System.out.println("<" + node.getClass().getSimpleName() + ">");
+				System.out.println("<" + node.getClass().getSimpleName() + ">");
     }
 
     public void defaultOut(SaNode node)
     {
-	//		System.out.println("</" + node.getClass().getSimpleName() + ">");
+	System.out.println("</" + node.getClass().getSimpleName() + ">");
     }
 
 
 
 
-
+//Done
     public Void visit(SaInstAffect node) throws Exception
     {
         defaultIn(node);
+        if (node.getLhs().getTsItem().getType() != node.getRhs().getType()){
+            throw new ErrorException(Error.TS, "type incorrect");
+
+        }
         node.getLhs().accept(this);
         node.getRhs().accept(this);
         defaultOut(node);
         return null;
     }
 
-    // LDEC -> DEC LDEC
-    // LDEC -> null
-    /*    public T visit(SaLDec node) throws Exception
-    {
-	defaultIn(node);
-	node.getTete().accept(this);
-	if(node.getQueue() != null) node.getQueue().accept(this);
-	defaultOut(node);
-	return null;
-	}*/
-
-
-    public Void visit(SaVarSimple node) throws Exception
-    {
+    //Done
+    public Void visit(SaDecTab node) throws Exception{
         defaultIn(node);
+        if(node.getType() != Type.ENTIER)
+            throw new ErrorException(Error.TS, "type incorrect");
         defaultOut(node);
         return null;
     }
-
+    //Done
     public Void visit(SaAppel node) throws Exception
     {
         defaultIn(node);
-        if(node.getArguments() != null) node.getArguments().accept(this);
+        if (node.getArguments().getTete().getType() != fonctionCourante.saDecFonc.getParametres().getTete().getType())
+            throw new ErrorException(Error.TS, "type incorrect");
+
         defaultOut(node);
         return null;
     }
 
-    public Void visit(SaExpAppel node) throws Exception
-    {
-        defaultIn(node);
-        node.getVal().accept(this);
-        defaultOut(node);
-        return null;
-    }
-
-    // EXP -> add EXP EXP
+    @Override
+    //Done
     public Void visit(SaExpAdd node) throws Exception
     {
         defaultIn(node);
-        if (node.getOp1().getType() != node.getOp2().getType() || node.getType()!=node.getOp2().getType())
+        if (node.getOp1().getType() !=Type.ENTIER || node.getOp2().getType()!= Type.ENTIER)
             throw new ErrorException(Error.TS, "type incorrect");
-        node.getOp1().accept(this);
-        node.getOp2().accept(this);
         defaultOut(node);
         return null;
     }
 
-    // EXP -> sub EXP EXP
+    //Done
     public Void visit(SaExpSub node) throws Exception
     {
         defaultIn(node);
-        if (node.getOp1().getType() != node.getOp2().getType() || node.getType()!=node.getOp2().getType())
+        if (node.getOp1().getType() != Type.ENTIER || node.getOp2().getType()!= Type.ENTIER)
             throw new ErrorException(Error.TS, "type incorrect");
-        node.getOp1().accept(this);
-        node.getOp2().accept(this);
         defaultOut(node);
         return null;
     }
 
-    // EXP -> mult EXP EXP
+    //Done
     public Void visit(SaExpMult node) throws Exception
     {
         defaultIn(node);
-        if (node.getOp1().getType() != node.getOp2().getType() || node.getType()!=node.getOp2().getType())
+        if (node.getOp1().getType() != Type.ENTIER|| node.getOp2().getType()!= Type.ENTIER)
             throw new ErrorException(Error.TS, "type incorrect");
         node.getOp1().accept(this);
         node.getOp2().accept(this);
@@ -113,11 +98,11 @@ public class SaTypeCheck extends SaDepthFirstVisitor <Void>{
         return null;
     }
 
-    // EXP -> div EXP EXP
+    //Done
     public Void visit(SaExpDiv node) throws Exception
     {
         defaultIn(node);
-        if (node.getOp1().getType() != node.getOp2().getType() || node.getType()!=node.getOp2().getType())
+        if (node.getOp1().getType() != Type.ENTIER || node.getOp2().getType()!= Type.ENTIER)
             throw new ErrorException(Error.TS, "type incorrect");
         node.getOp1().accept(this);
         node.getOp2().accept(this);
@@ -125,7 +110,7 @@ public class SaTypeCheck extends SaDepthFirstVisitor <Void>{
         return null;
     }
 
-    // EXP -> inf EXP EXP
+    //Done
     public Void visit(SaExpInf node) throws Exception
     {
         defaultIn(node);
@@ -137,7 +122,7 @@ public class SaTypeCheck extends SaDepthFirstVisitor <Void>{
         return null;
     }
 
-    // EXP -> eq EXP EXP
+    // Done
     public Void visit(SaExpEqual node) throws Exception
     {
         defaultIn(node);
@@ -152,18 +137,117 @@ public class SaTypeCheck extends SaDepthFirstVisitor <Void>{
 
 
 
-    // INST -> ret EXP
+    // Done
     public Void visit(SaInstRetour node) throws Exception
     {
         defaultIn(node);
         if (node.getVal().getType() != fonctionCourante.typeRetour)
             throw new ErrorException(Error.TS, "type incorrect");
-        node.getVal().accept(this);
+        defaultOut(node);
+        return null;
+    }
+
+    //Done
+    public Void visit(SaVarIndicee node) throws Exception
+    {
+        defaultIn(node);
+        if (node.getIndice().getType() != Type.ENTIER)
+            throw new ErrorException(Error.TS, "type incorrect");
+        defaultOut(node);
+        return null;
+    }
+    //Done
+    public Void visit(SaDecFonc node) throws Exception
+    {
+        defaultIn(node);
+        int nb =0;
+        if(node.getParametres() != null) nb = node.getParametres().length();
+        fonctionCourante = new TsItemFct(node.getNom(), node.getTypeRetour(), nb, new Ts(), node);
+        if(node.getVariable() != null) node.getVariable().accept(this);
+        if(node.getCorps() != null) node.getCorps().accept(this);
+        defaultOut(node);
+        return null;
+    }
+    //Done
+    public Void visit(SaExpInt node) throws Exception
+    {
+        defaultIn(node);
+        if(node.getType() != Type.ENTIER)
+            throw new ErrorException(Error.TS, "type incorrect");
+        defaultOut(node);
+        return null;
+    }
+
+    //Done
+    public Void visit(SaExpVrai node) throws Exception
+    {
+        defaultIn(node);
+        if(node.getType() != Type.BOOL)
+            throw new ErrorException(Error.TS, "type incorrect");
+        defaultOut(node);
+        return null;
+    }
+
+    //Done
+    public Void visit(SaExpFaux node) throws Exception
+    {
+        defaultIn(node);
+        if(node.getType() != Type.BOOL)
+            throw new ErrorException(Error.TS, "type incorrect");
+        defaultOut(node);
+        return null;
+    }
+    //Done
+    public Void visit(SaInstTantQue node) throws Exception
+    {
+        defaultIn(node);
+        if(node.getTest().getType() != Type.BOOL)
+            throw new ErrorException(Error.TS, "type incorrect");
         defaultOut(node);
         return null;
     }
 
 
 
+    // Done
+    public Void visit(SaExpAnd node) throws Exception
+    {
+        defaultIn(node);
+        if(node.getOp1().getType()!= Type.BOOL || node.getOp2().getType()!= Type.BOOL )
+            throw new ErrorException(Error.TS, "type incorrect");
+        defaultOut(node);
+        return null;
+    }
+
+
+    // Done
+    public Void visit(SaExpOr node) throws Exception
+    {
+        defaultIn(node);
+        if(node.getOp1().getType()!= Type.BOOL || node.getOp2().getType()!= Type.BOOL )
+            throw new ErrorException(Error.TS, "type incorrect");
+        defaultOut(node);
+        return null;
+    }
+
+    // Done
+    public Void visit(SaExpNot node) throws Exception
+    {
+        defaultIn(node);
+        if (node.getType() != Type.BOOL)
+            throw new ErrorException(Error.TS, "type incorrect");
+        defaultOut(node);
+        return null;
+    }
+
+    //Done
+    public Void visit(SaInstSi node) throws Exception
+    {
+        defaultIn(node);
+        if(node.getTest().getType() != Type.BOOL)
+            throw new ErrorException(Error.TS, "type incorrect");
+        defaultOut(node);
+        return null;
+    }
 
 }

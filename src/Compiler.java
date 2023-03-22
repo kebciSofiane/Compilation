@@ -71,8 +71,8 @@ public class Compiler
 		tableGlobale.afficheTout(baseName);
 		}
 
-	    /*System.out.println("[TYPE CHECKING]");
-	      new SaTypeCheck(saRoot);*/
+	  System.out.println("[TYPE CHECKING]");
+	      new SaTypeCheck(saRoot);
 	    
 	    /*System.out.println("[BUILD C3A] ");
 	    C3a c3a = new Sa2c3a(saRoot, tableGlobale).getC3a();
