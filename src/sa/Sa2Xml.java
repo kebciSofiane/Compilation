@@ -29,7 +29,9 @@ public class Sa2Xml extends SaDepthFirstVisitor < Void > {
 	try{
 	    root.accept(this);
 	}
-	catch(Exception e){}
+	catch(Exception e){
+		e.printStackTrace();
+	}
     }
 
     public void printOpenTag(String TagName){
