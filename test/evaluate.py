@@ -33,6 +33,7 @@ def compileCompiler() :
       continue
     print("Compiling %s..."%file, end="", file=outVerbose)
     proc = subprocess.Popen("cd %s && javac %s %s %s"%(srcPath, "-cp " if len(classpath) > 0 else "", classpath, file), shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    errMess = proc = subprocess.Popen("cd %s && javac %s %s %s"%(srcPath, "-cp " if len(classpath) > 0 else "", classpath, file), shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     errMess = proc.stderr.read().decode('utf8')
     returnCode = proc.wait()
     if returnCode == 0 :

@@ -46,19 +46,19 @@ public class Sa2ts extends SaDepthFirstVisitor <Void> {
 		Type type = node.getType();
 		if(this.context == Context.GLOBAL){
 			if(this.tableGlobale.getVar(node.getNom()) != null){
-				throw new ErrorException(Error.TS, "La variable existe déja");
+				throw new ErrorException(Error.TS, "La variable existe déjà");
 			}
 			node.setTsItem( tableGlobale.addVar(identif, type));
 		}
 		if(this.context == Context.LOCAL){
 			if(this.tableLocaleCourante.getVar(node.getNom())!= null){
-				throw new ErrorException(Error.TS, "La variable existe déja");
+				throw new ErrorException(Error.TS, "La variable existe déjà");
 			}
 			node.setTsItem(tableLocaleCourante.addVar(identif, type));
 		}
 		if(this.context == Context.PARAM){
 			if(this.tableLocaleCourante.getVar(node.getNom())!= null){
-				throw new ErrorException(Error.TS, "La variable existe déja");
+				throw new ErrorException(Error.TS, "La variable existe déjà");
 			}
 			node.setTsItem(tableLocaleCourante.addParam(identif, type));
 		}
@@ -79,7 +79,7 @@ public class Sa2ts extends SaDepthFirstVisitor <Void> {
 		int taille = node.getTaille();
 		if(this.context == Context.GLOBAL){
 			if(this.tableGlobale.getVar(node.getNom()) != null){
-				throw new ErrorException(Error.TS, "La variable existe déja");
+				throw new ErrorException(Error.TS, "La variable existe déjà");
 			}
 			node.tsItem = tableGlobale.addTab(identif, type, taille);
 		}
@@ -95,7 +95,7 @@ public class Sa2ts extends SaDepthFirstVisitor <Void> {
 		defaultIn(node);
 
 		if(this.getTableGlobale().getFct(node.getNom()) != null){
-			throw new ErrorException(Error.TS, "La fonction existe déja");
+			throw new ErrorException(Error.TS, "La fonction existe déjà");
 		}
 		this.tableLocaleCourante = new Ts();
 		this.context = Context.PARAM;
@@ -191,16 +191,16 @@ public class Sa2ts extends SaDepthFirstVisitor <Void> {
 		if (node.getArguments() != null)
 			nbArgs = node.getArguments().length();
 
-		System.out.println("nombre de parametres = " + nbArgs);
+		//System.out.println("nombre de parametres = " + nbArgs);
 
-		TsItemFct entreeFct = tableGlobale.getFct(identif);
-		System.out.println("nombre de parametres dans la ts = " + entreeFct.getNbArgs());
-		if (entreeFct != null) {
-			node.tsItem = entreeFct;
-				if(nbArgs != entreeFct.getNbArgs())
-					throw new ErrorException(Error.TS, "Wrong nb of args. ");
+		TsItemFct fonction = tableGlobale.getFct(identif);
+		//System.out.println("nombre de parametres dans la ts = " + fonction.getNbArgs());
+		if (fonction != null) {
+			node.tsItem = fonction;
+				if(nbArgs != fonction.getNbArgs())
+					throw new ErrorException(Error.TS, "Mauvais nombre d'arguments ");
 			}
-		else throw new ErrorException(Error.TS,"Function not found");
+		else throw new ErrorException(Error.TS,"La fonction n'existe pas");
 
 		defaultOut(node);
 		return null;
