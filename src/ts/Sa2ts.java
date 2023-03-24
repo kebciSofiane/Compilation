@@ -42,6 +42,8 @@ public class Sa2ts extends SaDepthFirstVisitor <Void> {
 	public Void visit(SaDecVar node) throws Exception
 	{
 		defaultIn(node);
+
+
 		String identif = node.getNom();
 		Type type = node.getType();
 		if(this.context == Context.GLOBAL){
@@ -62,6 +64,9 @@ public class Sa2ts extends SaDepthFirstVisitor <Void> {
 			}
 			node.setTsItem(tableLocaleCourante.addParam(identif, type));
 		}
+
+
+
 		defaultOut(node);
 		return null;
 	}
@@ -74,6 +79,7 @@ public class Sa2ts extends SaDepthFirstVisitor <Void> {
 	public Void visit(SaDecTab node) throws Exception{
 
 		defaultIn(node);
+	//	TsItemVarTab item = null;
 		String identif = node.getNom();
 		Type type = node.getType();
 		int taille = node.getTaille();
@@ -83,6 +89,8 @@ public class Sa2ts extends SaDepthFirstVisitor <Void> {
 			}
 			node.tsItem = tableGlobale.addTab(identif, type, taille);
 		}
+		//node.tsItem =  item;
+
 		defaultOut(node);
 		return null;
 	}
@@ -93,6 +101,7 @@ public class Sa2ts extends SaDepthFirstVisitor <Void> {
 	public Void visit(SaDecFonc node) throws Exception
 	{
 		defaultIn(node);
+		TsItemFct item = null;
 
 		if(this.getTableGlobale().getFct(node.getNom()) != null){
 			throw new ErrorException(Error.TS, "La fonction existe déjà");
@@ -123,6 +132,8 @@ public class Sa2ts extends SaDepthFirstVisitor <Void> {
 		node.tsItem  = tableGlobale.addFct(identif, typeDeRetour, nbArgs,this.tableLocaleCourante,node);
 
 		if(node.getCorps() != null) node.getCorps().accept(this);
+
+		node.tsItem =  item;
 		defaultOut(node);
 		return null;
 	}
@@ -181,7 +192,6 @@ public class Sa2ts extends SaDepthFirstVisitor <Void> {
 
 	//Done
 	@Override
-
 
 	public Void visit(SaAppel node) throws Exception {
 		defaultIn(node);

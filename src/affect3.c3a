@@ -1,0 +1,6 @@
+	t0 = call main
+	stop t0
+f	fbegin	#
+	fend
+main	fbegin	#
+	fend
