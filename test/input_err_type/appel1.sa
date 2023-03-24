@@ -3,9 +3,6 @@
   <tete type="SaDecFonc" nom="f" typeRetour="entier">
    <parametres type="SaLDecVar">
     <tete type="SaDecVarSimple" nom="a" typeVariable="entier"/>
-    <queue type="SaLDecVar">
-     <tete type="SaDecVarSimple" nom="b" typeVariable="entier"/>
-    </queue>
    </parametres>
   </tete>
   <queue type="SaLDecFonc">
@@ -14,7 +11,7 @@
      <val type="SaLInst">
       <tete type="SaAppel" nom="f">
        <arguments type="SaLExp">
-        <tete type="SaExpInt" val="2"/>
+        <tete type="SaExpVrai"/>
        </arguments>
       </tete>
      </val>

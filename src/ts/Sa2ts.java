@@ -160,7 +160,7 @@ public class Sa2ts extends SaDepthFirstVisitor <Void> {
 	{
 		defaultIn(node);
 		String identif = node.getNom();
-		TsItemVar item = null;
+		TsItemVar item ;
 		if( tableGlobale.getVar(identif ) != null){
 			if( ! (tableGlobale.getVar(identif) instanceof TsItemVarTab)){
 				throw new ErrorException(Error.TS, "Ce n'est pas une variable indicee");
@@ -186,7 +186,7 @@ public class Sa2ts extends SaDepthFirstVisitor <Void> {
 	public Void visit(SaAppel node) throws Exception {
 		defaultIn(node);
 		String identif = node.getNom();
-
+		TsItemFct item = null;
 		int nbArgs = 0;
 		if (node.getArguments() != null)
 			nbArgs = node.getArguments().length();
@@ -201,7 +201,7 @@ public class Sa2ts extends SaDepthFirstVisitor <Void> {
 					throw new ErrorException(Error.TS, "Mauvais nombre d'arguments ");
 			}
 		else throw new ErrorException(Error.TS,"La fonction n'existe pas");
-
+		node.tsItem =  item;
 		defaultOut(node);
 		return null;
 	}
