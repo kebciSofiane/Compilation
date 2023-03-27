@@ -36,8 +36,43 @@ public class Sa2c3a extends SaDepthFirstVisitor <C3aOperand> {
 	//	System.out.println("</" + node.getClass().getSimpleName() + ">");
     }
 
+    //Done
+    public C3aOperand visit(SaProg node) throws Exception
+    {
+        defaultIn(node);
+        if(node.getVariables() != null)
+            node.getVariables().accept(this);
+        if(node.getFonctions() != null)
+            node.getFonctions().accept(this);
+        defaultOut(node);
+        return null;
+    }
 
+    //Done
+    public C3aOperand visit(SaExpInt node) throws Exception
+    {
+        defaultIn(node);
+        C3aOperand result = new C3aConstant(node.getVal());
+        defaultOut(node);
+        return result;
+    }
+    //Done
+    public C3aOperand visit(SaExpVar node) throws Exception
+    {
+        defaultIn(node);
+        C3aOperand result = node.getVar().accept(this);
+        defaultOut(node);
+        return result;
+    }
 
+    //Done
+    public C3aOperand visit(SaExpAppel node) throws Exception
+    {
+        defaultIn(node);
+        C3aOperand result = node.getVal().accept(this);
+        defaultOut(node);
+        return result;
+    }
 
 
     //Done
@@ -71,7 +106,7 @@ public class Sa2c3a extends SaDepthFirstVisitor <C3aOperand> {
         C3aOperand result = c3a.newTemp();
         c3a.ajouteInst(new C3aInstSub(op1,op2,result,""));
         defaultOut(node);
-        return null;
+        return result;
     }
 
    //Done
@@ -83,7 +118,7 @@ public class Sa2c3a extends SaDepthFirstVisitor <C3aOperand> {
         C3aOperand result = c3a.newTemp();
         c3a.ajouteInst(new C3aInstMult(op1,op2,result,""));
         defaultOut(node);
-        return null;
+        return result;
     }
 
     // Done
@@ -95,6 +130,15 @@ public class Sa2c3a extends SaDepthFirstVisitor <C3aOperand> {
         C3aOperand result = c3a.newTemp();
         c3a.ajouteInst(new C3aInstDiv(op1,op2,result,""));
         defaultOut(node);
+        return result;
+    }
+
+    public C3aOperand visit(SaInstAffect node) throws Exception
+    {
+        defaultIn(node);
+        c3a.ajouteInst(new C3aInstAffect( node.getRhs().accept(this), node.getLhs().accept(this),""));
+        defaultOut(node);
         return null;
     }
+
 }
