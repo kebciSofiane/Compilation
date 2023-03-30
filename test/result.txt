@@ -245,11 +245,51 @@
 	varloc4.saout         CORRECT
 	varloc5.saout         CORRECT
 Évaluation de Diff de c3a :
-0/80 correct (  0.00%)
-	add1.c3a            INCORRECT
-	add2.c3a            INCORRECT
-	affect1.c3a         INCORRECT
-	affect2.c3a         INCORRECT
+44/80 correct ( 55.00%)
+	add1.c3a       CORRECT
+	add2.c3a       CORRECT
+	affect1.c3a    CORRECT
+	affect2.c3a    CORRECT
+	div1.c3a       CORRECT
+	div2.c3a       CORRECT
+	div3.c3a       CORRECT
+	div4.c3a       CORRECT
+	ecrire1.c3a    CORRECT
+	ecrire2.c3a    CORRECT
+	egal1.c3a      CORRECT
+	egal2.c3a      CORRECT
+	egal3.c3a      CORRECT
+	inf1.c3a       CORRECT
+	inf2.c3a       CORRECT
+	inf3.c3a       CORRECT
+	mult1.c3a      CORRECT
+	mult2.c3a      CORRECT
+	mult3.c3a      CORRECT
+	parenth1.c3a   CORRECT
+	parenth2.c3a   CORRECT
+	prio34-1.c3a   CORRECT
+	prio34-2.c3a   CORRECT
+	prio34-3.c3a   CORRECT
+	prio34-4.c3a   CORRECT
+	prio45-1.c3a   CORRECT
+	prio45-2.c3a   CORRECT
+	prio45-3.c3a   CORRECT
+	prio45-4.c3a   CORRECT
+	sub1.c3a       CORRECT
+	sub2.c3a       CORRECT
+	sub3.c3a       CORRECT
+	tab1.c3a       CORRECT
+	tab2.c3a       CORRECT
+	tab3.c3a       CORRECT
+	tab4.c3a       CORRECT
+	varglob1.c3a   CORRECT
+	varglob2.c3a   CORRECT
+	varglob3.c3a   CORRECT
+	varglob4.c3a   CORRECT
+	varloc1.c3a    CORRECT
+	varloc2.c3a    CORRECT
+	varloc3.c3a    CORRECT
+	varloc4.c3a    CORRECT
 	affect3.c3a         INCORRECT
 	and1.c3a            INCORRECT
 	and2.c3a            INCORRECT
@@ -263,22 +303,7 @@
 	appel1.c3a          INCORRECT
 	appel2.c3a          INCORRECT
 	appel3.c3a          INCORRECT
-	div1.c3a            INCORRECT
-	div2.c3a            INCORRECT
-	div3.c3a            INCORRECT
-	div4.c3a            INCORRECT
-	ecrire1.c3a         INCORRECT
-	ecrire2.c3a         INCORRECT
-	egal1.c3a           INCORRECT
-	egal2.c3a           INCORRECT
-	egal3.c3a           INCORRECT
 	fibo.c3a            INCORRECT
-	inf1.c3a            INCORRECT
-	inf2.c3a            INCORRECT
-	inf3.c3a            INCORRECT
-	mult1.c3a           INCORRECT
-	mult2.c3a           INCORRECT
-	mult3.c3a           INCORRECT
 	not1.c3a            INCORRECT
 	not2.c3a            INCORRECT
 	not3.c3a            INCORRECT
@@ -287,16 +312,6 @@
 	or3.c3a             INCORRECT
 	or4.c3a             INCORRECT
 	or5.c3a             INCORRECT
-	parenth1.c3a        INCORRECT
-	parenth2.c3a        INCORRECT
-	prio34-1.c3a        INCORRECT
-	prio34-2.c3a        INCORRECT
-	prio34-3.c3a        INCORRECT
-	prio34-4.c3a        INCORRECT
-	prio45-1.c3a        INCORRECT
-	prio45-2.c3a        INCORRECT
-	prio45-3.c3a        INCORRECT
-	prio45-4.c3a        INCORRECT
 	prio56-1.c3a        INCORRECT
 	prio56-2.c3a        INCORRECT
 	prio67-1.c3a        INCORRECT
@@ -307,31 +322,21 @@
 	si3.c3a             INCORRECT
 	si4.c3a             INCORRECT
 	si5.c3a             INCORRECT
-	sub1.c3a            INCORRECT
-	sub2.c3a            INCORRECT
-	sub3.c3a            INCORRECT
-	tab1.c3a            INCORRECT
-	tab2.c3a            INCORRECT
-	tab3.c3a            INCORRECT
-	tab4.c3a            INCORRECT
 	tantque1.c3a        INCORRECT
 	tantque2.c3a        INCORRECT
 	tri.c3a             INCORRECT
-	varglob1.c3a        INCORRECT
-	varglob2.c3a        INCORRECT
-	varglob3.c3a        INCORRECT
-	varglob4.c3a        INCORRECT
-	varloc1.c3a         INCORRECT
-	varloc2.c3a         INCORRECT
-	varloc3.c3a         INCORRECT
-	varloc4.c3a         INCORRECT
 	varloc5.c3a         INCORRECT
 Évaluation de Execution du c3a :
-38/80 correct ( 47.50%)
+62/80 correct ( 77.50%)
 	add1.c3aout       CORRECT
 	add2.c3aout       CORRECT
 	affect1.c3aout    CORRECT
 	affect2.c3aout    CORRECT
+	and1.c3aout       CORRECT
+	and2.c3aout       CORRECT
+	and3.c3aout       CORRECT
+	and4.c3aout       CORRECT
+	and5.c3aout       CORRECT
 	appel1.c3aout     CORRECT
 	appel2.c3aout     CORRECT
 	appel3.c3aout     CORRECT
@@ -341,15 +346,34 @@
 	div4.c3aout       CORRECT
 	ecrire1.c3aout    CORRECT
 	ecrire2.c3aout    CORRECT
+	egal1.c3aout      CORRECT
+	egal2.c3aout      CORRECT
+	egal3.c3aout      CORRECT
+	inf1.c3aout       CORRECT
+	inf2.c3aout       CORRECT
+	inf3.c3aout       CORRECT
 	mult1.c3aout      CORRECT
 	mult2.c3aout      CORRECT
 	mult3.c3aout      CORRECT
+	or1.c3aout        CORRECT
+	or2.c3aout        CORRECT
+	or3.c3aout        CORRECT
+	or4.c3aout        CORRECT
+	or5.c3aout        CORRECT
 	parenth1.c3aout   CORRECT
 	parenth2.c3aout   CORRECT
 	prio34-1.c3aout   CORRECT
 	prio34-2.c3aout   CORRECT
 	prio34-3.c3aout   CORRECT
 	prio34-4.c3aout   CORRECT
+	prio45-1.c3aout   CORRECT
+	prio45-2.c3aout   CORRECT
+	prio45-3.c3aout   CORRECT
+	prio45-4.c3aout   CORRECT
+	prio56-1.c3aout   CORRECT
+	prio56-2.c3aout   CORRECT
+	prio67-1.c3aout   CORRECT
+	prio67-2.c3aout   CORRECT
 	sub1.c3aout       CORRECT
 	sub2.c3aout       CORRECT
 	sub3.c3aout       CORRECT
@@ -367,38 +391,14 @@
 	varloc4.c3aout    CORRECT
 	varloc5.c3aout    CORRECT
 	affect3.c3aout         INCORRECT
-	and1.c3aout            INCORRECT
-	and2.c3aout            INCORRECT
-	and3.c3aout            INCORRECT
-	and4.c3aout            INCORRECT
-	and5.c3aout            INCORRECT
 	appel-param1.c3aout    INCORRECT
 	appel-param2.c3aout    INCORRECT
 	appel-param3.c3aout    INCORRECT
 	appel-retour1.c3aout   INCORRECT
-	egal1.c3aout           INCORRECT
-	egal2.c3aout           INCORRECT
-	egal3.c3aout           INCORRECT
 	fibo.c3aout            INCORRECT
-	inf1.c3aout            INCORRECT
-	inf2.c3aout            INCORRECT
-	inf3.c3aout            INCORRECT
 	not1.c3aout            INCORRECT
 	not2.c3aout            INCORRECT
 	not3.c3aout            INCORRECT
-	or1.c3aout             INCORRECT
-	or2.c3aout             INCORRECT
-	or3.c3aout             INCORRECT
-	or4.c3aout             INCORRECT
-	or5.c3aout             INCORRECT
-	prio45-1.c3aout        INCORRECT
-	prio45-2.c3aout        INCORRECT
-	prio45-3.c3aout        INCORRECT
-	prio45-4.c3aout        INCORRECT
-	prio56-1.c3aout        INCORRECT
-	prio56-2.c3aout        INCORRECT
-	prio67-1.c3aout        INCORRECT
-	prio67-2.c3aout        INCORRECT
 	rec1.c3aout            INCORRECT
 	si1.c3aout             INCORRECT
 	si2.c3aout             INCORRECT
@@ -475,66 +475,6 @@
 	sub4.l       CORRECT
 	tantque1.l   CORRECT
 ------------------------------EVALUATION ERRORS------------------------------
-ERROR evaluateC3a for input and1.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot read field "adresse" because "<parameter1>.item" is null
-	at c3a.C3aEval.visit(C3aEval.java:168)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aVar.accept(C3aVar.java:22)
-	at c3a.C3aEval.visit(C3aEval.java:291)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstJumpIfNotEqual.accept(C3aInstJumpIfNotEqual.java:24)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input and2.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot read field "adresse" because "<parameter1>.item" is null
-	at c3a.C3aEval.visit(C3aEval.java:168)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aVar.accept(C3aVar.java:22)
-	at c3a.C3aEval.visit(C3aEval.java:291)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstJumpIfNotEqual.accept(C3aInstJumpIfNotEqual.java:24)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input and3.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot read field "adresse" because "<parameter1>.item" is null
-	at c3a.C3aEval.visit(C3aEval.java:168)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aVar.accept(C3aVar.java:22)
-	at c3a.C3aEval.visit(C3aEval.java:291)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstJumpIfNotEqual.accept(C3aInstJumpIfNotEqual.java:24)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input and4.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot read field "adresse" because "<parameter1>.item" is null
-	at c3a.C3aEval.visit(C3aEval.java:168)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aVar.accept(C3aVar.java:22)
-	at c3a.C3aEval.visit(C3aEval.java:291)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstJumpIfNotEqual.accept(C3aInstJumpIfNotEqual.java:24)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input and5.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot read field "adresse" because "<parameter1>.item" is null
-	at c3a.C3aEval.visit(C3aEval.java:168)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aVar.accept(C3aVar.java:22)
-	at c3a.C3aEval.visit(C3aEval.java:291)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstJumpIfNotEqual.accept(C3aInstJumpIfNotEqual.java:24)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
 ERROR evaluateC3a for input appel-retour1.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot read field "adresse" because "<parameter1>.item" is null
 	at c3a.C3aEval.visit(C3aEval.java:168)
 	at c3a.C3aEval.visit(C3aEval.java:8)
@@ -547,211 +487,7 @@ ERROR evaluateC3a for input appel-retour1.l : 'Exception in thread "main" java.l
 	at C3aVM.main(C3aVM.java:59)
 '
 
-ERROR evaluateC3a for input egal1.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:283)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstJumpIfEqual.accept(C3aInstJumpIfEqual.java:24)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input egal2.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "c3a.C3aOperand.accept(c3a.C3aVisitor)" because "<parameter1>.op1" is null
-	at c3a.C3aEval.visit(C3aEval.java:327)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstWrite.accept(C3aInstWrite.java:22)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input egal3.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:283)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstJumpIfEqual.accept(C3aInstJumpIfEqual.java:24)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input fibo.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:274)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstJumpIfLess.accept(C3aInstJumpIfLess.java:25)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input inf1.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "c3a.C3aOperand.accept(c3a.C3aVisitor)" because "<parameter1>.op1" is null
-	at c3a.C3aEval.visit(C3aEval.java:327)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstWrite.accept(C3aInstWrite.java:22)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input inf2.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "c3a.C3aOperand.accept(c3a.C3aVisitor)" because "<parameter1>.op1" is null
-	at c3a.C3aEval.visit(C3aEval.java:327)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstWrite.accept(C3aInstWrite.java:22)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input inf3.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:274)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstJumpIfLess.accept(C3aInstJumpIfLess.java:25)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input not1.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot read field "adresse" because "<parameter1>.item" is null
-	at c3a.C3aEval.visit(C3aEval.java:168)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aVar.accept(C3aVar.java:22)
-	at c3a.C3aEval.visit(C3aEval.java:327)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstWrite.accept(C3aInstWrite.java:22)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input not2.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot read field "adresse" because "<parameter1>.item" is null
-	at c3a.C3aEval.visit(C3aEval.java:168)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aVar.accept(C3aVar.java:22)
-	at c3a.C3aEval.visit(C3aEval.java:327)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstWrite.accept(C3aInstWrite.java:22)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input not3.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot read field "adresse" because "<parameter1>.item" is null
-	at c3a.C3aEval.visit(C3aEval.java:168)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aVar.accept(C3aVar.java:22)
-	at c3a.C3aEval.visit(C3aEval.java:327)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstWrite.accept(C3aInstWrite.java:22)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input or1.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot read field "adresse" because "<parameter1>.item" is null
-	at c3a.C3aEval.visit(C3aEval.java:168)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aVar.accept(C3aVar.java:22)
-	at c3a.C3aEval.visit(C3aEval.java:327)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstWrite.accept(C3aInstWrite.java:22)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input or2.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot read field "adresse" because "<parameter1>.item" is null
-	at c3a.C3aEval.visit(C3aEval.java:168)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aVar.accept(C3aVar.java:22)
-	at c3a.C3aEval.visit(C3aEval.java:327)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstWrite.accept(C3aInstWrite.java:22)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input or3.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot read field "adresse" because "<parameter1>.item" is null
-	at c3a.C3aEval.visit(C3aEval.java:168)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aVar.accept(C3aVar.java:22)
-	at c3a.C3aEval.visit(C3aEval.java:327)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstWrite.accept(C3aInstWrite.java:22)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input or4.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot read field "adresse" because "<parameter1>.item" is null
-	at c3a.C3aEval.visit(C3aEval.java:168)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aVar.accept(C3aVar.java:22)
-	at c3a.C3aEval.visit(C3aEval.java:327)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstWrite.accept(C3aInstWrite.java:22)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input or5.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot read field "adresse" because "<parameter1>.item" is null
-	at c3a.C3aEval.visit(C3aEval.java:168)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aVar.accept(C3aVar.java:22)
-	at c3a.C3aEval.visit(C3aEval.java:327)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstWrite.accept(C3aInstWrite.java:22)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input prio45-1.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "c3a.C3aOperand.accept(c3a.C3aVisitor)" because "<parameter1>.op1" is null
-	at c3a.C3aEval.visit(C3aEval.java:327)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstWrite.accept(C3aInstWrite.java:22)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input prio45-2.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "c3a.C3aOperand.accept(c3a.C3aVisitor)" because "<parameter1>.op1" is null
-	at c3a.C3aEval.visit(C3aEval.java:327)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstWrite.accept(C3aInstWrite.java:22)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input prio45-3.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:274)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstJumpIfLess.accept(C3aInstJumpIfLess.java:25)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input prio45-4.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:274)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstJumpIfLess.accept(C3aInstJumpIfLess.java:25)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input prio56-1.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "c3a.C3aOperand.accept(c3a.C3aVisitor)" because "<parameter1>.op1" is null
-	at c3a.C3aEval.visit(C3aEval.java:291)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstJumpIfNotEqual.accept(C3aInstJumpIfNotEqual.java:24)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input prio56-2.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot read field "adresse" because "<parameter1>.item" is null
+ERROR evaluateC3a for input fibo.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot read field "adresse" because "<parameter1>.item" is null
 	at c3a.C3aEval.visit(C3aEval.java:168)
 	at c3a.C3aEval.visit(C3aEval.java:8)
 	at c3a.C3aVar.accept(C3aVar.java:22)
@@ -763,31 +499,43 @@ ERROR evaluateC3a for input prio56-2.l : 'Exception in thread "main" java.lang.N
 	at C3aVM.main(C3aVM.java:59)
 '
 
-ERROR evaluateC3a for input prio67-1.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot read field "adresse" because "<parameter1>.item" is null
-	at c3a.C3aEval.visit(C3aEval.java:168)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aVar.accept(C3aVar.java:22)
-	at c3a.C3aEval.visit(C3aEval.java:291)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstJumpIfNotEqual.accept(C3aInstJumpIfNotEqual.java:24)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
+ERROR evaluateC3a for input not1.l : 'Exception in thread "main" java.lang.IndexOutOfBoundsException: Index 3 out of bounds for length 3
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+	at java.base/java.util.Objects.checkIndex(Objects.java:359)
+	at java.base/java.util.ArrayList.get(ArrayList.java:427)
+	at c3a.C3aEval.<init>(C3aEval.java:64)
 	at C3aVM.run(C3aVM.java:31)
 	at C3aVM.main(C3aVM.java:59)
 '
 
-ERROR evaluateC3a for input prio67-2.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot read field "adresse" because "<parameter1>.item" is null
-	at c3a.C3aEval.visit(C3aEval.java:168)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aVar.accept(C3aVar.java:22)
-	at c3a.C3aEval.visit(C3aEval.java:291)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstJumpIfNotEqual.accept(C3aInstJumpIfNotEqual.java:24)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
+ERROR evaluateC3a for input not2.l : 'Exception in thread "main" java.lang.IndexOutOfBoundsException: Index 3 out of bounds for length 3
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+	at java.base/java.util.Objects.checkIndex(Objects.java:359)
+	at java.base/java.util.ArrayList.get(ArrayList.java:427)
+	at c3a.C3aEval.<init>(C3aEval.java:64)
 	at C3aVM.run(C3aVM.java:31)
 	at C3aVM.main(C3aVM.java:59)
 '
 
-ERROR evaluateC3a for input rec1.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "c3a.C3aOperand.accept(c3a.C3aVisitor)" because "<parameter1>.op1" is null
+ERROR evaluateC3a for input not3.l : 'Exception in thread "main" java.lang.IndexOutOfBoundsException: Index 3 out of bounds for length 3
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+	at java.base/java.util.Objects.checkIndex(Objects.java:359)
+	at java.base/java.util.ArrayList.get(ArrayList.java:427)
+	at c3a.C3aEval.<init>(C3aEval.java:64)
+	at C3aVM.run(C3aVM.java:31)
+	at C3aVM.main(C3aVM.java:59)
+'
+
+ERROR evaluateC3a for input rec1.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot read field "adresse" because "<parameter1>.item" is null
+	at c3a.C3aEval.visit(C3aEval.java:168)
+	at c3a.C3aEval.visit(C3aEval.java:8)
+	at c3a.C3aVar.accept(C3aVar.java:22)
 	at c3a.C3aEval.visit(C3aEval.java:282)
 	at c3a.C3aEval.visit(C3aEval.java:8)
 	at c3a.C3aInstJumpIfEqual.accept(C3aInstJumpIfEqual.java:24)
@@ -800,9 +548,9 @@ ERROR evaluateC3a for input si1.l : 'Exception in thread "main" java.lang.NullPo
 	at c3a.C3aEval.visit(C3aEval.java:168)
 	at c3a.C3aEval.visit(C3aEval.java:8)
 	at c3a.C3aVar.accept(C3aVar.java:22)
-	at c3a.C3aEval.visit(C3aEval.java:327)
+	at c3a.C3aEval.visit(C3aEval.java:282)
 	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstWrite.accept(C3aInstWrite.java:22)
+	at c3a.C3aInstJumpIfEqual.accept(C3aInstJumpIfEqual.java:24)
 	at c3a.C3aEval.<init>(C3aEval.java:69)
 	at C3aVM.run(C3aVM.java:31)
 	at C3aVM.main(C3aVM.java:59)
@@ -824,9 +572,9 @@ ERROR evaluateC3a for input si3.l : 'Exception in thread "main" java.lang.NullPo
 	at c3a.C3aEval.visit(C3aEval.java:168)
 	at c3a.C3aEval.visit(C3aEval.java:8)
 	at c3a.C3aVar.accept(C3aVar.java:22)
-	at c3a.C3aEval.visit(C3aEval.java:327)
+	at c3a.C3aEval.visit(C3aEval.java:282)
 	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstWrite.accept(C3aInstWrite.java:22)
+	at c3a.C3aInstJumpIfEqual.accept(C3aInstJumpIfEqual.java:24)
 	at c3a.C3aEval.<init>(C3aEval.java:69)
 	at C3aVM.run(C3aVM.java:31)
 	at C3aVM.main(C3aVM.java:59)
@@ -836,9 +584,9 @@ ERROR evaluateC3a for input si4.l : 'Exception in thread "main" java.lang.NullPo
 	at c3a.C3aEval.visit(C3aEval.java:168)
 	at c3a.C3aEval.visit(C3aEval.java:8)
 	at c3a.C3aVar.accept(C3aVar.java:22)
-	at c3a.C3aEval.visit(C3aEval.java:327)
+	at c3a.C3aEval.visit(C3aEval.java:282)
 	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstWrite.accept(C3aInstWrite.java:22)
+	at c3a.C3aInstJumpIfEqual.accept(C3aInstJumpIfEqual.java:24)
 	at c3a.C3aEval.<init>(C3aEval.java:69)
 	at C3aVM.run(C3aVM.java:31)
 	at C3aVM.main(C3aVM.java:59)
@@ -848,27 +596,27 @@ ERROR evaluateC3a for input si5.l : 'Exception in thread "main" java.lang.NullPo
 	at c3a.C3aEval.visit(C3aEval.java:168)
 	at c3a.C3aEval.visit(C3aEval.java:8)
 	at c3a.C3aVar.accept(C3aVar.java:22)
-	at c3a.C3aEval.visit(C3aEval.java:327)
+	at c3a.C3aEval.visit(C3aEval.java:282)
 	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstWrite.accept(C3aInstWrite.java:22)
+	at c3a.C3aInstJumpIfEqual.accept(C3aInstJumpIfEqual.java:24)
 	at c3a.C3aEval.<init>(C3aEval.java:69)
 	at C3aVM.run(C3aVM.java:31)
 	at C3aVM.main(C3aVM.java:59)
 '
 
 ERROR evaluateC3a for input tantque1.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:274)
+	at c3a.C3aEval.visit(C3aEval.java:300)
 	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstJumpIfLess.accept(C3aInstJumpIfLess.java:25)
+	at c3a.C3aInstJump.accept(C3aInstJump.java:21)
 	at c3a.C3aEval.<init>(C3aEval.java:69)
 	at C3aVM.run(C3aVM.java:31)
 	at C3aVM.main(C3aVM.java:59)
 '
 
 ERROR evaluateC3a for input tantque2.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:274)
+	at c3a.C3aEval.visit(C3aEval.java:300)
 	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstJumpIfLess.accept(C3aInstJumpIfLess.java:25)
+	at c3a.C3aInstJump.accept(C3aInstJump.java:21)
 	at c3a.C3aEval.<init>(C3aEval.java:69)
 	at C3aVM.run(C3aVM.java:31)
 	at C3aVM.main(C3aVM.java:59)
