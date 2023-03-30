@@ -475,38 +475,32 @@
 	sub4.l       CORRECT
 	tantque1.l   CORRECT
 ------------------------------EVALUATION ERRORS------------------------------
-ERROR evaluateC3a for input appel-retour1.l : 'Exception in thread "main" java.lang.NullPointerException
-	at c3a.C3aEval.visit(C3aEval.java:168)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aVar.accept(C3aVar.java:22)
-	at c3a.C3aEval.visit(C3aEval.java:327)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstWrite.accept(C3aInstWrite.java:22)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
+ERROR evaluateC3a for input appel-retour1.l : 'Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 4 out of bounds for length 3
+	at c3a.C3aParser.parseCallInstr(C3aParser.java:80)
+	at c3a.C3aParser.processLine(C3aParser.java:45)
+	at java.base/java.nio.file.FileChannelLinesSpliterator.forEachRemaining(FileChannelLinesSpliterator.java:117)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEachOrdered(ReferencePipeline.java:668)
+	at c3a.C3aParser.parse(C3aParser.java:33)
+	at C3aVM.run(C3aVM.java:28)
 	at C3aVM.main(C3aVM.java:59)
 '
 
-ERROR evaluateC3a for input fibo.l : 'Exception in thread "main" java.lang.NullPointerException
-	at c3a.C3aEval.visit(C3aEval.java:168)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aVar.accept(C3aVar.java:22)
-	at c3a.C3aEval.visit(C3aEval.java:245)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstAdd.accept(C3aInstAdd.java:23)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
+ERROR evaluateC3a for input fibo.l : 'Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 4 out of bounds for length 3
+	at c3a.C3aParser.parseCallInstr(C3aParser.java:80)
+	at c3a.C3aParser.processLine(C3aParser.java:45)
+	at java.base/java.nio.file.FileChannelLinesSpliterator.forEachRemaining(FileChannelLinesSpliterator.java:117)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEachOrdered(ReferencePipeline.java:668)
+	at c3a.C3aParser.parse(C3aParser.java:33)
+	at C3aVM.run(C3aVM.java:28)
 	at C3aVM.main(C3aVM.java:59)
 '
 
-ERROR evaluateC3a for input rec1.l : 'Exception in thread "main" java.lang.NullPointerException
-	at c3a.C3aEval.visit(C3aEval.java:168)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aVar.accept(C3aVar.java:22)
-	at c3a.C3aEval.visit(C3aEval.java:245)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstAdd.accept(C3aInstAdd.java:23)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
+ERROR evaluateC3a for input rec1.l : 'Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 4 out of bounds for length 3
+	at c3a.C3aParser.parseCallInstr(C3aParser.java:80)
+	at c3a.C3aParser.processLine(C3aParser.java:45)
+	at java.base/java.nio.file.FileChannelLinesSpliterator.forEachRemaining(FileChannelLinesSpliterator.java:117)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEachOrdered(ReferencePipeline.java:668)
+	at c3a.C3aParser.parse(C3aParser.java:33)
+	at C3aVM.run(C3aVM.java:28)
 	at C3aVM.main(C3aVM.java:59)
 '

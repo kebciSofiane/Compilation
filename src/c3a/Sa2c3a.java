@@ -124,7 +124,8 @@ public class Sa2c3a extends SaDepthFirstVisitor <C3aOperand> {
     {
         defaultIn(node);
         C3aOperand result = node.getVal().accept(this);
-        //c3a.ajouteInst(new C3aInstCall(new C3aFunction( node.getVal().tsItem),result,""));
+        C3aFunction op = new C3aFunction(node.getVal().tsItem);
+        c3a.ajouteInst(new C3aInstCall(op,result,""));
         defaultOut(node);
         return result;
 
