@@ -245,11 +245,16 @@
 	varloc4.saout         CORRECT
 	varloc5.saout         CORRECT
 Évaluation de Diff de c3a :
-50/80 correct ( 62.50%)
+66/80 correct ( 82.50%)
 	add1.c3a       CORRECT
 	add2.c3a       CORRECT
 	affect1.c3a    CORRECT
 	affect2.c3a    CORRECT
+	and1.c3a       CORRECT
+	and2.c3a       CORRECT
+	and3.c3a       CORRECT
+	and4.c3a       CORRECT
+	and5.c3a       CORRECT
 	div1.c3a       CORRECT
 	div2.c3a       CORRECT
 	div3.c3a       CORRECT
@@ -268,6 +273,11 @@
 	not1.c3a       CORRECT
 	not2.c3a       CORRECT
 	not3.c3a       CORRECT
+	or1.c3a        CORRECT
+	or2.c3a        CORRECT
+	or3.c3a        CORRECT
+	or4.c3a        CORRECT
+	or5.c3a        CORRECT
 	parenth1.c3a   CORRECT
 	parenth2.c3a   CORRECT
 	prio34-1.c3a   CORRECT
@@ -278,9 +288,15 @@
 	prio45-2.c3a   CORRECT
 	prio45-3.c3a   CORRECT
 	prio45-4.c3a   CORRECT
+	prio56-1.c3a   CORRECT
+	prio56-2.c3a   CORRECT
+	prio67-1.c3a   CORRECT
+	prio67-2.c3a   CORRECT
+	si1.c3a        CORRECT
 	si2.c3a        CORRECT
 	si3.c3a        CORRECT
 	si4.c3a        CORRECT
+	si5.c3a        CORRECT
 	sub1.c3a       CORRECT
 	sub2.c3a       CORRECT
 	sub3.c3a       CORRECT
@@ -297,11 +313,6 @@
 	varloc3.c3a    CORRECT
 	varloc4.c3a    CORRECT
 	affect3.c3a         INCORRECT
-	and1.c3a            INCORRECT
-	and2.c3a            INCORRECT
-	and3.c3a            INCORRECT
-	and4.c3a            INCORRECT
-	and5.c3a            INCORRECT
 	appel-param1.c3a    INCORRECT
 	appel-param2.c3a    INCORRECT
 	appel-param3.c3a    INCORRECT
@@ -310,18 +321,7 @@
 	appel2.c3a          INCORRECT
 	appel3.c3a          INCORRECT
 	fibo.c3a            INCORRECT
-	or1.c3a             INCORRECT
-	or2.c3a             INCORRECT
-	or3.c3a             INCORRECT
-	or4.c3a             INCORRECT
-	or5.c3a             INCORRECT
-	prio56-1.c3a        INCORRECT
-	prio56-2.c3a        INCORRECT
-	prio67-1.c3a        INCORRECT
-	prio67-2.c3a        INCORRECT
 	rec1.c3a            INCORRECT
-	si1.c3a             INCORRECT
-	si5.c3a             INCORRECT
 	tantque1.c3a        INCORRECT
 	tantque2.c3a        INCORRECT
 	tri.c3a             INCORRECT
