@@ -245,7 +245,7 @@
 	varloc4.saout         CORRECT
 	varloc5.saout         CORRECT
 Évaluation de Diff de c3a :
-44/80 correct ( 55.00%)
+47/80 correct ( 58.75%)
 	add1.c3a       CORRECT
 	add2.c3a       CORRECT
 	affect1.c3a    CORRECT
@@ -265,6 +265,9 @@
 	mult1.c3a      CORRECT
 	mult2.c3a      CORRECT
 	mult3.c3a      CORRECT
+	not1.c3a       CORRECT
+	not2.c3a       CORRECT
+	not3.c3a       CORRECT
 	parenth1.c3a   CORRECT
 	parenth2.c3a   CORRECT
 	prio34-1.c3a   CORRECT
@@ -304,9 +307,6 @@
 	appel2.c3a          INCORRECT
 	appel3.c3a          INCORRECT
 	fibo.c3a            INCORRECT
-	not1.c3a            INCORRECT
-	not2.c3a            INCORRECT
-	not3.c3a            INCORRECT
 	or1.c3a             INCORRECT
 	or2.c3a             INCORRECT
 	or3.c3a             INCORRECT
@@ -327,7 +327,7 @@
 	tri.c3a             INCORRECT
 	varloc5.c3a         INCORRECT
 Évaluation de Execution du c3a :
-62/80 correct ( 77.50%)
+69/80 correct ( 86.25%)
 	add1.c3aout       CORRECT
 	add2.c3aout       CORRECT
 	affect1.c3aout    CORRECT
@@ -355,6 +355,9 @@
 	mult1.c3aout      CORRECT
 	mult2.c3aout      CORRECT
 	mult3.c3aout      CORRECT
+	not1.c3aout       CORRECT
+	not2.c3aout       CORRECT
+	not3.c3aout       CORRECT
 	or1.c3aout        CORRECT
 	or2.c3aout        CORRECT
 	or3.c3aout        CORRECT
@@ -374,6 +377,10 @@
 	prio56-2.c3aout   CORRECT
 	prio67-1.c3aout   CORRECT
 	prio67-2.c3aout   CORRECT
+	si1.c3aout        CORRECT
+	si2.c3aout        CORRECT
+	si4.c3aout        CORRECT
+	si5.c3aout        CORRECT
 	sub1.c3aout       CORRECT
 	sub2.c3aout       CORRECT
 	sub3.c3aout       CORRECT
@@ -396,15 +403,8 @@
 	appel-param3.c3aout    INCORRECT
 	appel-retour1.c3aout   INCORRECT
 	fibo.c3aout            INCORRECT
-	not1.c3aout            INCORRECT
-	not2.c3aout            INCORRECT
-	not3.c3aout            INCORRECT
 	rec1.c3aout            INCORRECT
-	si1.c3aout             INCORRECT
-	si2.c3aout             INCORRECT
 	si3.c3aout             INCORRECT
-	si4.c3aout             INCORRECT
-	si5.c3aout             INCORRECT
 	tantque1.c3aout        INCORRECT
 	tantque2.c3aout        INCORRECT
 	tri.c3aout             INCORRECT
@@ -487,118 +487,21 @@ ERROR evaluateC3a for input appel-retour1.l : 'Exception in thread "main" java.l
 	at C3aVM.main(C3aVM.java:59)
 '
 
-ERROR evaluateC3a for input fibo.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot read field "adresse" because "<parameter1>.item" is null
-	at c3a.C3aEval.visit(C3aEval.java:168)
+ERROR evaluateC3a for input fibo.l : 'Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 10000 out of bounds for length 10000
+	at c3a.C3aEval.push(C3aEval.java:124)
+	at c3a.C3aEval.visit(C3aEval.java:340)
 	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aVar.accept(C3aVar.java:22)
-	at c3a.C3aEval.visit(C3aEval.java:282)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstJumpIfEqual.accept(C3aInstJumpIfEqual.java:24)
+	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
 	at c3a.C3aEval.<init>(C3aEval.java:69)
 	at C3aVM.run(C3aVM.java:31)
 	at C3aVM.main(C3aVM.java:59)
 '
 
-ERROR evaluateC3a for input not1.l : 'Exception in thread "main" java.lang.IndexOutOfBoundsException: Index 3 out of bounds for length 3
-	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
-	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
-	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
-	at java.base/java.util.Objects.checkIndex(Objects.java:359)
-	at java.base/java.util.ArrayList.get(ArrayList.java:427)
-	at c3a.C3aEval.<init>(C3aEval.java:64)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input not2.l : 'Exception in thread "main" java.lang.IndexOutOfBoundsException: Index 3 out of bounds for length 3
-	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
-	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
-	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
-	at java.base/java.util.Objects.checkIndex(Objects.java:359)
-	at java.base/java.util.ArrayList.get(ArrayList.java:427)
-	at c3a.C3aEval.<init>(C3aEval.java:64)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input not3.l : 'Exception in thread "main" java.lang.IndexOutOfBoundsException: Index 3 out of bounds for length 3
-	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
-	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
-	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
-	at java.base/java.util.Objects.checkIndex(Objects.java:359)
-	at java.base/java.util.ArrayList.get(ArrayList.java:427)
-	at c3a.C3aEval.<init>(C3aEval.java:64)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input rec1.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot read field "adresse" because "<parameter1>.item" is null
-	at c3a.C3aEval.visit(C3aEval.java:168)
+ERROR evaluateC3a for input rec1.l : 'Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 10000 out of bounds for length 10000
+	at c3a.C3aEval.push(C3aEval.java:124)
+	at c3a.C3aEval.visit(C3aEval.java:340)
 	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aVar.accept(C3aVar.java:22)
-	at c3a.C3aEval.visit(C3aEval.java:282)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstJumpIfEqual.accept(C3aInstJumpIfEqual.java:24)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input si1.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot read field "adresse" because "<parameter1>.item" is null
-	at c3a.C3aEval.visit(C3aEval.java:168)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aVar.accept(C3aVar.java:22)
-	at c3a.C3aEval.visit(C3aEval.java:282)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstJumpIfEqual.accept(C3aInstJumpIfEqual.java:24)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input si2.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot read field "adresse" because "<parameter1>.item" is null
-	at c3a.C3aEval.visit(C3aEval.java:168)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aVar.accept(C3aVar.java:22)
-	at c3a.C3aEval.visit(C3aEval.java:282)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstJumpIfEqual.accept(C3aInstJumpIfEqual.java:24)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input si3.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot read field "adresse" because "<parameter1>.item" is null
-	at c3a.C3aEval.visit(C3aEval.java:168)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aVar.accept(C3aVar.java:22)
-	at c3a.C3aEval.visit(C3aEval.java:282)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstJumpIfEqual.accept(C3aInstJumpIfEqual.java:24)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input si4.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot read field "adresse" because "<parameter1>.item" is null
-	at c3a.C3aEval.visit(C3aEval.java:168)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aVar.accept(C3aVar.java:22)
-	at c3a.C3aEval.visit(C3aEval.java:282)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstJumpIfEqual.accept(C3aInstJumpIfEqual.java:24)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input si5.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot read field "adresse" because "<parameter1>.item" is null
-	at c3a.C3aEval.visit(C3aEval.java:168)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aVar.accept(C3aVar.java:22)
-	at c3a.C3aEval.visit(C3aEval.java:282)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstJumpIfEqual.accept(C3aInstJumpIfEqual.java:24)
+	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
 	at c3a.C3aEval.<init>(C3aEval.java:69)
 	at C3aVM.run(C3aVM.java:31)
 	at C3aVM.main(C3aVM.java:59)
