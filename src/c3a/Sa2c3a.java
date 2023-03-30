@@ -100,18 +100,24 @@ public class Sa2c3a extends SaDepthFirstVisitor <C3aOperand> {
 
     @Override
     //todo
-    public C3aOperand visit(SaInstTantQue node) throws Exception
-    {
-        C3aOperand result = null;
+    public C3aOperand visit(SaInstTantQue node) throws Exception {
         defaultIn(node);
-        C3aOperand op =node.getTest().accept(this);
-        if (node.getFaire() != null)
-            result =node.getFaire().accept(this);
+        C3aLabel labelTest = c3a.newAutoLabel();
+        C3aLabel labF = c3a.newAutoLabel();
 
-        c3a.ajouteInst(new C3aInstJump(result,""));
+        c3a.addLabelToNextInst(labelTest);
+        C3aOperand test = node.getTest().accept(this);
+        c3a.ajouteInst(new C3aInstJumpIfEqual(test,c3a.False,labF,""));
+
+        node.getFaire().accept(this);
+
+        c3a.ajouteInst(new C3aInstJump(labelTest,""));
+        c3a.addLabelToNextInst(labF);
         defaultOut(node);
-        return result;
+
+        return null;
     }
+
     @Override
     //Done
     public C3aOperand visit(SaExpAppel node) throws Exception
@@ -296,6 +302,22 @@ public class Sa2c3a extends SaDepthFirstVisitor <C3aOperand> {
         defaultOut(node);
         return result;
     }
+
+    public C3aOperand visit(SaLExp node) throws Exception {
+        defaultIn(node);
+
+        SaLExp saLExp = node;
+
+        while (saLExp != null) {
+            C3aOperand arg = saLExp.getTete().accept(this);
+            c3a.ajouteInst(new C3aInstParam(arg,""));
+            saLExp = saLExp.getQueue();
+        }
+        defaultOut(node);
+
+        return null;
+    }
+
 
     @Override
     // Done

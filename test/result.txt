@@ -327,86 +327,86 @@
 	tri.c3a             INCORRECT
 	varloc5.c3a         INCORRECT
 Évaluation de Execution du c3a :
-69/80 correct ( 86.25%)
-	add1.c3aout       CORRECT
-	add2.c3aout       CORRECT
-	affect1.c3aout    CORRECT
-	affect2.c3aout    CORRECT
-	and1.c3aout       CORRECT
-	and2.c3aout       CORRECT
-	and3.c3aout       CORRECT
-	and4.c3aout       CORRECT
-	and5.c3aout       CORRECT
-	appel1.c3aout     CORRECT
-	appel2.c3aout     CORRECT
-	appel3.c3aout     CORRECT
-	div1.c3aout       CORRECT
-	div2.c3aout       CORRECT
-	div3.c3aout       CORRECT
-	div4.c3aout       CORRECT
-	ecrire1.c3aout    CORRECT
-	ecrire2.c3aout    CORRECT
-	egal1.c3aout      CORRECT
-	egal2.c3aout      CORRECT
-	egal3.c3aout      CORRECT
-	inf1.c3aout       CORRECT
-	inf2.c3aout       CORRECT
-	inf3.c3aout       CORRECT
-	mult1.c3aout      CORRECT
-	mult2.c3aout      CORRECT
-	mult3.c3aout      CORRECT
-	not1.c3aout       CORRECT
-	not2.c3aout       CORRECT
-	not3.c3aout       CORRECT
-	or1.c3aout        CORRECT
-	or2.c3aout        CORRECT
-	or3.c3aout        CORRECT
-	or4.c3aout        CORRECT
-	or5.c3aout        CORRECT
-	parenth1.c3aout   CORRECT
-	parenth2.c3aout   CORRECT
-	prio34-1.c3aout   CORRECT
-	prio34-2.c3aout   CORRECT
-	prio34-3.c3aout   CORRECT
-	prio34-4.c3aout   CORRECT
-	prio45-1.c3aout   CORRECT
-	prio45-2.c3aout   CORRECT
-	prio45-3.c3aout   CORRECT
-	prio45-4.c3aout   CORRECT
-	prio56-1.c3aout   CORRECT
-	prio56-2.c3aout   CORRECT
-	prio67-1.c3aout   CORRECT
-	prio67-2.c3aout   CORRECT
-	si1.c3aout        CORRECT
-	si2.c3aout        CORRECT
-	si4.c3aout        CORRECT
-	si5.c3aout        CORRECT
-	sub1.c3aout       CORRECT
-	sub2.c3aout       CORRECT
-	sub3.c3aout       CORRECT
-	tab1.c3aout       CORRECT
-	tab2.c3aout       CORRECT
-	tab3.c3aout       CORRECT
-	tab4.c3aout       CORRECT
-	varglob1.c3aout   CORRECT
-	varglob2.c3aout   CORRECT
-	varglob3.c3aout   CORRECT
-	varglob4.c3aout   CORRECT
-	varloc1.c3aout    CORRECT
-	varloc2.c3aout    CORRECT
-	varloc3.c3aout    CORRECT
-	varloc4.c3aout    CORRECT
-	varloc5.c3aout    CORRECT
-	affect3.c3aout         INCORRECT
-	appel-param1.c3aout    INCORRECT
-	appel-param2.c3aout    INCORRECT
-	appel-param3.c3aout    INCORRECT
+75/80 correct ( 93.75%)
+	add1.c3aout           CORRECT
+	add2.c3aout           CORRECT
+	affect1.c3aout        CORRECT
+	affect2.c3aout        CORRECT
+	affect3.c3aout        CORRECT
+	and1.c3aout           CORRECT
+	and2.c3aout           CORRECT
+	and3.c3aout           CORRECT
+	and4.c3aout           CORRECT
+	and5.c3aout           CORRECT
+	appel-param1.c3aout   CORRECT
+	appel-param2.c3aout   CORRECT
+	appel-param3.c3aout   CORRECT
+	appel1.c3aout         CORRECT
+	appel2.c3aout         CORRECT
+	appel3.c3aout         CORRECT
+	div1.c3aout           CORRECT
+	div2.c3aout           CORRECT
+	div3.c3aout           CORRECT
+	div4.c3aout           CORRECT
+	ecrire1.c3aout        CORRECT
+	ecrire2.c3aout        CORRECT
+	egal1.c3aout          CORRECT
+	egal2.c3aout          CORRECT
+	egal3.c3aout          CORRECT
+	inf1.c3aout           CORRECT
+	inf2.c3aout           CORRECT
+	inf3.c3aout           CORRECT
+	mult1.c3aout          CORRECT
+	mult2.c3aout          CORRECT
+	mult3.c3aout          CORRECT
+	not1.c3aout           CORRECT
+	not2.c3aout           CORRECT
+	not3.c3aout           CORRECT
+	or1.c3aout            CORRECT
+	or2.c3aout            CORRECT
+	or3.c3aout            CORRECT
+	or4.c3aout            CORRECT
+	or5.c3aout            CORRECT
+	parenth1.c3aout       CORRECT
+	parenth2.c3aout       CORRECT
+	prio34-1.c3aout       CORRECT
+	prio34-2.c3aout       CORRECT
+	prio34-3.c3aout       CORRECT
+	prio34-4.c3aout       CORRECT
+	prio45-1.c3aout       CORRECT
+	prio45-2.c3aout       CORRECT
+	prio45-3.c3aout       CORRECT
+	prio45-4.c3aout       CORRECT
+	prio56-1.c3aout       CORRECT
+	prio56-2.c3aout       CORRECT
+	prio67-1.c3aout       CORRECT
+	prio67-2.c3aout       CORRECT
+	si1.c3aout            CORRECT
+	si2.c3aout            CORRECT
+	si4.c3aout            CORRECT
+	si5.c3aout            CORRECT
+	sub1.c3aout           CORRECT
+	sub2.c3aout           CORRECT
+	sub3.c3aout           CORRECT
+	tab1.c3aout           CORRECT
+	tab2.c3aout           CORRECT
+	tab3.c3aout           CORRECT
+	tab4.c3aout           CORRECT
+	tantque1.c3aout       CORRECT
+	tantque2.c3aout       CORRECT
+	varglob1.c3aout       CORRECT
+	varglob2.c3aout       CORRECT
+	varglob3.c3aout       CORRECT
+	varglob4.c3aout       CORRECT
+	varloc1.c3aout        CORRECT
+	varloc2.c3aout        CORRECT
+	varloc3.c3aout        CORRECT
+	varloc4.c3aout        CORRECT
+	varloc5.c3aout        CORRECT
 	appel-retour1.c3aout   INCORRECT
 	fibo.c3aout            INCORRECT
 	rec1.c3aout            INCORRECT
 	si3.c3aout             INCORRECT
-	tantque1.c3aout        INCORRECT
-	tantque2.c3aout        INCORRECT
 	tri.c3aout             INCORRECT
 Évaluation de Diff de pre-nasm :
 0/80 correct (  0.00%)
@@ -475,7 +475,7 @@
 	sub4.l       CORRECT
 	tantque1.l   CORRECT
 ------------------------------EVALUATION ERRORS------------------------------
-ERROR evaluateC3a for input appel-retour1.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot read field "adresse" because "<parameter1>.item" is null
+ERROR evaluateC3a for input appel-retour1.l : 'Exception in thread "main" java.lang.NullPointerException
 	at c3a.C3aEval.visit(C3aEval.java:168)
 	at c3a.C3aEval.visit(C3aEval.java:8)
 	at c3a.C3aVar.accept(C3aVar.java:22)
@@ -489,46 +489,20 @@ ERROR evaluateC3a for input appel-retour1.l : 'Exception in thread "main" java.l
 
 ERROR evaluateC3a for input fibo.l : 'Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 10000 out of bounds for length 10000
 	at c3a.C3aEval.push(C3aEval.java:124)
-	at c3a.C3aEval.visit(C3aEval.java:340)
+	at c3a.C3aEval.pushReg(C3aEval.java:137)
+	at c3a.C3aEval.visit(C3aEval.java:357)
 	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
+	at c3a.C3aInstFBegin.accept(C3aInstFBegin.java:20)
 	at c3a.C3aEval.<init>(C3aEval.java:69)
 	at C3aVM.run(C3aVM.java:31)
 	at C3aVM.main(C3aVM.java:59)
 '
 
-ERROR evaluateC3a for input rec1.l : 'Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 10000 out of bounds for length 10000
+ERROR evaluateC3a for input rec1.l : 'Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 10001 out of bounds for length 10000
 	at c3a.C3aEval.push(C3aEval.java:124)
 	at c3a.C3aEval.visit(C3aEval.java:340)
 	at c3a.C3aEval.visit(C3aEval.java:8)
 	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input tantque1.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:300)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstJump.accept(C3aInstJump.java:21)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input tantque2.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:300)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstJump.accept(C3aInstJump.java:21)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input tri.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:300)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstJump.accept(C3aInstJump.java:21)
 	at c3a.C3aEval.<init>(C3aEval.java:69)
 	at C3aVM.run(C3aVM.java:31)
 	at C3aVM.main(C3aVM.java:59)
