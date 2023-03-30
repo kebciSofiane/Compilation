@@ -163,87 +163,87 @@
 	varloc4.ts         CORRECT
 	varloc5.ts         CORRECT
 Évaluation de Execution de sa :
-68/80 correct ( 85.00%)
-	add1.saout       CORRECT
-	add2.saout       CORRECT
-	affect1.saout    CORRECT
-	affect2.saout    CORRECT
-	and1.saout       CORRECT
-	and2.saout       CORRECT
-	and3.saout       CORRECT
-	and4.saout       CORRECT
-	and5.saout       CORRECT
-	div1.saout       CORRECT
-	div2.saout       CORRECT
-	div3.saout       CORRECT
-	div4.saout       CORRECT
-	ecrire1.saout    CORRECT
-	ecrire2.saout    CORRECT
-	egal1.saout      CORRECT
-	egal2.saout      CORRECT
-	egal3.saout      CORRECT
-	inf1.saout       CORRECT
-	inf2.saout       CORRECT
-	inf3.saout       CORRECT
-	mult1.saout      CORRECT
-	mult2.saout      CORRECT
-	mult3.saout      CORRECT
-	not1.saout       CORRECT
-	not2.saout       CORRECT
-	not3.saout       CORRECT
-	or1.saout        CORRECT
-	or2.saout        CORRECT
-	or3.saout        CORRECT
-	or4.saout        CORRECT
-	or5.saout        CORRECT
-	parenth1.saout   CORRECT
-	parenth2.saout   CORRECT
-	prio34-1.saout   CORRECT
-	prio34-2.saout   CORRECT
-	prio34-3.saout   CORRECT
-	prio34-4.saout   CORRECT
-	prio45-1.saout   CORRECT
-	prio45-2.saout   CORRECT
-	prio45-3.saout   CORRECT
-	prio45-4.saout   CORRECT
-	prio56-1.saout   CORRECT
-	prio56-2.saout   CORRECT
-	prio67-1.saout   CORRECT
-	prio67-2.saout   CORRECT
-	si1.saout        CORRECT
-	si2.saout        CORRECT
-	si3.saout        CORRECT
-	si4.saout        CORRECT
-	si5.saout        CORRECT
-	sub1.saout       CORRECT
-	sub2.saout       CORRECT
-	sub3.saout       CORRECT
-	tab1.saout       CORRECT
-	tab2.saout       CORRECT
-	tab3.saout       CORRECT
-	tab4.saout       CORRECT
-	tantque1.saout   CORRECT
-	tantque2.saout   CORRECT
-	varglob1.saout   CORRECT
-	varglob2.saout   CORRECT
-	varglob3.saout   CORRECT
-	varglob4.saout   CORRECT
-	varloc1.saout    CORRECT
-	varloc2.saout    CORRECT
-	varloc3.saout    CORRECT
-	varloc4.saout    CORRECT
-	affect3.saout         INCORRECT
-	appel-param1.saout    INCORRECT
-	appel-param2.saout    INCORRECT
-	appel-param3.saout    INCORRECT
-	appel-retour1.saout   INCORRECT
-	appel1.saout          INCORRECT
-	appel2.saout          INCORRECT
-	appel3.saout          INCORRECT
-	fibo.saout            INCORRECT
-	rec1.saout            INCORRECT
-	tri.saout             INCORRECT
-	varloc5.saout         INCORRECT
+80/80 correct (100.00%)
+	add1.saout            CORRECT
+	add2.saout            CORRECT
+	affect1.saout         CORRECT
+	affect2.saout         CORRECT
+	affect3.saout         CORRECT
+	and1.saout            CORRECT
+	and2.saout            CORRECT
+	and3.saout            CORRECT
+	and4.saout            CORRECT
+	and5.saout            CORRECT
+	appel-param1.saout    CORRECT
+	appel-param2.saout    CORRECT
+	appel-param3.saout    CORRECT
+	appel-retour1.saout   CORRECT
+	appel1.saout          CORRECT
+	appel2.saout          CORRECT
+	appel3.saout          CORRECT
+	div1.saout            CORRECT
+	div2.saout            CORRECT
+	div3.saout            CORRECT
+	div4.saout            CORRECT
+	ecrire1.saout         CORRECT
+	ecrire2.saout         CORRECT
+	egal1.saout           CORRECT
+	egal2.saout           CORRECT
+	egal3.saout           CORRECT
+	fibo.saout            CORRECT
+	inf1.saout            CORRECT
+	inf2.saout            CORRECT
+	inf3.saout            CORRECT
+	mult1.saout           CORRECT
+	mult2.saout           CORRECT
+	mult3.saout           CORRECT
+	not1.saout            CORRECT
+	not2.saout            CORRECT
+	not3.saout            CORRECT
+	or1.saout             CORRECT
+	or2.saout             CORRECT
+	or3.saout             CORRECT
+	or4.saout             CORRECT
+	or5.saout             CORRECT
+	parenth1.saout        CORRECT
+	parenth2.saout        CORRECT
+	prio34-1.saout        CORRECT
+	prio34-2.saout        CORRECT
+	prio34-3.saout        CORRECT
+	prio34-4.saout        CORRECT
+	prio45-1.saout        CORRECT
+	prio45-2.saout        CORRECT
+	prio45-3.saout        CORRECT
+	prio45-4.saout        CORRECT
+	prio56-1.saout        CORRECT
+	prio56-2.saout        CORRECT
+	prio67-1.saout        CORRECT
+	prio67-2.saout        CORRECT
+	rec1.saout            CORRECT
+	si1.saout             CORRECT
+	si2.saout             CORRECT
+	si3.saout             CORRECT
+	si4.saout             CORRECT
+	si5.saout             CORRECT
+	sub1.saout            CORRECT
+	sub2.saout            CORRECT
+	sub3.saout            CORRECT
+	tab1.saout            CORRECT
+	tab2.saout            CORRECT
+	tab3.saout            CORRECT
+	tab4.saout            CORRECT
+	tantque1.saout        CORRECT
+	tantque2.saout        CORRECT
+	tri.saout             CORRECT
+	varglob1.saout        CORRECT
+	varglob2.saout        CORRECT
+	varglob3.saout        CORRECT
+	varglob4.saout        CORRECT
+	varloc1.saout         CORRECT
+	varloc2.saout         CORRECT
+	varloc3.saout         CORRECT
+	varloc4.saout         CORRECT
+	varloc5.saout         CORRECT
 Évaluation de Diff de c3a :
 0/80 correct (  0.00%)
 	add1.c3a            INCORRECT
@@ -428,7 +428,7 @@
 	mauvais_nb_arg1.l   CORRECT
 	var_inconnue1.l     CORRECT
 Évaluation de ERR_TYPE :
-38/45 correct ( 84.44%)
+42/45 correct ( 93.33%)
 	add1.l       CORRECT
 	add2.l       CORRECT
 	add3.l       CORRECT
@@ -441,6 +441,10 @@
 	and2.l       CORRECT
 	and3.l       CORRECT
 	and4.l       CORRECT
+	appel1.l     CORRECT
+	appel2.l     CORRECT
+	appel3.l     CORRECT
+	appel4.l     CORRECT
 	div1.l       CORRECT
 	div2.l       CORRECT
 	div3.l       CORRECT
@@ -467,10 +471,6 @@
 	sub3.l       CORRECT
 	sub4.l       CORRECT
 	tantque1.l   CORRECT
-	appel1.l    INCORRECT
-	appel2.l    INCORRECT
-	appel3.l    INCORRECT
-	appel4.l    INCORRECT
 	retour1.l   INCORRECT
 	retour2.l   INCORRECT
 	retour3.l   INCORRECT

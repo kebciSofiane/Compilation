@@ -196,22 +196,25 @@ public class Sa2ts extends SaDepthFirstVisitor <Void> {
 	public Void visit(SaAppel node) throws Exception {
 		defaultIn(node);
 		String identif = node.getNom();
-		TsItemFct item = null;
-		int nbArgs = 0;
-		if (node.getArguments() != null)
-			nbArgs = node.getArguments().length();
 
-		//System.out.println("nombre de parametres = " + nbArgs);
+		int nbArgs = 0;
+
+
+		if (node.getArguments() != null) {
+			node.getArguments().accept(this);
+			nbArgs = node.getArguments().length();
+		}
+
 
 		TsItemFct fonction = tableGlobale.getFct(identif);
-		//System.out.println("nombre de parametres dans la ts = " + fonction.getNbArgs());
-		if (fonction != null) {
-			node.tsItem = fonction;
-				if(nbArgs != fonction.getNbArgs())
-					throw new ErrorException(Error.TS, "Mauvais nombre d'arguments ");
-			}
-		else throw new ErrorException(Error.TS,"La fonction n'existe pas");
-		node.tsItem =  item;
+		if(fonction ==null){
+			throw new ErrorException(Error.TS, "La fonction n'existe pas");
+		}
+
+		if(nbArgs != fonction.getNbArgs())
+			throw new ErrorException(Error.TS, "Mauvais nombre d'arguments ");
+
+		node.tsItem = tableGlobale.getFct(node.getNom());
 		defaultOut(node);
 		return null;
 	}
