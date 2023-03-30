@@ -113,8 +113,6 @@ public class Sa2ts extends SaDepthFirstVisitor <Void> {
 
 		int nbArgs;
 
-
-
 		if (node.getParametres() == null){
 			nbArgs = 0;
 		}
@@ -127,12 +125,11 @@ public class Sa2ts extends SaDepthFirstVisitor <Void> {
 		context = Context.LOCAL;
 		if(node.getVariable() != null) node.getVariable().accept(this);
 
-
-
 		node.tsItem  = tableGlobale.addFct(identif, typeDeRetour, nbArgs,this.tableLocaleCourante,node);
 
 		if(node.getCorps() != null) node.getCorps().accept(this);
 
+		item  = tableGlobale.getFct(identif);
 		node.tsItem =  item;
 		defaultOut(node);
 		return null;

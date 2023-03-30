@@ -55,6 +55,8 @@ public class SaTypeCheck extends SaDepthFirstVisitor <Void>{
         return null;
     }
 
+
+
     @Override
     //Done
     public Void visit(SaAppel node) throws Exception
@@ -159,6 +161,8 @@ public class SaTypeCheck extends SaDepthFirstVisitor <Void>{
         defaultIn(node);
         if (node.getVal().getType() != fonctionCourante.typeRetour)
             throw new ErrorException(Error.TYPE, "type incorrect");
+
+        node.getVal().accept(this);
         defaultOut(node);
         return null;
     }
@@ -177,15 +181,15 @@ public class SaTypeCheck extends SaDepthFirstVisitor <Void>{
     public Void visit(SaDecFonc node) throws Exception
     {
         defaultIn(node);
-        int nb =0;
+
         this.fonctionCourante = node.tsItem;
-     //   if(node.getParametres() != null) nb = node.getParametres().length();
-      //  fonctionCourante = new TsItemFct(node.getNom(), node.getTypeRetour(), nb, new Ts(), node);
-    //    if(node.getVariable() != null) node.getVariable().accept(this);
+
         if(node.getCorps() != null) node.getCorps().accept(this);
         defaultOut(node);
         return null;
     }
+
+
     //Done
 
     @Override

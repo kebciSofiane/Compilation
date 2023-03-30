@@ -4,8 +4,8 @@ import sc.lexer.*;
 import sc.node.*;
 import sa.*;
 import ts.Sa2ts;
-import ts.Ts;
-//import ts.*;
+import ts.*;
+
 import c3a.*;
 //import nasm.*;
 //import fg.*;

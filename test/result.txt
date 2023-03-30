@@ -327,11 +327,45 @@
 	varloc4.c3a         INCORRECT
 	varloc5.c3a         INCORRECT
 Évaluation de Execution du c3a :
-0/80 correct (  0.00%)
-	add1.c3aout            INCORRECT
-	add2.c3aout            INCORRECT
-	affect1.c3aout         INCORRECT
-	affect2.c3aout         INCORRECT
+38/80 correct ( 47.50%)
+	add1.c3aout       CORRECT
+	add2.c3aout       CORRECT
+	affect1.c3aout    CORRECT
+	affect2.c3aout    CORRECT
+	appel1.c3aout     CORRECT
+	appel2.c3aout     CORRECT
+	appel3.c3aout     CORRECT
+	div1.c3aout       CORRECT
+	div2.c3aout       CORRECT
+	div3.c3aout       CORRECT
+	div4.c3aout       CORRECT
+	ecrire1.c3aout    CORRECT
+	ecrire2.c3aout    CORRECT
+	mult1.c3aout      CORRECT
+	mult2.c3aout      CORRECT
+	mult3.c3aout      CORRECT
+	parenth1.c3aout   CORRECT
+	parenth2.c3aout   CORRECT
+	prio34-1.c3aout   CORRECT
+	prio34-2.c3aout   CORRECT
+	prio34-3.c3aout   CORRECT
+	prio34-4.c3aout   CORRECT
+	sub1.c3aout       CORRECT
+	sub2.c3aout       CORRECT
+	sub3.c3aout       CORRECT
+	tab1.c3aout       CORRECT
+	tab2.c3aout       CORRECT
+	tab3.c3aout       CORRECT
+	tab4.c3aout       CORRECT
+	varglob1.c3aout   CORRECT
+	varglob2.c3aout   CORRECT
+	varglob3.c3aout   CORRECT
+	varglob4.c3aout   CORRECT
+	varloc1.c3aout    CORRECT
+	varloc2.c3aout    CORRECT
+	varloc3.c3aout    CORRECT
+	varloc4.c3aout    CORRECT
+	varloc5.c3aout    CORRECT
 	affect3.c3aout         INCORRECT
 	and1.c3aout            INCORRECT
 	and2.c3aout            INCORRECT
@@ -342,15 +376,6 @@
 	appel-param2.c3aout    INCORRECT
 	appel-param3.c3aout    INCORRECT
 	appel-retour1.c3aout   INCORRECT
-	appel1.c3aout          INCORRECT
-	appel2.c3aout          INCORRECT
-	appel3.c3aout          INCORRECT
-	div1.c3aout            INCORRECT
-	div2.c3aout            INCORRECT
-	div3.c3aout            INCORRECT
-	div4.c3aout            INCORRECT
-	ecrire1.c3aout         INCORRECT
-	ecrire2.c3aout         INCORRECT
 	egal1.c3aout           INCORRECT
 	egal2.c3aout           INCORRECT
 	egal3.c3aout           INCORRECT
@@ -358,9 +383,6 @@
 	inf1.c3aout            INCORRECT
 	inf2.c3aout            INCORRECT
 	inf3.c3aout            INCORRECT
-	mult1.c3aout           INCORRECT
-	mult2.c3aout           INCORRECT
-	mult3.c3aout           INCORRECT
 	not1.c3aout            INCORRECT
 	not2.c3aout            INCORRECT
 	not3.c3aout            INCORRECT
@@ -369,12 +391,6 @@
 	or3.c3aout             INCORRECT
 	or4.c3aout             INCORRECT
 	or5.c3aout             INCORRECT
-	parenth1.c3aout        INCORRECT
-	parenth2.c3aout        INCORRECT
-	prio34-1.c3aout        INCORRECT
-	prio34-2.c3aout        INCORRECT
-	prio34-3.c3aout        INCORRECT
-	prio34-4.c3aout        INCORRECT
 	prio45-1.c3aout        INCORRECT
 	prio45-2.c3aout        INCORRECT
 	prio45-3.c3aout        INCORRECT
@@ -389,25 +405,9 @@
 	si3.c3aout             INCORRECT
 	si4.c3aout             INCORRECT
 	si5.c3aout             INCORRECT
-	sub1.c3aout            INCORRECT
-	sub2.c3aout            INCORRECT
-	sub3.c3aout            INCORRECT
-	tab1.c3aout            INCORRECT
-	tab2.c3aout            INCORRECT
-	tab3.c3aout            INCORRECT
-	tab4.c3aout            INCORRECT
 	tantque1.c3aout        INCORRECT
 	tantque2.c3aout        INCORRECT
 	tri.c3aout             INCORRECT
-	varglob1.c3aout        INCORRECT
-	varglob2.c3aout        INCORRECT
-	varglob3.c3aout        INCORRECT
-	varglob4.c3aout        INCORRECT
-	varloc1.c3aout         INCORRECT
-	varloc2.c3aout         INCORRECT
-	varloc3.c3aout         INCORRECT
-	varloc4.c3aout         INCORRECT
-	varloc5.c3aout         INCORRECT
 Évaluation de Diff de pre-nasm :
 0/80 correct (  0.00%)
 Évaluation de Execution du pre-nasm :
@@ -428,7 +428,7 @@
 	mauvais_nb_arg1.l   CORRECT
 	var_inconnue1.l     CORRECT
 Évaluation de ERR_TYPE :
-42/45 correct ( 93.33%)
+45/45 correct (100.00%)
 	add1.l       CORRECT
 	add2.l       CORRECT
 	add3.l       CORRECT
@@ -465,731 +465,419 @@
 	or2.l        CORRECT
 	or3.l        CORRECT
 	or4.l        CORRECT
+	retour1.l    CORRECT
+	retour2.l    CORRECT
+	retour3.l    CORRECT
 	si1.l        CORRECT
 	sub1.l       CORRECT
 	sub2.l       CORRECT
 	sub3.l       CORRECT
 	sub4.l       CORRECT
 	tantque1.l   CORRECT
-	retour1.l   INCORRECT
-	retour2.l   INCORRECT
-	retour3.l   INCORRECT
 ------------------------------EVALUATION ERRORS------------------------------
-ERROR evaluateC3a for input add1.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
+ERROR evaluateC3a for input and1.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot read field "adresse" because "<parameter1>.item" is null
+	at c3a.C3aEval.visit(C3aEval.java:168)
 	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
+	at c3a.C3aVar.accept(C3aVar.java:22)
+	at c3a.C3aEval.visit(C3aEval.java:291)
+	at c3a.C3aEval.visit(C3aEval.java:8)
+	at c3a.C3aInstJumpIfNotEqual.accept(C3aInstJumpIfNotEqual.java:24)
 	at c3a.C3aEval.<init>(C3aEval.java:69)
 	at C3aVM.run(C3aVM.java:31)
 	at C3aVM.main(C3aVM.java:59)
 '
 
-ERROR evaluateC3a for input add2.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
+ERROR evaluateC3a for input and2.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot read field "adresse" because "<parameter1>.item" is null
+	at c3a.C3aEval.visit(C3aEval.java:168)
 	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
+	at c3a.C3aVar.accept(C3aVar.java:22)
+	at c3a.C3aEval.visit(C3aEval.java:291)
+	at c3a.C3aEval.visit(C3aEval.java:8)
+	at c3a.C3aInstJumpIfNotEqual.accept(C3aInstJumpIfNotEqual.java:24)
 	at c3a.C3aEval.<init>(C3aEval.java:69)
 	at C3aVM.run(C3aVM.java:31)
 	at C3aVM.main(C3aVM.java:59)
 '
 
-ERROR evaluateC3a for input affect1.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
+ERROR evaluateC3a for input and3.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot read field "adresse" because "<parameter1>.item" is null
+	at c3a.C3aEval.visit(C3aEval.java:168)
 	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
+	at c3a.C3aVar.accept(C3aVar.java:22)
+	at c3a.C3aEval.visit(C3aEval.java:291)
+	at c3a.C3aEval.visit(C3aEval.java:8)
+	at c3a.C3aInstJumpIfNotEqual.accept(C3aInstJumpIfNotEqual.java:24)
 	at c3a.C3aEval.<init>(C3aEval.java:69)
 	at C3aVM.run(C3aVM.java:31)
 	at C3aVM.main(C3aVM.java:59)
 '
 
-ERROR evaluateC3a for input affect2.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
+ERROR evaluateC3a for input and4.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot read field "adresse" because "<parameter1>.item" is null
+	at c3a.C3aEval.visit(C3aEval.java:168)
 	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
+	at c3a.C3aVar.accept(C3aVar.java:22)
+	at c3a.C3aEval.visit(C3aEval.java:291)
+	at c3a.C3aEval.visit(C3aEval.java:8)
+	at c3a.C3aInstJumpIfNotEqual.accept(C3aInstJumpIfNotEqual.java:24)
 	at c3a.C3aEval.<init>(C3aEval.java:69)
 	at C3aVM.run(C3aVM.java:31)
 	at C3aVM.main(C3aVM.java:59)
 '
 
-ERROR evaluateC3a for input affect3.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
+ERROR evaluateC3a for input and5.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot read field "adresse" because "<parameter1>.item" is null
+	at c3a.C3aEval.visit(C3aEval.java:168)
 	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
+	at c3a.C3aVar.accept(C3aVar.java:22)
+	at c3a.C3aEval.visit(C3aEval.java:291)
+	at c3a.C3aEval.visit(C3aEval.java:8)
+	at c3a.C3aInstJumpIfNotEqual.accept(C3aInstJumpIfNotEqual.java:24)
 	at c3a.C3aEval.<init>(C3aEval.java:69)
 	at C3aVM.run(C3aVM.java:31)
 	at C3aVM.main(C3aVM.java:59)
 '
 
-ERROR evaluateC3a for input and1.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
+ERROR evaluateC3a for input appel-retour1.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot read field "adresse" because "<parameter1>.item" is null
+	at c3a.C3aEval.visit(C3aEval.java:168)
 	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input and2.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
+	at c3a.C3aVar.accept(C3aVar.java:22)
+	at c3a.C3aEval.visit(C3aEval.java:327)
 	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input and3.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input and4.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input and5.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input appel-param1.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input appel-param2.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input appel-param3.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input appel-retour1.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input appel1.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input appel2.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input appel3.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input div1.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input div2.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input div3.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input div4.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input ecrire1.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input ecrire2.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
+	at c3a.C3aInstWrite.accept(C3aInstWrite.java:22)
 	at c3a.C3aEval.<init>(C3aEval.java:69)
 	at C3aVM.run(C3aVM.java:31)
 	at C3aVM.main(C3aVM.java:59)
 '
 
 ERROR evaluateC3a for input egal1.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
+	at c3a.C3aEval.visit(C3aEval.java:283)
 	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
+	at c3a.C3aInstJumpIfEqual.accept(C3aInstJumpIfEqual.java:24)
 	at c3a.C3aEval.<init>(C3aEval.java:69)
 	at C3aVM.run(C3aVM.java:31)
 	at C3aVM.main(C3aVM.java:59)
 '
 
-ERROR evaluateC3a for input egal2.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
+ERROR evaluateC3a for input egal2.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "c3a.C3aOperand.accept(c3a.C3aVisitor)" because "<parameter1>.op1" is null
+	at c3a.C3aEval.visit(C3aEval.java:327)
 	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
+	at c3a.C3aInstWrite.accept(C3aInstWrite.java:22)
 	at c3a.C3aEval.<init>(C3aEval.java:69)
 	at C3aVM.run(C3aVM.java:31)
 	at C3aVM.main(C3aVM.java:59)
 '
 
 ERROR evaluateC3a for input egal3.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
+	at c3a.C3aEval.visit(C3aEval.java:283)
 	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
+	at c3a.C3aInstJumpIfEqual.accept(C3aInstJumpIfEqual.java:24)
 	at c3a.C3aEval.<init>(C3aEval.java:69)
 	at C3aVM.run(C3aVM.java:31)
 	at C3aVM.main(C3aVM.java:59)
 '
 
 ERROR evaluateC3a for input fibo.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
+	at c3a.C3aEval.visit(C3aEval.java:274)
 	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
+	at c3a.C3aInstJumpIfLess.accept(C3aInstJumpIfLess.java:25)
 	at c3a.C3aEval.<init>(C3aEval.java:69)
 	at C3aVM.run(C3aVM.java:31)
 	at C3aVM.main(C3aVM.java:59)
 '
 
-ERROR evaluateC3a for input inf1.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
+ERROR evaluateC3a for input inf1.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "c3a.C3aOperand.accept(c3a.C3aVisitor)" because "<parameter1>.op1" is null
+	at c3a.C3aEval.visit(C3aEval.java:327)
 	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
+	at c3a.C3aInstWrite.accept(C3aInstWrite.java:22)
 	at c3a.C3aEval.<init>(C3aEval.java:69)
 	at C3aVM.run(C3aVM.java:31)
 	at C3aVM.main(C3aVM.java:59)
 '
 
-ERROR evaluateC3a for input inf2.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
+ERROR evaluateC3a for input inf2.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "c3a.C3aOperand.accept(c3a.C3aVisitor)" because "<parameter1>.op1" is null
+	at c3a.C3aEval.visit(C3aEval.java:327)
 	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
+	at c3a.C3aInstWrite.accept(C3aInstWrite.java:22)
 	at c3a.C3aEval.<init>(C3aEval.java:69)
 	at C3aVM.run(C3aVM.java:31)
 	at C3aVM.main(C3aVM.java:59)
 '
 
 ERROR evaluateC3a for input inf3.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
+	at c3a.C3aEval.visit(C3aEval.java:274)
 	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
+	at c3a.C3aInstJumpIfLess.accept(C3aInstJumpIfLess.java:25)
 	at c3a.C3aEval.<init>(C3aEval.java:69)
 	at C3aVM.run(C3aVM.java:31)
 	at C3aVM.main(C3aVM.java:59)
 '
 
-ERROR evaluateC3a for input mult1.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
+ERROR evaluateC3a for input not1.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot read field "adresse" because "<parameter1>.item" is null
+	at c3a.C3aEval.visit(C3aEval.java:168)
 	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
+	at c3a.C3aVar.accept(C3aVar.java:22)
+	at c3a.C3aEval.visit(C3aEval.java:327)
+	at c3a.C3aEval.visit(C3aEval.java:8)
+	at c3a.C3aInstWrite.accept(C3aInstWrite.java:22)
 	at c3a.C3aEval.<init>(C3aEval.java:69)
 	at C3aVM.run(C3aVM.java:31)
 	at C3aVM.main(C3aVM.java:59)
 '
 
-ERROR evaluateC3a for input mult2.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
+ERROR evaluateC3a for input not2.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot read field "adresse" because "<parameter1>.item" is null
+	at c3a.C3aEval.visit(C3aEval.java:168)
 	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
+	at c3a.C3aVar.accept(C3aVar.java:22)
+	at c3a.C3aEval.visit(C3aEval.java:327)
+	at c3a.C3aEval.visit(C3aEval.java:8)
+	at c3a.C3aInstWrite.accept(C3aInstWrite.java:22)
 	at c3a.C3aEval.<init>(C3aEval.java:69)
 	at C3aVM.run(C3aVM.java:31)
 	at C3aVM.main(C3aVM.java:59)
 '
 
-ERROR evaluateC3a for input mult3.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
+ERROR evaluateC3a for input not3.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot read field "adresse" because "<parameter1>.item" is null
+	at c3a.C3aEval.visit(C3aEval.java:168)
 	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
+	at c3a.C3aVar.accept(C3aVar.java:22)
+	at c3a.C3aEval.visit(C3aEval.java:327)
+	at c3a.C3aEval.visit(C3aEval.java:8)
+	at c3a.C3aInstWrite.accept(C3aInstWrite.java:22)
 	at c3a.C3aEval.<init>(C3aEval.java:69)
 	at C3aVM.run(C3aVM.java:31)
 	at C3aVM.main(C3aVM.java:59)
 '
 
-ERROR evaluateC3a for input not1.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
+ERROR evaluateC3a for input or1.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot read field "adresse" because "<parameter1>.item" is null
+	at c3a.C3aEval.visit(C3aEval.java:168)
 	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
+	at c3a.C3aVar.accept(C3aVar.java:22)
+	at c3a.C3aEval.visit(C3aEval.java:327)
+	at c3a.C3aEval.visit(C3aEval.java:8)
+	at c3a.C3aInstWrite.accept(C3aInstWrite.java:22)
 	at c3a.C3aEval.<init>(C3aEval.java:69)
 	at C3aVM.run(C3aVM.java:31)
 	at C3aVM.main(C3aVM.java:59)
 '
 
-ERROR evaluateC3a for input not2.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
+ERROR evaluateC3a for input or2.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot read field "adresse" because "<parameter1>.item" is null
+	at c3a.C3aEval.visit(C3aEval.java:168)
 	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
+	at c3a.C3aVar.accept(C3aVar.java:22)
+	at c3a.C3aEval.visit(C3aEval.java:327)
+	at c3a.C3aEval.visit(C3aEval.java:8)
+	at c3a.C3aInstWrite.accept(C3aInstWrite.java:22)
 	at c3a.C3aEval.<init>(C3aEval.java:69)
 	at C3aVM.run(C3aVM.java:31)
 	at C3aVM.main(C3aVM.java:59)
 '
 
-ERROR evaluateC3a for input not3.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
+ERROR evaluateC3a for input or3.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot read field "adresse" because "<parameter1>.item" is null
+	at c3a.C3aEval.visit(C3aEval.java:168)
 	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
+	at c3a.C3aVar.accept(C3aVar.java:22)
+	at c3a.C3aEval.visit(C3aEval.java:327)
+	at c3a.C3aEval.visit(C3aEval.java:8)
+	at c3a.C3aInstWrite.accept(C3aInstWrite.java:22)
 	at c3a.C3aEval.<init>(C3aEval.java:69)
 	at C3aVM.run(C3aVM.java:31)
 	at C3aVM.main(C3aVM.java:59)
 '
 
-ERROR evaluateC3a for input or1.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
+ERROR evaluateC3a for input or4.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot read field "adresse" because "<parameter1>.item" is null
+	at c3a.C3aEval.visit(C3aEval.java:168)
 	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
+	at c3a.C3aVar.accept(C3aVar.java:22)
+	at c3a.C3aEval.visit(C3aEval.java:327)
+	at c3a.C3aEval.visit(C3aEval.java:8)
+	at c3a.C3aInstWrite.accept(C3aInstWrite.java:22)
 	at c3a.C3aEval.<init>(C3aEval.java:69)
 	at C3aVM.run(C3aVM.java:31)
 	at C3aVM.main(C3aVM.java:59)
 '
 
-ERROR evaluateC3a for input or2.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
+ERROR evaluateC3a for input or5.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot read field "adresse" because "<parameter1>.item" is null
+	at c3a.C3aEval.visit(C3aEval.java:168)
 	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
+	at c3a.C3aVar.accept(C3aVar.java:22)
+	at c3a.C3aEval.visit(C3aEval.java:327)
+	at c3a.C3aEval.visit(C3aEval.java:8)
+	at c3a.C3aInstWrite.accept(C3aInstWrite.java:22)
 	at c3a.C3aEval.<init>(C3aEval.java:69)
 	at C3aVM.run(C3aVM.java:31)
 	at C3aVM.main(C3aVM.java:59)
 '
 
-ERROR evaluateC3a for input or3.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
+ERROR evaluateC3a for input prio45-1.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "c3a.C3aOperand.accept(c3a.C3aVisitor)" because "<parameter1>.op1" is null
+	at c3a.C3aEval.visit(C3aEval.java:327)
 	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
+	at c3a.C3aInstWrite.accept(C3aInstWrite.java:22)
 	at c3a.C3aEval.<init>(C3aEval.java:69)
 	at C3aVM.run(C3aVM.java:31)
 	at C3aVM.main(C3aVM.java:59)
 '
 
-ERROR evaluateC3a for input or4.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
+ERROR evaluateC3a for input prio45-2.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "c3a.C3aOperand.accept(c3a.C3aVisitor)" because "<parameter1>.op1" is null
+	at c3a.C3aEval.visit(C3aEval.java:327)
 	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input or5.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input parenth1.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input parenth2.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input prio34-1.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input prio34-2.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input prio34-3.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input prio34-4.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input prio45-1.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input prio45-2.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
+	at c3a.C3aInstWrite.accept(C3aInstWrite.java:22)
 	at c3a.C3aEval.<init>(C3aEval.java:69)
 	at C3aVM.run(C3aVM.java:31)
 	at C3aVM.main(C3aVM.java:59)
 '
 
 ERROR evaluateC3a for input prio45-3.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
+	at c3a.C3aEval.visit(C3aEval.java:274)
 	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
+	at c3a.C3aInstJumpIfLess.accept(C3aInstJumpIfLess.java:25)
 	at c3a.C3aEval.<init>(C3aEval.java:69)
 	at C3aVM.run(C3aVM.java:31)
 	at C3aVM.main(C3aVM.java:59)
 '
 
 ERROR evaluateC3a for input prio45-4.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
+	at c3a.C3aEval.visit(C3aEval.java:274)
 	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
+	at c3a.C3aInstJumpIfLess.accept(C3aInstJumpIfLess.java:25)
 	at c3a.C3aEval.<init>(C3aEval.java:69)
 	at C3aVM.run(C3aVM.java:31)
 	at C3aVM.main(C3aVM.java:59)
 '
 
-ERROR evaluateC3a for input prio56-1.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
+ERROR evaluateC3a for input prio56-1.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "c3a.C3aOperand.accept(c3a.C3aVisitor)" because "<parameter1>.op1" is null
+	at c3a.C3aEval.visit(C3aEval.java:291)
 	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
+	at c3a.C3aInstJumpIfNotEqual.accept(C3aInstJumpIfNotEqual.java:24)
 	at c3a.C3aEval.<init>(C3aEval.java:69)
 	at C3aVM.run(C3aVM.java:31)
 	at C3aVM.main(C3aVM.java:59)
 '
 
-ERROR evaluateC3a for input prio56-2.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
+ERROR evaluateC3a for input prio56-2.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot read field "adresse" because "<parameter1>.item" is null
+	at c3a.C3aEval.visit(C3aEval.java:168)
 	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
+	at c3a.C3aVar.accept(C3aVar.java:22)
+	at c3a.C3aEval.visit(C3aEval.java:282)
+	at c3a.C3aEval.visit(C3aEval.java:8)
+	at c3a.C3aInstJumpIfEqual.accept(C3aInstJumpIfEqual.java:24)
 	at c3a.C3aEval.<init>(C3aEval.java:69)
 	at C3aVM.run(C3aVM.java:31)
 	at C3aVM.main(C3aVM.java:59)
 '
 
-ERROR evaluateC3a for input prio67-1.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
+ERROR evaluateC3a for input prio67-1.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot read field "adresse" because "<parameter1>.item" is null
+	at c3a.C3aEval.visit(C3aEval.java:168)
 	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
+	at c3a.C3aVar.accept(C3aVar.java:22)
+	at c3a.C3aEval.visit(C3aEval.java:291)
+	at c3a.C3aEval.visit(C3aEval.java:8)
+	at c3a.C3aInstJumpIfNotEqual.accept(C3aInstJumpIfNotEqual.java:24)
 	at c3a.C3aEval.<init>(C3aEval.java:69)
 	at C3aVM.run(C3aVM.java:31)
 	at C3aVM.main(C3aVM.java:59)
 '
 
-ERROR evaluateC3a for input prio67-2.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
+ERROR evaluateC3a for input prio67-2.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot read field "adresse" because "<parameter1>.item" is null
+	at c3a.C3aEval.visit(C3aEval.java:168)
 	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
+	at c3a.C3aVar.accept(C3aVar.java:22)
+	at c3a.C3aEval.visit(C3aEval.java:291)
+	at c3a.C3aEval.visit(C3aEval.java:8)
+	at c3a.C3aInstJumpIfNotEqual.accept(C3aInstJumpIfNotEqual.java:24)
 	at c3a.C3aEval.<init>(C3aEval.java:69)
 	at C3aVM.run(C3aVM.java:31)
 	at C3aVM.main(C3aVM.java:59)
 '
 
-ERROR evaluateC3a for input rec1.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
+ERROR evaluateC3a for input rec1.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "c3a.C3aOperand.accept(c3a.C3aVisitor)" because "<parameter1>.op1" is null
+	at c3a.C3aEval.visit(C3aEval.java:282)
 	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
+	at c3a.C3aInstJumpIfEqual.accept(C3aInstJumpIfEqual.java:24)
 	at c3a.C3aEval.<init>(C3aEval.java:69)
 	at C3aVM.run(C3aVM.java:31)
 	at C3aVM.main(C3aVM.java:59)
 '
 
-ERROR evaluateC3a for input si1.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
+ERROR evaluateC3a for input si1.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot read field "adresse" because "<parameter1>.item" is null
+	at c3a.C3aEval.visit(C3aEval.java:168)
 	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
+	at c3a.C3aVar.accept(C3aVar.java:22)
+	at c3a.C3aEval.visit(C3aEval.java:327)
+	at c3a.C3aEval.visit(C3aEval.java:8)
+	at c3a.C3aInstWrite.accept(C3aInstWrite.java:22)
 	at c3a.C3aEval.<init>(C3aEval.java:69)
 	at C3aVM.run(C3aVM.java:31)
 	at C3aVM.main(C3aVM.java:59)
 '
 
-ERROR evaluateC3a for input si2.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
+ERROR evaluateC3a for input si2.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot read field "adresse" because "<parameter1>.item" is null
+	at c3a.C3aEval.visit(C3aEval.java:168)
 	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
+	at c3a.C3aVar.accept(C3aVar.java:22)
+	at c3a.C3aEval.visit(C3aEval.java:282)
+	at c3a.C3aEval.visit(C3aEval.java:8)
+	at c3a.C3aInstJumpIfEqual.accept(C3aInstJumpIfEqual.java:24)
 	at c3a.C3aEval.<init>(C3aEval.java:69)
 	at C3aVM.run(C3aVM.java:31)
 	at C3aVM.main(C3aVM.java:59)
 '
 
-ERROR evaluateC3a for input si3.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
+ERROR evaluateC3a for input si3.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot read field "adresse" because "<parameter1>.item" is null
+	at c3a.C3aEval.visit(C3aEval.java:168)
 	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
+	at c3a.C3aVar.accept(C3aVar.java:22)
+	at c3a.C3aEval.visit(C3aEval.java:327)
+	at c3a.C3aEval.visit(C3aEval.java:8)
+	at c3a.C3aInstWrite.accept(C3aInstWrite.java:22)
 	at c3a.C3aEval.<init>(C3aEval.java:69)
 	at C3aVM.run(C3aVM.java:31)
 	at C3aVM.main(C3aVM.java:59)
 '
 
-ERROR evaluateC3a for input si4.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
+ERROR evaluateC3a for input si4.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot read field "adresse" because "<parameter1>.item" is null
+	at c3a.C3aEval.visit(C3aEval.java:168)
 	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
+	at c3a.C3aVar.accept(C3aVar.java:22)
+	at c3a.C3aEval.visit(C3aEval.java:327)
+	at c3a.C3aEval.visit(C3aEval.java:8)
+	at c3a.C3aInstWrite.accept(C3aInstWrite.java:22)
 	at c3a.C3aEval.<init>(C3aEval.java:69)
 	at C3aVM.run(C3aVM.java:31)
 	at C3aVM.main(C3aVM.java:59)
 '
 
-ERROR evaluateC3a for input si5.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
+ERROR evaluateC3a for input si5.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot read field "adresse" because "<parameter1>.item" is null
+	at c3a.C3aEval.visit(C3aEval.java:168)
 	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input sub1.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
+	at c3a.C3aVar.accept(C3aVar.java:22)
+	at c3a.C3aEval.visit(C3aEval.java:327)
 	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input sub2.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input sub3.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input tab1.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input tab2.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input tab3.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input tab4.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
+	at c3a.C3aInstWrite.accept(C3aInstWrite.java:22)
 	at c3a.C3aEval.<init>(C3aEval.java:69)
 	at C3aVM.run(C3aVM.java:31)
 	at C3aVM.main(C3aVM.java:59)
 '
 
 ERROR evaluateC3a for input tantque1.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
+	at c3a.C3aEval.visit(C3aEval.java:274)
 	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
+	at c3a.C3aInstJumpIfLess.accept(C3aInstJumpIfLess.java:25)
 	at c3a.C3aEval.<init>(C3aEval.java:69)
 	at C3aVM.run(C3aVM.java:31)
 	at C3aVM.main(C3aVM.java:59)
 '
 
 ERROR evaluateC3a for input tantque2.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
+	at c3a.C3aEval.visit(C3aEval.java:274)
 	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
+	at c3a.C3aInstJumpIfLess.accept(C3aInstJumpIfLess.java:25)
 	at c3a.C3aEval.<init>(C3aEval.java:69)
 	at C3aVM.run(C3aVM.java:31)
 	at C3aVM.main(C3aVM.java:59)
 '
 
 ERROR evaluateC3a for input tri.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
+	at c3a.C3aEval.visit(C3aEval.java:300)
 	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input varglob1.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input varglob2.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input varglob3.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input varglob4.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input varloc1.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input varloc2.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input varloc3.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input varloc4.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
-	at c3a.C3aEval.<init>(C3aEval.java:69)
-	at C3aVM.run(C3aVM.java:31)
-	at C3aVM.main(C3aVM.java:59)
-'
-
-ERROR evaluateC3a for input varloc5.l : 'Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
-	at c3a.C3aEval.visit(C3aEval.java:342)
-	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
+	at c3a.C3aInstJump.accept(C3aInstJump.java:21)
 	at c3a.C3aEval.<init>(C3aEval.java:69)
 	at C3aVM.run(C3aVM.java:31)
 	at C3aVM.main(C3aVM.java:59)
