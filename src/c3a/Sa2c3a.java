@@ -99,7 +99,7 @@ public class Sa2c3a extends SaDepthFirstVisitor <C3aOperand> {
     }
 
     @Override
-    //todo
+    //Done
     public C3aOperand visit(SaInstTantQue node) throws Exception {
         defaultIn(node);
         C3aLabel labelTest = c3a.newAutoLabel();
@@ -148,7 +148,8 @@ public class Sa2c3a extends SaDepthFirstVisitor <C3aOperand> {
     {
         defaultIn(node);
         c3a.ajouteInst(new C3aInstFBegin(node.tsItem, "entree fonction"));
-        if(node.getCorps() != null) node.getCorps().accept(this);
+        if(node.getCorps() != null)
+        node.getCorps().accept(this);
         c3a.ajouteInst(new C3aInstFEnd( ""));
         defaultOut(node);
         return null;
@@ -201,7 +202,7 @@ public class Sa2c3a extends SaDepthFirstVisitor <C3aOperand> {
         defaultOut(node);
         return result;
     }
-//todo
+//Done
     public C3aOperand visit(SaExpInf node) throws Exception
     {
         defaultIn(node);
@@ -217,7 +218,7 @@ public class Sa2c3a extends SaDepthFirstVisitor <C3aOperand> {
         return result;
     }
 
-    //todo
+    //Done
     public C3aOperand visit(SaExpEqual node) throws Exception
     {
         defaultIn(node);
@@ -233,7 +234,7 @@ public class Sa2c3a extends SaDepthFirstVisitor <C3aOperand> {
         return result;
     }
 
-    // todo
+    //Done
     public C3aOperand visit(SaExpAnd node) throws Exception
     {
         defaultIn(node);
@@ -254,7 +255,7 @@ public class Sa2c3a extends SaDepthFirstVisitor <C3aOperand> {
     }
 
 
-    // todo
+    // Done
     public C3aOperand visit(SaExpOr node) throws Exception
     {
         defaultIn(node);
@@ -274,7 +275,7 @@ public class Sa2c3a extends SaDepthFirstVisitor <C3aOperand> {
         return result;
     }
 
-    // todo
+    // Done
     public C3aOperand visit(SaExpNot node) throws Exception
     {
         defaultIn(node);
@@ -303,6 +304,7 @@ public class Sa2c3a extends SaDepthFirstVisitor <C3aOperand> {
         return result;
     }
 
+    //Done
     public C3aOperand visit(SaLExp node) throws Exception {
         defaultIn(node);
 
@@ -333,36 +335,30 @@ public class Sa2c3a extends SaDepthFirstVisitor <C3aOperand> {
     }
 
     @Override
-    // todo
-    public C3aOperand visit(SaInstSi node) throws Exception
-    {
-        defaultIn(node);
-        C3aOperand op1 ;
-        C3aOperand op2 ;
-        C3aLabel l1 = c3a.newAutoLabel();
-        C3aLabel l0 = c3a.newAutoLabel();
-        C3aOperand op =node.getTest().accept(this);
-        C3aOperand result = c3a.newTemp();
+    // Done
+        public C3aOperand visit(SaInstSi node) throws Exception {
+        C3aOperand test = node.getTest().accept(this);
+        C3aLabel sinon = null;
+        if (node.getSinon() != null) sinon = c3a.newAutoLabel();
+        C3aLabel labFin = c3a.newAutoLabel();
 
+        C3aLabel jump = (node.getSinon() != null) ? sinon : labFin;
+        c3a.ajouteInst(new C3aInstJumpIfEqual(test,c3a.False,jump,""));
+        node.getAlors().accept(this);
 
-        if(node.getSinon() != null) {
-            op2 = node.getSinon().accept(this);
-            c3a.ajouteInst(new C3aInstJumpIfEqual(op,c3a.False, l0,""));
-            c3a.ajouteInst(new C3aInstJump(l1,""));
-            c3a.addLabelToNextInst(l0);
-            c3a.addLabelToNextInst(l1);
+        if (node.getSinon() != null) {
+            c3a.ajouteInst(new C3aInstJump(labFin,""));
+            c3a.addLabelToNextInst(sinon);
+            node.getSinon().accept(this);
         }
-        else  if (node.getAlors() != null){
-            op1 = node.getAlors().accept(this);
-            c3a.ajouteInst(new C3aInstJumpIfEqual(op, c3a.False,l1,""));
-            c3a.addLabelToNextInst(l1);
-        }
-        defaultOut(node);
-        return result;
+        c3a.addLabelToNextInst(labFin);
+
+        return null;
     }
 
+
     @Override
-    // todo
+    // Done
     public C3aOperand visit(SaInstRetour node) throws Exception
     {
         defaultIn(node);

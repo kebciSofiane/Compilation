@@ -245,7 +245,7 @@
 	varloc4.saout         CORRECT
 	varloc5.saout         CORRECT
 Évaluation de Diff de c3a :
-47/80 correct ( 58.75%)
+50/80 correct ( 62.50%)
 	add1.c3a       CORRECT
 	add2.c3a       CORRECT
 	affect1.c3a    CORRECT
@@ -278,6 +278,9 @@
 	prio45-2.c3a   CORRECT
 	prio45-3.c3a   CORRECT
 	prio45-4.c3a   CORRECT
+	si2.c3a        CORRECT
+	si3.c3a        CORRECT
+	si4.c3a        CORRECT
 	sub1.c3a       CORRECT
 	sub2.c3a       CORRECT
 	sub3.c3a       CORRECT
@@ -318,16 +321,13 @@
 	prio67-2.c3a        INCORRECT
 	rec1.c3a            INCORRECT
 	si1.c3a             INCORRECT
-	si2.c3a             INCORRECT
-	si3.c3a             INCORRECT
-	si4.c3a             INCORRECT
 	si5.c3a             INCORRECT
 	tantque1.c3a        INCORRECT
 	tantque2.c3a        INCORRECT
 	tri.c3a             INCORRECT
 	varloc5.c3a         INCORRECT
 Évaluation de Execution du c3a :
-75/80 correct ( 93.75%)
+77/80 correct ( 96.25%)
 	add1.c3aout           CORRECT
 	add2.c3aout           CORRECT
 	affect1.c3aout        CORRECT
@@ -383,6 +383,7 @@
 	prio67-2.c3aout       CORRECT
 	si1.c3aout            CORRECT
 	si2.c3aout            CORRECT
+	si3.c3aout            CORRECT
 	si4.c3aout            CORRECT
 	si5.c3aout            CORRECT
 	sub1.c3aout           CORRECT
@@ -394,6 +395,7 @@
 	tab4.c3aout           CORRECT
 	tantque1.c3aout       CORRECT
 	tantque2.c3aout       CORRECT
+	tri.c3aout            CORRECT
 	varglob1.c3aout       CORRECT
 	varglob2.c3aout       CORRECT
 	varglob3.c3aout       CORRECT
@@ -406,8 +408,6 @@
 	appel-retour1.c3aout   INCORRECT
 	fibo.c3aout            INCORRECT
 	rec1.c3aout            INCORRECT
-	si3.c3aout             INCORRECT
-	tri.c3aout             INCORRECT
 Évaluation de Diff de pre-nasm :
 0/80 correct (  0.00%)
 Évaluation de Execution du pre-nasm :
@@ -487,22 +487,25 @@ ERROR evaluateC3a for input appel-retour1.l : 'Exception in thread "main" java.l
 	at C3aVM.main(C3aVM.java:59)
 '
 
-ERROR evaluateC3a for input fibo.l : 'Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 10000 out of bounds for length 10000
-	at c3a.C3aEval.push(C3aEval.java:124)
-	at c3a.C3aEval.pushReg(C3aEval.java:137)
-	at c3a.C3aEval.visit(C3aEval.java:357)
+ERROR evaluateC3a for input fibo.l : 'Exception in thread "main" java.lang.NullPointerException
+	at c3a.C3aEval.visit(C3aEval.java:168)
 	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstFBegin.accept(C3aInstFBegin.java:20)
+	at c3a.C3aVar.accept(C3aVar.java:22)
+	at c3a.C3aEval.visit(C3aEval.java:245)
+	at c3a.C3aEval.visit(C3aEval.java:8)
+	at c3a.C3aInstAdd.accept(C3aInstAdd.java:23)
 	at c3a.C3aEval.<init>(C3aEval.java:69)
 	at C3aVM.run(C3aVM.java:31)
 	at C3aVM.main(C3aVM.java:59)
 '
 
-ERROR evaluateC3a for input rec1.l : 'Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 10001 out of bounds for length 10000
-	at c3a.C3aEval.push(C3aEval.java:124)
-	at c3a.C3aEval.visit(C3aEval.java:340)
+ERROR evaluateC3a for input rec1.l : 'Exception in thread "main" java.lang.NullPointerException
+	at c3a.C3aEval.visit(C3aEval.java:168)
 	at c3a.C3aEval.visit(C3aEval.java:8)
-	at c3a.C3aInstCall.accept(C3aInstCall.java:25)
+	at c3a.C3aVar.accept(C3aVar.java:22)
+	at c3a.C3aEval.visit(C3aEval.java:245)
+	at c3a.C3aEval.visit(C3aEval.java:8)
+	at c3a.C3aInstAdd.accept(C3aInstAdd.java:23)
 	at c3a.C3aEval.<init>(C3aEval.java:69)
 	at C3aVM.run(C3aVM.java:31)
 	at C3aVM.main(C3aVM.java:59)
